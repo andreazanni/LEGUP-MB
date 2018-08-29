@@ -1,0 +1,7 @@
+{
+  "name": "Musei",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
