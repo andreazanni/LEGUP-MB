@@ -14,3 +14,5 @@ Musei/platforms/ios/Musei.xcodeproj/project.xcworkspace/xcuserdata/andreazanni.x
 Musei/platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/andreazanni.xcuserdatad/xcschemes/xcschememanagement.plist
 Musei/platforms/ios/Musei.xcodeproj/project.xcworkspace/xcuserdata/andreazanni.xcuserdatad/UserInterfaceState.xcuserstate
 Musei/platforms/ios/Musei.xcodeproj/xcuserdata/andreazanni.xcuserdatad/xcschemes/xcschememanagement.plist
+Musei/www/build/main.js
+Musei/www/build/vendor.js.map
