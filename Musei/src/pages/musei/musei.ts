@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { MuseoPage } from '../museo/museo';
 
 /**
  * Generated class for the MuseiPage page.
@@ -21,6 +22,10 @@ export class MuseiPage {
   
   goHomePage() {
   	this.navCtrl.push(HomePage);
+  }
+  
+  goMuseoPage() {
+  	this.navCtrl.push(MuseoPage);
   }
 
 }

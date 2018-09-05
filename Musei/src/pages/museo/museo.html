@@ -1,0 +1,16 @@
+<ion-menu [content]="mycontent">
+  <ion-content>
+    <ion-list>
+      <p>some menu content, could be list items</p>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
+<ion-content class="card-background-page">
+	<ion-card class="cardHome" style="background-color: yellow">
+		<button class="sideMenu" ion-button menuToggle (click)="openMenu()">
+			<ion-icon name="menu"></ion-icon>
+		</button>
+    	<div class="card-title">Museo Civico Medievale</div>
+  	</ion-card>
+</ion-content>

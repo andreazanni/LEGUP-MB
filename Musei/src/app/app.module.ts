@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Splash } from '../pages/splash/splash';
 import { MuseiPage } from '../pages/musei/musei';
+import { MuseoPage } from '../pages/museo/museo';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
 	Splash,
-	MuseiPage
+	MuseiPage,
+	MuseoPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { MuseiPage } from '../pages/musei/musei';
     MyApp,
     HomePage,
 	Splash,
-	MuseiPage
+	MuseiPage,
+	MuseoPage
   ],
   providers: [
     StatusBar,

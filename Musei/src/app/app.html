@@ -1,1 +1,40 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="mycontent">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)=onLoad(ServicesMessPage)>
+                <ion-icon name="contact" item-left></ion-icon>
+                Login
+            </button>
+            <button ion-item (click)=onLoad(ServicesLaundryPage)>
+                <ion-icon name="color-palette" item-left></ion-icon>
+                Collezioni
+            </button>
+            <button ion-item (click)=onLoad(ServicesLaundryPage)>
+                <ion-icon name="paper-plane" item-left></ion-icon>
+                News
+            </button>
+            <button ion-item (click)=onLoad(ServicesLaundryPage)>
+                <ion-icon name="alarm" item-left></ion-icon>
+                Orari
+            </button>
+            <button ion-item (click)=onLoad(ServicesLaundryPage)>
+                <ion-icon name="pin" item-left></ion-icon>
+                Come raggiungerci
+            </button>
+            <button ion-item (click)=onLoad(ServicesLaundryPage)>
+                <ion-icon name="logo-facebook" item-left></ion-icon>
+                Condivisione Social
+            </button>
+            <button ion-item (click)=onLoad(ServicesLaundryPage)>
+                <ion-icon name="git-compare" item-left></ion-icon>
+                Percorsi Trasversali
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #mycontent></ion-nav>
