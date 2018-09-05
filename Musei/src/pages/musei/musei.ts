@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the MuseiPage page.
@@ -17,9 +18,9 @@ export class MuseiPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MuseiPage');
+  
+  goHomePage() {
+  	this.navCtrl.push(HomePage);
   }
 
 }

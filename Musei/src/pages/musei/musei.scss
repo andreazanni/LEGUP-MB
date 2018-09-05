@@ -16,7 +16,14 @@ page-musei {
 	}
 	
 	.card-title {
-		padding: 25% 0;
+		padding: 20% 0;
+		height: 100%;
+		text-align: center;
+		font-size: 18px;
+	}
+	
+	.card-title-home {
+		padding: 10% 0;
 		height: 100%;
 		text-align: center;
 		font-size: 18px;
@@ -24,5 +31,10 @@ page-musei {
 	
 	.colHome {
 		padding: 0px;
+	}
+	
+	.back-musei {
+		background-color: transparent;
+		color: black;
 	}
 }
