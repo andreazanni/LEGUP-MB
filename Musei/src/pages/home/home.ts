@@ -11,7 +11,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
   }
   
-  goAnotherPage() {
+  goMuseiPage() {
   	this.navCtrl.push(MuseiPage);
   }
 	
