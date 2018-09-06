@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, MenuController } from 'ionic-angular';
 
 /**
  * Generated class for the MuseoPage page.
