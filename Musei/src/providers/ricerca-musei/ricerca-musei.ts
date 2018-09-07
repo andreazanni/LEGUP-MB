@@ -8,6 +8,7 @@ export class RicercaMuseiProvider {
   constructor(public http: Http) {
   }
 
+  //Data un'area ricerca i musei associati
   startRicercaMusei(options) {
     return new Promise(resolve => {
       let headers = new Headers();
@@ -23,6 +24,7 @@ export class RicercaMuseiProvider {
     });
   }
 
+  //Restituisce i dati del museo selezionato
   getDatiMusei(options) {
     return new Promise(resolve => {
       let headers = new Headers();

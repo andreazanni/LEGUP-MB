@@ -10,7 +10,7 @@ import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-muse
   templateUrl: 'musei.html',
 })
 export class MuseiPage {
-  
+
   NOME: any;
   musei: any;
 
@@ -18,6 +18,7 @@ export class MuseiPage {
     this.musei = this.navParams.get('musei');
   }
 
+  //Richiama il metodo che recupera i dati del museo
   findMuseo(string) {
     let loading = this.loadingCtrl.create({
       content: "Caricamento dati museo..."
@@ -44,6 +45,7 @@ export class MuseiPage {
     });
   }
   
+  //Associato al tasto per tornare all'home page
   goHomePage() {
   	this.navCtrl.push(HomePage);
   }

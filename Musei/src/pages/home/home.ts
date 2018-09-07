@@ -16,6 +16,7 @@ export class HomePage {
   AREA: any;
   NOME: any;
 
+  //Richiama il metodo che restituisce i musei associati ad un'area
   findMusei(string) {
     let loading = this.loadingCtrl.create({
       content: "Caricamento musei..."

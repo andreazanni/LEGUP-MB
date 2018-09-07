@@ -14,6 +14,7 @@ export class MuseoPage {
     this.museo = this.navParams.get('musei');
   }
 
+ //Apre il side menu
  openMenu() {
    this.menuCtrl.open();
  }
