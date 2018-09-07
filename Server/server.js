@@ -24,7 +24,6 @@ app.post('/api/musei', function(req, musei){
         var query = { AREA: req.body.AREA };
         dbo.collection("musei").find(query).toArray(function(err, result) {
           if (err) throw err;
-          console.log(musei);
           musei.json(result);
           db.close();
         });

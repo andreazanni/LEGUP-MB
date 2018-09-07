@@ -10,8 +10,7 @@ import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-muse
   templateUrl: 'musei.html',
 })
 export class MuseiPage {
-
-  AREA: any;
+  
   NOME: any;
   musei: any;
 
@@ -25,7 +24,6 @@ export class MuseiPage {
     });
 
     loading.present();
-    console.log(string)
     let options = {
       NOME: string
     };
@@ -35,13 +33,12 @@ export class MuseiPage {
 
       if(typeof(data[0]) === "undefined") {
         let alert = this.alertCtrl.create({
-          title: 'Oops!',
+          title: 'Errore imprevisto!',
           buttons: ['OK']
         });
 
         alert.present();
       } else {
-        console.log("Musei"+ data);
           this.navCtrl.push(MuseoPage, {musei: data});
       }
     });

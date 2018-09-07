@@ -43,7 +43,6 @@ export class HomePage {
             this.navCtrl.push(MuseoPage, {musei: data});
           } else {
             //Altrimenti vado alla pagina dei musei
-            console.log("Museo:"+ data[1])
             this.navCtrl.push(MuseiPage, {musei: data});
           }
       }
