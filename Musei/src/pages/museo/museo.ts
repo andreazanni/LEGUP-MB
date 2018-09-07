@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, MenuController, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -18,4 +19,9 @@ export class MuseoPage {
  openMenu() {
    this.menuCtrl.open();
  }
+
+  //Associato al tasto per tornare all'home page
+  goHomePage() {
+    this.nav.push(HomePage);  
+  }
 }

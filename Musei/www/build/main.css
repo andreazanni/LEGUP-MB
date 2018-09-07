@@ -25773,6 +25773,11 @@ page-museo .sideMenu {
   color: black;
 }
 
+page-museo .home-button {
+  background-color: transparent;
+  color: black;
+}
+
 .ios page-splash .scroll-content, .md page-splash .scroll-content {
   display: -webkit-box;
   display: -webkit-flex;
