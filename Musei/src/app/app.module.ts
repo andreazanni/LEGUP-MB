@@ -9,6 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { Splash } from '../pages/splash/splash';
 import { MuseiPage } from '../pages/musei/musei';
 import { MuseoPage } from '../pages/museo/museo';
+import { RicercaMuseiProvider } from '../providers/ricerca-musei/ricerca-musei';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,11 @@ import { MuseoPage } from '../pages/museo/museo';
     HomePage,
 	Splash,
 	MuseiPage,
-	MuseoPage
+  MuseoPage,
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -28,12 +31,13 @@ import { MuseoPage } from '../pages/museo/museo';
     HomePage,
 	Splash,
 	MuseiPage,
-	MuseoPage
+  MuseoPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RicercaMuseiProvider,
   ]
 })
 export class AppModule {}
