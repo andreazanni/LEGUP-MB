@@ -5527,19 +5527,19 @@ ion-footer {
 }
 
 ion-app.ios {
-  font-family: -apple-system, "Helvetica Neue", "Roboto", sans-serif;
+  font-family: "Montserrat";
   font-size: 1.4rem;
   background-color: #fff;
 }
 
 ion-app.md {
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat";
   font-size: 1.4rem;
   background-color: #fff;
 }
 
 ion-app.wp {
-  font-family: "Segoe UI", "Noto Sans", sans-serif;
+  font-family: "Montserrat";
   font-size: 1.4rem;
   background-color: #fff;
 }
@@ -25685,6 +25685,14 @@ ion-navbar.toolbar {
   left: 0;
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("subset-Montserrat-Regular.eot");
+  src: url("subset-Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("subset-Montserrat-Regular.woff2") format("woff2"), url("subset-Montserrat-Regular.woff") format("woff"), url("subset-Montserrat-Regular.ttf") format("truetype"), url("subset-Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 page-home .gridHome {
   height: 100%;
   width: 100% !important;
@@ -25710,6 +25718,80 @@ page-home .card-title {
 
 page-home .colHome {
   padding: 0px;
+}
+
+page-home #card-archeologia {
+  background-image: url("../assets/imgs/home/archeologico.jpg");
+  background-size: cover;
+}
+
+page-home #card-arteantica {
+  background-image: url("../assets/imgs/home/arteantica.jpg");
+  background-size: cover;
+}
+
+page-home #card-artemoderna {
+  background-image: url("../assets/imgs/home/artemoderna.jpg");
+  background-size: cover;
+}
+
+page-home #card-storiaememoria {
+  background-image: url("../assets/imgs/home/storia.jpg");
+  background-size: cover;
+}
+
+page-home #card-musica {
+  background-image: url("../assets/imgs/home/musica.jpg");
+  background-size: cover;
+}
+
+page-home #card-patrimonioindustriale {
+  background-image: url("../assets/imgs/home/patrimonioindustriale.jpg");
+  background-size: cover;
+}
+
+page-home .card-gradient {
+  height: 100%;
+}
+
+page-home .card-title {
+  text-align: left;
+  padding: 50% 5px;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+page-home #card-artemoderna .card-gradient {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(208, 47, 124, 0.8)), to(rgba(252, 103, 103, 0.8)));
+  background-image: linear-gradient(to top right, rgba(208, 47, 124, 0.8), rgba(252, 103, 103, 0.8));
+}
+
+page-home #card-archeologia .card-gradient {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(131, 102, 74, 0.8)), to(rgba(242, 176, 113, 0.8)));
+  background-image: linear-gradient(to top right, rgba(131, 102, 74, 0.8), rgba(242, 176, 113, 0.8));
+}
+
+page-home #card-arteantica .card-gradient {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(156, 37, 26, 0.8)), to(rgba(36, 11, 54, 0.8)));
+  background-image: linear-gradient(to top right, rgba(156, 37, 26, 0.8), rgba(36, 11, 54, 0.8));
+}
+
+page-home #card-storiaememoria .card-gradient {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(101, 143, 87, 0.8)), to(rgba(178, 177, 43, 0.8)));
+  background-image: linear-gradient(to top right, rgba(101, 143, 87, 0.8), rgba(178, 177, 43, 0.8));
+}
+
+page-home #card-musica .card-gradient {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.8)), to(rgba(225, 0, 255, 0.8)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.8), rgba(225, 0, 255, 0.8));
+}
+
+page-home #card-patrimonioindustriale .card-gradient {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(43, 104, 175, 0.8)), to(rgba(145, 186, 251, 0.8)));
+  background-image: linear-gradient(to top right, rgba(43, 104, 175, 0.8), rgba(145, 186, 251, 0.8));
 }
 
 page-musei .gridHome {

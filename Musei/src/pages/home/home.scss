@@ -4,25 +4,93 @@ page-home {
 		width: 100% !important;
 		padding: 0px;
 	}
-	
+
 	.rowHome {
 		height: 33.33%;
 	}
-	
+
 	.cardHome {
 		margin: 0px;
 		width: 100%;
 		height: 100%;
 	}
-	
+
 	.card-title {
 		padding: 50% 0;
 		height: 100%;
 		text-align: center;
 		font-size: 18px;
 	}
-	
+
 	.colHome {
 		padding: 0px;
+	}
+
+	#card-archeologia{
+		background-image: url("../assets/imgs/home/archeologico.jpg");
+		background-size: cover;
+	}
+
+	#card-arteantica {
+		background-image: url("../assets/imgs/home/arteantica.jpg");
+		background-size: cover;
+	}
+
+	#card-artemoderna {
+		background-image: url("../assets/imgs/home/artemoderna.jpg");
+		background-size: cover;
+	}
+
+	#card-storiaememoria {
+		background-image: url("../assets/imgs/home/storia.jpg");
+		background-size: cover;
+	}
+
+	#card-musica {
+		background-image: url("../assets/imgs/home/musica.jpg");
+		background-size: cover;
+	}
+
+	#card-patrimonioindustriale {
+		background-image: url("../assets/imgs/home/patrimonioindustriale.jpg");
+		background-size: cover;
+	}
+
+	.card-gradient {
+		height: 100%;
+	}
+
+	.card-title {
+    text-align: left;
+    padding: 50% 5px;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+	}
+
+	#card-artemoderna .card-gradient {
+		background-image: linear-gradient(to top right, rgba(208,47,124,0.8), rgba(252,103,103,0.8));
+	}
+
+	#card-archeologia .card-gradient {
+		background-image: linear-gradient(to top right, rgba(131,102,74,0.8), rgba(242,176,113,0.8));
+	}
+
+	#card-arteantica .card-gradient {
+		background-image: linear-gradient(to top right, rgba(156,37,26,0.8), rgba(36,11,54,0.8));
+	}
+
+	#card-storiaememoria .card-gradient {
+		background-image: linear-gradient(to top right, rgba(101,143,87,0.8), rgba(178,177,43,0.8));
+	}
+
+	#card-musica .card-gradient {
+		background-image: linear-gradient(to top right, rgba(91,73,137,0.8), rgba(225,0,255,0.8));
+	}
+
+	#card-patrimonioindustriale .card-gradient {
+		background-image: linear-gradient(to top right, rgba(43,104,175,0.8), rgba(145,186,251,0.8));
 	}
 }
