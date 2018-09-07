@@ -25828,6 +25828,11 @@ page-musei .colHome {
   padding: 0px;
 }
 
+page-musei .colHomeYellow {
+  padding: 0px;
+  background-color: yellow;
+}
+
 page-musei .back-musei {
   background-color: transparent;
   color: black;
@@ -25846,6 +25851,11 @@ page-museo .card-title {
 }
 
 page-museo .sideMenu {
+  background-color: transparent;
+  color: black;
+}
+
+page-museo .home-button {
   background-color: transparent;
   color: black;
 }

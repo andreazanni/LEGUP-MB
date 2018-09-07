@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
-
-/**
- * Generated class for the MuseoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, MenuController, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -15,10 +9,19 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 })
 export class MuseoPage {
 
-  constructor(public menuCtrl: MenuController) {
+  museo: any;
+
+  constructor(public menuCtrl: MenuController, public nav: NavController, public navParams: NavParams) {
+    this.museo = this.navParams.get('musei');
   }
 
+ //Apre il side menu
  openMenu() {
    this.menuCtrl.open();
  }
+
+  //Associato al tasto per tornare all'home page
+  goHomePage() {
+    this.nav.push(HomePage);  
+  }
 }

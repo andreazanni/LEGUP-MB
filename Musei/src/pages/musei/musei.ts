@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { MuseoPage } from '../museo/museo';
-
-/**
- * Generated class for the MuseiPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-musei';
 
 @IonicPage()
 @Component({
@@ -17,15 +11,43 @@ import { MuseoPage } from '../museo/museo';
 })
 export class MuseiPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  NOME: any;
+  musei: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+    this.musei = this.navParams.get('musei');
+  }
+
+  //Richiama il metodo che recupera i dati del museo
+  findMuseo(string) {
+    let loading = this.loadingCtrl.create({
+      content: "Caricamento dati museo..."
+    });
+
+    loading.present();
+    let options = {
+      NOME: string
+    };
+
+    this.museiService.getDatiMusei(options).then((data) => {
+      loading.dismiss();
+
+      if(typeof(data[0]) === "undefined") {
+        let alert = this.alertCtrl.create({
+          title: 'Errore imprevisto!',
+          buttons: ['OK']
+        });
+
+        alert.present();
+      } else {
+          this.navCtrl.push(MuseoPage, {musei: data});
+      }
+    });
   }
   
+  //Associato al tasto per tornare all'home page
   goHomePage() {
   	this.navCtrl.push(HomePage);
-  }
-  
-  goMuseoPage() {
-  	this.navCtrl.push(MuseoPage);
   }
 
 }
