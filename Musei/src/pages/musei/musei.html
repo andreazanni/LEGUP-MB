@@ -1,33 +1,31 @@
 <ion-content class="card-background-page">
   <ion-grid class="gridHome">
     <ion-row class="rowHome">
-        <ion-col class="colHome">
-			<ion-card class="cardHome" (click)="findMusei()" style="background-color: yellow">
-		    	<button class="back-musei" ion-button icon-only (click)="goHomePage()">
-		      	  <ion-icon name="arrow-back"></ion-icon>
-		    	</button>
-    			<div class="card-title-home">Museo Civico Medievale</div>
+        <ion-col class="colHomeYellow">
+			<button class="back-musei" ion-button icon-only (click)="goHomePage()"><ion-icon name="arrow-back"></ion-icon></button>
+			<ion-card class="cardHome" (click)="findMuseo(musei[0].NOME)" style="background-color: yellow">	
+    			<div class="card-title-home">{{musei[0].NOME}}</div>
   		  	</ion-card>
 	    </ion-col>
 	</ion-row>
     <ion-row class="rowHome">
         <ion-col class="colHome">
-			<ion-card class="cardHome" style="background-color: blue">
-    			<div class="card-title">Museo Civico d'Arte Industriale e Galleria Davia Bargellini</div>
+			<ion-card class="cardHome" (click)="findMuseo(musei[1].NOME)" style="background-color: blue">
+    			<div class="card-title">{{musei[1].NOME}}</div>
   		  	</ion-card>
 	    </ion-col>
 	</ion-row>
     <ion-row class="rowHome">
         <ion-col class="colHome">
-			<ion-card class="cardHome" style="background-color: red">
-    			<div class="card-title">Collezioni Comunali d'Arte</div>
+			<ion-card class="cardHome" (click)="findMuseo(musei[2].NOME)" style="background-color: red">
+    			<div class="card-title">{{musei[2].NOME}}</div>
   		  	</ion-card>
 	    </ion-col>
 	</ion-row>
     <ion-row class="rowHome">
         <ion-col class="colHome">
-			<ion-card class="cardHome" style="background-color: green">
-    			<div class="card-title">Museo del Tessuto e della Tappezzeria "Vittorio Zironi"</div>
+			<ion-card class="cardHome" (click)="findMuseo(musei[3].NOME)" style="background-color: green">
+    			<div class="card-title">{{musei[3].NOME}}</div>
   		  	</ion-card>
 	    </ion-col>
 	</ion-row>

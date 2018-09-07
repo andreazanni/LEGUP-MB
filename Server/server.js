@@ -17,22 +17,33 @@ app.get('/api/check', function(req,res) {
     res.end();
 });
 
-app.post('/api/musei', function(req, res){
-    console.log("Tipo: "+ req.body.TIPO);
-    console.log("NOME: "+ req.body.NOME);
+app.post('/api/musei', function(req, musei){
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
         var dbo = db.db("musei");
-        var query = { TIPO: req.body.TIPO };
+        var query = { AREA: req.body.AREA };
         dbo.collection("musei").find(query).toArray(function(err, result) {
           if (err) throw err;
-          console.log(result);
-          res.json(result);
+          console.log(musei);
+          musei.json(result);
+          db.close();
+        });
+      });
+});
+
+app.post('/api/museo', function(req, musei){
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("musei");
+        var query = { NOME: req.body.NOME };
+        dbo.collection("musei").find(query).toArray(function(err, result) {
+          if (err) throw err;
+          musei.json(result);
           db.close();
         });
       });
 });
 
 
-app.listen(8079);
-console.log("App listening on port 8079");
+app.listen(3000);
+console.log("App listening on port 3000");

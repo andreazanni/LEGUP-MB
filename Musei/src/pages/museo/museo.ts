@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, MenuController } from 'ionic-angular';
+import { IonicPage, MenuController, NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the MuseoPage page.
@@ -15,7 +15,11 @@ import { IonicPage, MenuController } from 'ionic-angular';
 })
 export class MuseoPage {
 
-  constructor(public menuCtrl: MenuController) {
+  museo: any;
+
+  constructor(public menuCtrl: MenuController, public nav: NavController, public navParams: NavParams) {
+    this.museo = this.navParams.get('musei');
+    console.log(this.museo[0].NOME)
   }
 
  openMenu() {

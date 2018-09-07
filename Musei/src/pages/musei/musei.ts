@@ -4,13 +4,6 @@ import { HomePage } from '../home/home';
 import { MuseoPage } from '../museo/museo';
 import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-musei';
 
-/**
- * Generated class for the MuseiPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-musei',
@@ -18,25 +11,26 @@ import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-muse
 })
 export class MuseiPage {
 
-  TIPO: any;
+  AREA: any;
   NOME: any;
+  musei: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+    this.musei = this.navParams.get('musei');
   }
 
-  findMusei() {
+  findMuseo(string) {
     let loading = this.loadingCtrl.create({
-      content: "Finding museum..."
+      content: "Caricamento dati museo..."
     });
 
     loading.present();
-
+    console.log(string)
     let options = {
-      TIPO: "Archeologia",
-      NOME: "Museo arte antica"
+      NOME: string
     };
 
-    this.museiService.getRicercaMusei(options).then((data) => {
+    this.museiService.getDatiMusei(options).then((data) => {
       loading.dismiss();
 
       if(typeof(data[0]) === "undefined") {
@@ -46,21 +40,15 @@ export class MuseiPage {
         });
 
         alert.present();
-        console.log("Data: " + data);
-        console.log("Opzioni: " + options);
       } else {
-          this.goMuseoPage();
-          console.log('volo');
+        console.log("Musei"+ data);
+          this.navCtrl.push(MuseoPage, {musei: data});
       }
     });
   }
   
   goHomePage() {
   	this.navCtrl.push(HomePage);
-  }
-  
-  goMuseoPage() {
-  	this.navCtrl.push(MuseoPage);
   }
 
 }

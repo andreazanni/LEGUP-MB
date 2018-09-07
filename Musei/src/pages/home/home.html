@@ -2,36 +2,36 @@
   <ion-grid class="gridHome">
     <ion-row class="rowHome">
         <ion-col class="colHome">
-			<ion-card class="cardHome" style="background-color: SaddleBrown">
+			<ion-card class="cardHome" (click)="findMusei('Archeologia')" style="background-color: SaddleBrown">
     			<div class="card-title">Archeologia</div>
   		  	</ion-card>
 	    </ion-col>
 		<ion-col class="colHome">
-			<ion-card class="cardHome" (click)="goMuseiPage()" style="background-color: red">
+			<ion-card class="cardHome" (click)="findMusei('Arte antica')" style="background-color: red">
     			<div class="card-title">Arte antica</div>
   		  	</ion-card>
 		</ion-col>
 	</ion-row>
     <ion-row class="rowHome">
         <ion-col class="colHome">
-			<ion-card class="cardHome" style="background-color: Violet">
+			<ion-card class="cardHome" (click)="findMusei('Arte moderna e contemporanea')"style="background-color: Violet">
     			<div class="card-title">Arte moderna e contemporanea</div>
   		  	</ion-card>
 	    </ion-col>
 		<ion-col class="colHome">
-  	  		<ion-card class="cardHome" style="background-color: RebeccaPurple">
+  	  		<ion-card class="cardHome" (click)="findMusei('Musica')"style="background-color: RebeccaPurple">
     			<div class="card-title">Musica</div>
   		  	</ion-card>
 		</ion-col>
 	</ion-row>
     <ion-row class="rowHome">
         <ion-col class="colHome">
-			<ion-card class="cardHome" style="background-color: RoyalBlue">
-    			<div class="card-title">Patrimonio industriale e Cultura tecnica</div>
+			<ion-card class="cardHome" (click)="findMusei('Patrimonio industriale e cultura tecnica')"style="background-color: RoyalBlue">
+    			<div class="card-title">Patrimonio industriale e cultura tecnica</div>
   		  	</ion-card>
 	    </ion-col>
 		<ion-col class="colHome">
-  	  		<ion-card class="cardHome" style="background-color: SeaGreen">
+  	  		<ion-card class="cardHome" (click)="findMusei('Storia e Memoria')" style="background-color: SeaGreen">
     			<div class="card-title">Storia e Memoria</div>
   		  	</ion-card>
 		</ion-col>
