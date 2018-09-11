@@ -25858,6 +25858,8 @@ page-museo .sideMenu {
 page-museo .home-button {
   background-color: transparent;
   color: black;
+  margin: 0 2%;
+  float: right;
 }
 
 .ios page-splash .scroll-content, .md page-splash .scroll-content {
