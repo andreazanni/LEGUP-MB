@@ -39,10 +39,7 @@ export class MyApp {
         alert(err);
       });
 
-    }
-
-    console.log(this.page);
-    
+    }    
 
     this.menuCtrl.close();
   }

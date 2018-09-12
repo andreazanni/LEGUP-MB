@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/andreazanni/Documents/GitHub/LEGUP-MB/Musei/platforms/android/CordovaLib/assets"/><source path="/Users/andreazanni/Documents/GitHub/LEGUP-MB/Musei/platforms/android/CordovaLib/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/Users/andreazanni/Documents/GitHub/LEGUP-MB/Musei/platforms/android/CordovaLib/src/release/assets"/></dataSet></merger>
