@@ -10,10 +10,19 @@ import { HomePage } from '../home/home';
 export class MuseoPage {
 
   museo: any;
+  classeMuseo: any;
 
   constructor(public menuCtrl: MenuController, public nav: NavController, public navParams: NavParams) {
     this.museo = this.navParams.get('musei');
+    this.classeMuseo = this.navParams.get('classe1');
   }
+
+  ionViewDidLoad() {
+    console.log(this.classeMuseo);
+    var idClass = document.getElementById('paginaMuseo');
+    idClass.classList.add(this.classeMuseo);
+  }
+
 
  //Apre il side menu
  openMenu() {
@@ -22,6 +31,6 @@ export class MuseoPage {
 
   //Associato al tasto per tornare all'home page
   goHomePage() {
-    this.nav.push(HomePage);  
+    this.nav.push(HomePage);
   }
 }

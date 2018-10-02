@@ -25693,6 +25693,41 @@ ion-navbar.toolbar {
   font-style: normal;
 }
 
+.menu-content-reveal {
+  -webkit-box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.7) !important;
+  box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.7) !important;
+}
+
+.scroll-content {
+  overflow: hidden;
+}
+
+.item-block, .content, .toolbar-background {
+  background: -webkit-gradient(linear, left top, right top, from(#a4b2bc), to(#eaf0f2));
+  background: linear-gradient(to right, #a4b2bc 0%, #eaf0f2 100%);
+}
+
+.toolbar-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.item-block .item-inner, .toolbar-background, .item-block:last-child {
+  border: none !important;
+}
+
+.item-block {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.item-inner {
+  background-size: 0 !important;
+}
+
 page-home .gridHome {
   height: 100%;
   width: 100% !important;
@@ -25765,33 +25800,33 @@ page-home .card-title {
 }
 
 page-home #card-artemoderna .card-gradient {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(208, 47, 124, 0.8)), to(rgba(252, 103, 103, 0.8)));
-  background-image: linear-gradient(to top right, rgba(208, 47, 124, 0.8), rgba(252, 103, 103, 0.8));
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(208, 47, 124, 0.7)), to(rgba(252, 103, 103, 0.7)));
+  background-image: linear-gradient(to top right, rgba(208, 47, 124, 0.7), rgba(252, 103, 103, 0.7));
 }
 
 page-home #card-archeologia .card-gradient {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(131, 102, 74, 0.8)), to(rgba(242, 176, 113, 0.8)));
-  background-image: linear-gradient(to top right, rgba(131, 102, 74, 0.8), rgba(242, 176, 113, 0.8));
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(131, 102, 74, 0.7)), to(rgba(242, 176, 113, 0.7)));
+  background-image: linear-gradient(to top right, rgba(131, 102, 74, 0.7), rgba(242, 176, 113, 0.7));
 }
 
 page-home #card-arteantica .card-gradient {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(156, 37, 26, 0.8)), to(rgba(36, 11, 54, 0.8)));
-  background-image: linear-gradient(to top right, rgba(156, 37, 26, 0.8), rgba(36, 11, 54, 0.8));
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(156, 37, 26, 0.7)), to(rgba(36, 11, 54, 0.7)));
+  background-image: linear-gradient(to top right, rgba(156, 37, 26, 0.7), rgba(36, 11, 54, 0.7));
 }
 
 page-home #card-storiaememoria .card-gradient {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(101, 143, 87, 0.8)), to(rgba(178, 177, 43, 0.8)));
-  background-image: linear-gradient(to top right, rgba(101, 143, 87, 0.8), rgba(178, 177, 43, 0.8));
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(101, 143, 87, 0.7)), to(rgba(178, 177, 43, 0.7)));
+  background-image: linear-gradient(to top right, rgba(101, 143, 87, 0.7), rgba(178, 177, 43, 0.7));
 }
 
 page-home #card-musica .card-gradient {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.8)), to(rgba(225, 0, 255, 0.8)));
-  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.8), rgba(225, 0, 255, 0.8));
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
 }
 
 page-home #card-patrimonioindustriale .card-gradient {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(43, 104, 175, 0.8)), to(rgba(145, 186, 251, 0.8)));
-  background-image: linear-gradient(to top right, rgba(43, 104, 175, 0.8), rgba(145, 186, 251, 0.8));
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(43, 104, 175, 0.7)), to(rgba(145, 186, 251, 0.7)));
+  background-image: linear-gradient(to top right, rgba(43, 104, 175, 0.7), rgba(145, 186, 251, 0.7));
 }
 
 page-musei .gridHome {
@@ -25814,7 +25849,10 @@ page-musei .card-title {
   padding: 20% 0;
   height: 100%;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
 }
 
 page-musei .card-title-home {
@@ -25824,24 +25862,73 @@ page-musei .card-title-home {
   font-size: 18px;
 }
 
+page-musei .col {
+  padding: 0px;
+}
+
 page-musei .colHome {
   padding: 0px;
 }
 
-page-musei .colHomeYellow {
-  padding: 0px;
+page-musei .back-musei {
+  background-color: transparent;
+  color: white;
+  float: left;
+  position: absolute;
+}
+
+page-musei #row-1 .cardHome {
   background-color: yellow;
 }
 
-page-musei .back-musei {
-  background-color: transparent;
-  color: black;
+page-musei #row-2 .cardHome {
+  background-color: blue;
+}
+
+page-musei #row-3 .cardHome {
+  background-color: red;
+}
+
+page-musei #row-4 .cardHome {
+  background-color: green;
+}
+
+page-musei .area_artemoderna #row-1 {
+  background-image: url("../assets/imgs/home/ArteModerna/mambo.jpg");
+  background-size: cover;
+}
+
+page-musei .area_artemoderna #row-2 {
+  background-image: url("../assets/imgs/home/ArteModerna/villadellerose.jpg");
+  background-size: cover;
+}
+
+page-musei .area_artemoderna #row-3 {
+  background-image: url("../assets/imgs/home/ArteModerna/ustica.jpg");
+  background-size: cover;
+}
+
+page-musei .area_artemoderna #row-4 {
+  background-image: url("../assets/imgs/home/ArteModerna/casamorandi.jpg");
+  background-size: cover;
+}
+
+page-musei .area_artemoderna #row-1 .cardHome, page-musei .area_artemoderna #row-2 .cardHome, page-musei .area_artemoderna #row-3 .cardHome, page-musei .area_artemoderna #row-4 .cardHome {
+  background: none !important;
+  border: 5px solid white;
+  border-radius: 0;
+}
+
+page-musei .area_artemoderna .col {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(208, 47, 124, 0.7)), to(rgba(252, 103, 103, 0.7)));
+  background-image: linear-gradient(to top right, rgba(208, 47, 124, 0.7), rgba(252, 103, 103, 0.7));
 }
 
 page-museo .cardHome {
   margin: 0px;
   width: 100%;
   height: 100%;
+  border-radius: 0;
 }
 
 page-museo .card-title {
@@ -25852,14 +25939,57 @@ page-museo .card-title {
 
 page-museo .sideMenu {
   background-color: transparent;
-  color: black;
+  color: white;
 }
 
 page-museo .home-button {
   background-color: transparent;
-  color: black;
+  color: white;
   margin: 0 2%;
   float: right;
+}
+
+page-museo .museo_mambo .card-title {
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  border-left: 1px white solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  top: 48%;
+  height: 48%;
+}
+
+page-museo .museo-content {
+  display: none;
+}
+
+page-museo .museo_mambo .museo-content {
+  display: block;
+  padding-top: 20%;
+}
+
+page-museo .museo_mambo .museo-content p {
+  font-size: 10px !important;
+  font-weight: 600;
+  color: white;
+  text-align: justify;
+}
+
+page-museo #paginaMuseo.museo_mambo {
+  background-image: url("../assets/imgs/home/ArteModerna/MamboHome/mambohome.jpg");
+  background-size: cover;
+}
+
+page-museo .museo_mambo .cardHome {
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(208, 47, 124, 0.7)), to(rgba(252, 103, 103, 0.7))) !important;
+  background-image: linear-gradient(to top right, rgba(208, 47, 124, 0.7), rgba(252, 103, 103, 0.7)) !important;
 }
 
 .ios page-splash .scroll-content, .md page-splash .scroll-content {

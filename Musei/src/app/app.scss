@@ -32,3 +32,36 @@
     font-weight: normal;
     font-style: normal;
 }
+
+  .menu-content-reveal {
+    box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.7) !important;
+  }
+
+  .scroll-content {
+      overflow: hidden;
+    }
+
+  .item-block, .content, .toolbar-background {
+    background: linear-gradient(to right, #a4b2bc 0%,#eaf0f2 100%);
+  }
+
+  .toolbar-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .item-block .item-inner, .toolbar-background, .item-block:last-child  {
+    border: none !important;
+  }
+
+.item-block {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.item-inner {
+  background-size: 0 !important;
+}

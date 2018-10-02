@@ -16,6 +16,9 @@ export class HomePage {
   AREA: any;
   NOME: any;
 
+  classArea: any;
+  classMuseo: any;
+
   //Richiama il metodo che restituisce i musei associati ad un'area
   findMusei(string) {
     let loading = this.loadingCtrl.create({
@@ -41,10 +44,27 @@ export class HomePage {
       } else {
           //Se ho soltanto un dato in posizione 0 vado alla pagina del museo direttamente perche' ho un solo museo trovato
           if(typeof(data[1]) === "undefined") {
-            this.navCtrl.push(MuseoPage, {musei: data});
+          switch(string){
+            case "Archeologia":
+              this.classMuseo = "museo_archeologia";
+              break;
+            default:
+              this.classMuseo = string;
+          }
+            this.navCtrl.push(MuseoPage, {musei: data, classe1: this.classMuseo});
+            console.log(this.classMuseo);
+
           } else {
             //Altrimenti vado alla pagina dei musei
-            this.navCtrl.push(MuseiPage, {musei: data});
+            switch(string){
+              case "Arte moderna e contemporanea":
+                this.classArea = "area_artemoderna";
+                break;
+              default:
+                this.classArea = string;
+            }
+            this.navCtrl.push(MuseiPage, {musei: data, classe1: this.classArea});
+            console.log(this.classArea);
           }
       }
     });

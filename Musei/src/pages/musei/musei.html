@@ -1,30 +1,30 @@
-<ion-content class="card-background-page">
+<ion-content id="paginaArea" class="card-background-page">
   <ion-grid class="gridHome">
-    <ion-row class="rowHome">
+    <ion-row id="row-1" class="rowHome">
         <ion-col class="colHomeYellow">
 			<button class="back-musei" ion-button icon-only (click)="goHomePage()"><ion-icon name="arrow-back"></ion-icon></button>
-			<ion-card class="cardHome" (click)="findMuseo(musei[0].NOME)" style="background-color: yellow">	
-    			<div class="card-title-home">{{musei[0].NOME}}</div>
+			<ion-card class="cardHome" (click)="findMuseo(musei[0].NOME)">
+    			<div class="card-title">{{musei[0].NOME}}</div>
   		  	</ion-card>
 	    </ion-col>
 	</ion-row>
-    <ion-row class="rowHome">
+    <ion-row id="row-2" class="rowHome">
         <ion-col class="colHome">
-			<ion-card class="cardHome" (click)="findMuseo(musei[1].NOME)" style="background-color: blue">
+			<ion-card class="cardHome" (click)="findMuseo(musei[1].NOME)">
     			<div class="card-title">{{musei[1].NOME}}</div>
   		  	</ion-card>
 	    </ion-col>
 	</ion-row>
-    <ion-row class="rowHome">
+    <ion-row id="row-3" class="rowHome">
         <ion-col class="colHome">
-			<ion-card class="cardHome" (click)="findMuseo(musei[2].NOME)" style="background-color: red">
+			<ion-card class="cardHome" (click)="findMuseo(musei[2].NOME)">
     			<div class="card-title">{{musei[2].NOME}}</div>
   		  	</ion-card>
 	    </ion-col>
 	</ion-row>
-    <ion-row class="rowHome">
+    <ion-row id="row-4" class="rowHome">
         <ion-col class="colHome">
-			<ion-card class="cardHome" (click)="findMuseo(musei[3].NOME)" style="background-color: green">
+			<ion-card class="cardHome" (click)="findMuseo(musei[3].NOME)">
     			<div class="card-title">{{musei[3].NOME}}</div>
   		  	</ion-card>
 	    </ion-col>
