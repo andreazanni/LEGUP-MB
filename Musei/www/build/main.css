@@ -3763,7 +3763,7 @@ ion-icon::before {
   font-family: 'Montserrat', sans-serif;
   src: url("../assets/fonts/subset-Montserrat-Light.eot");
   src: url("../assets/fonts/subset-Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-Light.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-Light.woff") format("woff"), url("../assets/fonts/subset-Montserrat-Light.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-Light.svg#Montserrat-Light") format("svg");
-  font-weight: light;
+  font-weight: normal;
   font-style: 300;
 }
 
@@ -3787,7 +3787,7 @@ ion-icon::before {
   font-family: 'Montserrat', sans-serif;
   src: url("../assets/fonts/subset-Montserrat-ExtraBold.eot");
   src: url("../assets/fonts/subset-Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-ExtraBold.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-ExtraBold.woff") format("woff"), url("../assets/fonts/subset-Montserrat-ExtraBold.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-ExtraBold.svg#Montserrat-ExtraBold") format("svg");
-  font-weight: extra-bold;
+  font-weight: bold;
   font-style: 800;
 }
 
