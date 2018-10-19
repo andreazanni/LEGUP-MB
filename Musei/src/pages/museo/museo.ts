@@ -18,7 +18,6 @@ export class MuseoPage {
   }
 
   ionViewDidLoad() {
-    console.log(this.classeMuseo);
     var idClass = document.getElementById('paginaMuseo');
     idClass.classList.add(this.classeMuseo);
   }
@@ -32,5 +31,6 @@ export class MuseoPage {
   //Associato al tasto per tornare all'home page
   goHomePage() {
     this.nav.push(HomePage);
+    this.nav.removeView(this.nav.last());
   }
 }

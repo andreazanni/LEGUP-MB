@@ -53,6 +53,7 @@ export class MuseiPage {
           }
         }
           this.navCtrl.push(MuseoPage, {musei: data, classe1: this.classMuseoArea});
+          this.navCtrl.removeView(this.navCtrl.last());
           console.log(this.classMuseoArea);
       }
     });
@@ -60,16 +61,15 @@ export class MuseiPage {
 
   //evento che scatta al caricamento della pagina musei, serve a impostare le classi in modo dinamico nel css
   ionViewDidLoad() {
-    console.log(this.classeArea);
     var idClass = document.getElementById('paginaArea');
-    console.log(idClass.classList.contains(this.classeArea));
+    idClass.classList.remove(this.classeArea);
     idClass.classList.add(this.classeArea);
-    console.log(idClass.classList.contains(this.classeArea));
   }
 
   //Associato al tasto per tornare all'home page.
   goHomePage() {
-  	this.navCtrl.push(HomePage);
+    this.navCtrl.push(HomePage);
+    this.navCtrl.removeView(this.navCtrl.last());
     //Ho notato che ogni volta viene creata il tag di una pagina musei o museo. Bisogna gestire il fatto di utilizzare sempre e solo una pagina per area e museo, in modo da non creare n. pagine.
     //var idRemovePage = document.getElementById('paginaArea');
     //idRemovePage.parentNode.removeChild(idRemovePage);
