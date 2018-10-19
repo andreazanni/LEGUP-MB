@@ -14,7 +14,7 @@ export class RicercaMuseiProvider {
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
 
-      this.http.post('http://192.168.3.43:3000/api/musei', JSON.stringify(options), {headers: headers})
+      this.http.post('http://www.omniservicetest.it/node/Musei/api/musei', JSON.stringify(options), {headers: headers})
         .map(res => res.json())
         .subscribe(data => {
           resolve(data);
@@ -30,7 +30,7 @@ export class RicercaMuseiProvider {
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
 
-      this.http.post('http://192.168.3.43:3000/api/museo', JSON.stringify(options), {headers: headers})
+      this.http.post('http://www.omniservicetest.it/node/Musei/api/museo', JSON.stringify(options), {headers: headers})
         .map(res => res.json())
         .subscribe(data => {
           resolve(data);
