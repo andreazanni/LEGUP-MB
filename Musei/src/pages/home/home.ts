@@ -42,11 +42,14 @@ export class HomePage {
 
         alert.present();
       } else {
-          //Se ho soltanto un dato in posizione 0 vado alla pagina del museo direttamente perche' ho un solo museo trovato
+          //Se ho soltanto un dato in posizione 0 vado alla pagina del museo direttamente perche' ho un solo museo trovato. Assegno le classi per museo con nomenclatura "museo_abbreviazionenomemuseo"
           if(typeof(data[1]) === "undefined") {
           switch(string){
             case "Archeologia":
               this.classMuseo = "museo_archeologia";
+              break;
+            case "Musica":
+              this.classMuseo = "museo_musica";
               break;
             default:
               this.classMuseo = string;
@@ -55,7 +58,7 @@ export class HomePage {
             console.log(this.classMuseo);
 
           } else {
-            //Altrimenti vado alla pagina dei musei
+            //Altrimenti vado alla pagina dei musei dell'Area. Assegno le classi per area con nomenclatura "area_abbreviazionenomearea"
             switch(string){
               case "Arte moderna e contemporanea":
                 this.classArea = "area_artemoderna";

@@ -20,6 +20,13 @@ export class MuseoPage {
   ionViewDidLoad() {
     var idClass = document.getElementById('paginaMuseo');
     idClass.classList.add(this.classeMuseo);
+    var idCardDescrizione = document.getElementById('descrizione');
+    idCardDescrizione.innerHTML = this.museo[0].DESCRIZIONE
+    //calcolo altezza contenitore descrizione museo
+    var idCardTitle = document.getElementById('museo_cardTitle');
+    var descrizioneHeight = idCardTitle.offsetHeight - idCardDescrizione.offsetTop;
+    idCardDescrizione.style.height = descrizioneHeight + "px";
+    //console.log(idCardTitle.offsetTop, idCardTitle.offsetHeight);
   }
 
 
@@ -32,5 +39,6 @@ export class MuseoPage {
   goHomePage() {
     this.nav.push(HomePage);
     this.nav.removeView(this.nav.last());
+
   }
 }

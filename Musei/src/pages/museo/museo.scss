@@ -23,7 +23,13 @@ page-museo {
 		color: white;
 		margin: 0 2%;
 		float: right;
-	}
+  }
+
+  .museo-content {
+		display: none;
+  }
+
+  //MAMbo
 
 	.museo_mambo .card-title {
 		color: white;
@@ -37,17 +43,15 @@ page-museo {
 		padding-left: 10px;
 		padding-right: 10px;
 		position: absolute;
-		top: 48%;
-		height: 48%;
-	}
-
-	.museo-content {
-		display: none;
+		top: 38%;
+		height: 59%;
 	}
 
 	.museo_mambo .museo-content {
 		display: block;
-		padding-top: 20%;
+    margin-top: 20%;
+    height: 78%;
+    overflow: auto;
 	}
 
 	.museo_mambo .museo-content p {
@@ -57,10 +61,10 @@ page-museo {
 		text-align: justify;
 	}
 
-
 	#paginaMuseo.museo_mambo {
 		background-image: url("../assets/imgs/home/ArteModerna/MamboHome/mambohome.jpg");
-		background-size: cover;
+    background-size: cover;
+    background-position: center;
 	}
 
 	.museo_mambo .cardHome {
@@ -68,6 +72,47 @@ page-museo {
 		background-image: linear-gradient(to top right, rgba(208,47,124,0.7), rgba(252,103,103,0.7)) !important;
 	}
 
+  //Musica
 
+  .museo_musica .card-title {
+		color: white;
+		text-transform: uppercase;
+		text-align: left;
+		font-size: 16px;
+    font-weight: 700;
+		border-left: 1px white solid;
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		position: absolute;
+		top: 38%;
+		height: 59%;
+	}
+
+	.museo_musica .museo-content {
+		display: block;
+    margin-top: 20%;
+    height: 78%;
+    overflow: auto;
+	}
+
+	.museo_musica .museo-content p {
+		font-size: 10px !important;
+    font-weight: 600;
+    color: white;
+		text-align: justify;
+	}
+
+	#paginaMuseo.museo_musica {
+		background-image: url("../assets/imgs/home/Musica/MusicaHome/musicahome.jpg");
+    background-size: cover;
+    background-position: center;
+	}
+
+	.museo_musica .cardHome {
+		background-color: transparent !important;
+		background-image: linear-gradient(to top right, rgba(91,73,137,0.7), rgba(225,0,255,0.7)) !important;
+	}
 
 }
