@@ -27,7 +27,7 @@ var MuseoPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__museo__["a" /* MuseoPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__museo__["a" /* MuseoPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__museo__["a" /* MuseoPage */]),
             ],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_2__museo__["a" /* MuseoPage */],

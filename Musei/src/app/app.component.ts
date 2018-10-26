@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, ModalController, MenuController, Nav } from 'ionic-angular';
+import { Platform, ModalController, MenuController, Nav, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -15,8 +15,9 @@ export class MyApp {
   rootPage:any = HomePage;
   page: any;
 
-  constructor(public socialSharing: SocialSharing, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, public menuCtrl: MenuController) {
-    platform.ready().then(() => {
+  constructor(public socialSharing: SocialSharing, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, public menuCtrl: MenuController, 
+  public events: Events) {
+      platform.ready().then(() => {
 
       statusBar.styleDefault();
       
@@ -27,20 +28,25 @@ export class MyApp {
     });
   }
 
-  onLoad(string) {
-    console.log(string);
+  onLoad(service: string) {
+    console.log(service);
 
-    if(string == "Social") {
-      this.socialSharing.canShareVia("instagram").then(() => {
-       this.socialSharing.shareViaInstagram("Museo Archeologia", null);
-        //this.page = HomePage;
-        //this.nav.push(this.page);
-      }).catch((err) => {
-        alert(err);
-      });
-
-    }    
-
+    switch(service) {
+      case "SocialService":
+        this.socialSharing.canShareVia("instagram").then(() => {
+          this.socialSharing.shareViaInstagram("Museo Archeologia", null);
+        }).catch((err) => {
+          alert("Errore! Non sono riuscito a connettermi con il social.");
+          });
+        break;
+      
+      case "InformazioniService":
+        this.events.publish('info');
+        break;
+      
+      default:
+        break;
+    } 
     this.menuCtrl.close();
   }
 }

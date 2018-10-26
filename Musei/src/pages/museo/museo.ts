@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, MenuController, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, MenuController, NavController, NavParams, Events } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 
@@ -13,9 +13,12 @@ export class MuseoPage {
   museo: any;
   classeMuseo: any;
 
-  constructor(public menuCtrl: MenuController, public nav: NavController, public navParams: NavParams, public tts: TextToSpeech) {
+  constructor(public menuCtrl: MenuController, public nav: NavController, public navParams: NavParams, public tts: TextToSpeech, public events: Events) {
     this.museo = this.navParams.get('musei');
     this.classeMuseo = this.navParams.get('classe1');
+    this.events.subscribe('info', (data)=> {
+      console.log(this.museo[0].INFO);
+    });
   }
 
   ionViewDidLoad() {
@@ -35,20 +38,20 @@ export class MuseoPage {
 
 
  //Apre il side menu
- openMenu() {
-   this.menuCtrl.open("menuMuseo");
+  openMenu() {
+    this.menuCtrl.open("menuMuseo");
  }
 
- read() {
+  read() {
     this.tts.speak({text: document.getElementById("museoDescrizione").innerText, locale: 'it-IT', rate: 0.88});
     document.getElementById("mic").style.display = "none";
     document.getElementById("disabled-mic").style.display = "inline";
  }
 
- stopRead() {
-  this.tts.speak("");
-  document.getElementById("mic").style.display = "inline";
-  document.getElementById("disabled-mic").style.display = "none";
+  stopRead() {
+    this.tts.speak("");
+    document.getElementById("mic").style.display = "inline";
+    document.getElementById("disabled-mic").style.display = "none";
  }
 
   //Associato al tasto per tornare all'home page

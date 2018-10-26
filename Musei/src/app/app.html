@@ -37,9 +37,9 @@
                 <ion-icon name="contact" item-left></ion-icon>
                 Login
             </button>
-            <button ion-item (click)=onLoad(CollezioniService)>
-                <ion-icon name="color-palette" item-left></ion-icon>
-                Collezioni
+            <button ion-item (click)="onLoad('InformazioniService')">
+                <ion-icon name="paper" item-left></ion-icon>
+                Informazioni
             </button>
             <button ion-item (click)=onLoad(NewsService)>
                 <ion-icon name="paper-plane" item-left></ion-icon>
@@ -53,7 +53,7 @@
                 <ion-icon name="pin" item-left></ion-icon>
                 Come raggiungerci
             </button>
-            <button ion-item (click)="onLoad('Social')">
+            <button ion-item (click)="onLoad('SocialService')">
                 <ion-icon name="logo-facebook" item-left></ion-icon>
                 Condivisione Social
             </button>
