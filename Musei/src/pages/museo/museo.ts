@@ -25,12 +25,12 @@ export class MuseoPage {
     idCardDescrizione.innerHTML = this.museo[0].DESCRIZIONE
     //calcolo altezza contenitore descrizione museo
     var idCardTitle = document.getElementById('museo_cardTitle');
-    var descrizioneHeight = idCardTitle.offsetHeight - idCardDescrizione.offsetTop;
-    idCardDescrizione.style.height = descrizioneHeight + "px";
+    idCardDescrizione.style.height = idCardTitle.offsetHeight - idCardDescrizione.offsetTop+ "px";
     //console.log(idCardTitle.offsetTop, idCardTitle.offsetHeight);
     //Disabilito il menu principale e abilito quello specifico del museo
     this.menuCtrl.enable(false, "menuPrincipale");
     this.menuCtrl.enable(true, "menuMuseo");
+
   }
 
 
