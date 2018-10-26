@@ -25709,6 +25709,10 @@ ion-navbar.toolbar {
   background-size: 0 !important;
 }
 
+page-home .spinnerCaricamento {
+  background: none;
+}
+
 page-home .gridHome {
   height: 100%;
   width: 100% !important;

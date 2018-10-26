@@ -24,9 +24,7 @@ export class MuseoPage {
     idCardDescrizione.innerHTML = this.museo[0].DESCRIZIONE
     //calcolo altezza contenitore descrizione museo
     var idCardTitle = document.getElementById('museo_cardTitle');
-    var descrizioneHeight = idCardTitle.offsetHeight - idCardDescrizione.offsetTop;
-    idCardDescrizione.style.height = descrizioneHeight + "px";
-    //console.log(idCardTitle.offsetTop, idCardTitle.offsetHeight);
+    idCardDescrizione.style.height = idCardTitle.offsetHeight - idCardDescrizione.offsetTop+ "px";
   }
 
 
