@@ -1,4 +1,31 @@
-<ion-menu [content]="mycontent">
+<ion-menu [content]="mycontent" id="menuPrincipale">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)=onLoad(LoginService)>
+                <ion-icon name="contact" item-left></ion-icon>
+                Login
+            </button>
+            <button ion-item (click)=onLoad(LoginService)>
+                <ion-icon name="locate" item-left></ion-icon>
+                Il museo più vicino a te
+            </button>
+            <button ion-item (click)=onLoad(LoginService)>
+                <ion-icon name="paper" item-left></ion-icon>
+                Informazioni generali
+            </button>
+            <button ion-item (click)=onLoad(LoginService)>
+                <ion-icon name="chatbubbles" item-left></ion-icon>
+                Contatti
+            </button>      
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-menu [content]="mycontent" id="menuMuseo">
     <ion-header>
         <ion-toolbar>
             <ion-title>Menu</ion-title>
