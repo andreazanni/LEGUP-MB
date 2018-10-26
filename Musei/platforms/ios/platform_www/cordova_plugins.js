@@ -61,6 +61,14 @@ module.exports = [
     "clobbers": [
       "window.StatusBar"
     ]
+  },
+  {
+    "id": "cordova-plugin-tts.tts",
+    "file": "plugins/cordova-plugin-tts/www/tts.js",
+    "pluginId": "cordova-plugin-tts",
+    "clobbers": [
+      "TTS"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -73,7 +81,8 @@ module.exports.metadata =
   "cordova-plugin-ionic-keyboard": "2.1.2",
   "es6-promise-plugin": "4.2.2",
   "cordova-plugin-x-socialsharing": "5.4.1",
-  "cordova-plugin-statusbar": "2.4.2"
+  "cordova-plugin-statusbar": "2.4.2",
+  "cordova-plugin-tts": "0.2.3"
 };
 // BOTTOM OF METADATA
 });

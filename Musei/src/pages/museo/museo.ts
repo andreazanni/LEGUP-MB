@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, MenuController, NavController, NavParams } from 'ionic-angular';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 
 @IonicPage()
@@ -12,7 +13,7 @@ export class MuseoPage {
   museo: any;
   classeMuseo: any;
 
-  constructor(public menuCtrl: MenuController, public nav: NavController, public navParams: NavParams) {
+  constructor(public menuCtrl: MenuController, public nav: NavController, public navParams: NavParams, public tts: TextToSpeech) {
     this.museo = this.navParams.get('musei');
     this.classeMuseo = this.navParams.get('classe1');
   }
@@ -36,6 +37,18 @@ export class MuseoPage {
  //Apre il side menu
  openMenu() {
    this.menuCtrl.open("menuMuseo");
+ }
+
+ read() {
+    this.tts.speak({text: document.getElementById("museoDescrizione").innerText, locale: 'it-IT', rate: 0.88});
+    document.getElementById("mic").style.display = "none";
+    document.getElementById("disabled-mic").style.display = "inline";
+ }
+
+ stopRead() {
+  this.tts.speak("");
+  document.getElementById("mic").style.display = "inline";
+  document.getElementById("disabled-mic").style.display = "none";
  }
 
   //Associato al tasto per tornare all'home page

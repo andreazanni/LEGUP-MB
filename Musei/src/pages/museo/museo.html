@@ -3,12 +3,17 @@
 		<button class="sideMenu" ion-button menuToggle (click)="openMenu()">
 			<ion-icon name="menu"></ion-icon>
 		</button>
-		<button class="home-button"ion-button icon-only (click)="goHomePage()">
+		<button class="vocal-button" id="mic" ion-button icon-only (click)="read()">
+			<ion-icon name="mic"></ion-icon>
+		</button>
+		<button class="vocal-button" id="disabled-mic" style="display:none" ion-button icon-only (click)="stopRead()">
+			<ion-icon name="mic-off"></ion-icon>
+		</button>
+		<button class="home-button" ion-button icon-only (click)="goHomePage()">
 			<ion-icon name="home"></ion-icon>
 		</button>
     	<div class="card-title" id="museo_cardTitle">{{museo[0].NOME}}
 				<div class="museo-content" id="descrizione">
-
 				</div>
 			</div>
   	</ion-card>
