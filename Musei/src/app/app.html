@@ -11,11 +11,11 @@
                 Login
             </button>
             <button ion-item (click)=onLoad(LoginService)>
-                <ion-icon name="locate" item-left></ion-icon>
+                <ion-icon name="walk" item-left></ion-icon>
                 Il museo più vicino a te
             </button>
             <button ion-item (click)=onLoad(LoginService)>
-                <ion-icon name="paper" item-left></ion-icon>
+                <ion-icon name="information-circle" item-left></ion-icon>
                 Informazioni generali
             </button>
             <button ion-item (click)=onLoad(LoginService)>
@@ -38,16 +38,20 @@
                 Login
             </button>
             <button ion-item (click)="onLoad('InformazioniService')">
-                <ion-icon name="paper" item-left></ion-icon>
+                <ion-icon name="information-circle" item-left></ion-icon>
                 Informazioni
+            </button>
+            <button ion-item (click)="onLoad('OrariService')">
+                <ion-icon name="alarm" item-left></ion-icon>
+                Orari
+            </button>
+            <button ion-item (click)="onLoad('BigliettiService')">
+                <ion-icon name="paper" item-left></ion-icon>
+                Biglietti
             </button>
             <button ion-item (click)=onLoad(NewsService)>
                 <ion-icon name="paper-plane" item-left></ion-icon>
                 News
-            </button>
-            <button ion-item (click)=onLoad(OrariService)>
-                <ion-icon name="alarm" item-left></ion-icon>
-                Orari
             </button>
             <button ion-item (click)=onLoad(IndicazioniService)>
                 <ion-icon name="pin" item-left></ion-icon>

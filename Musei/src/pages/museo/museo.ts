@@ -21,6 +21,14 @@ export class MuseoPage {
       console.log(this.museo[0].INFO);
       this.openInfo(this.museo[0].INFO);
     });
+
+    this.events.subscribe('orari', (data)=> {
+      console.log(this.museo[0].ORARI);
+    });
+
+    this.events.subscribe('biglietti', (data)=> {
+      console.log(this.museo[0].BIGLIETTI);
+    });
   }
 
   ionViewDidLoad() {

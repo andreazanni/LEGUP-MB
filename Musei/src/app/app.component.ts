@@ -44,7 +44,15 @@ export class MyApp {
         this.events.publish('info');
         break;
       
-      default:
+      case "OrariService":
+        this.events.publish('orari');
+        break;
+
+      case "BigliettiService":
+        this.events.publish('biglietti');
+        break;    
+      
+        default:
         break;
     } 
     this.menuCtrl.close();
