@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, MenuController, NavController, NavParams, Events } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
+import { ContentPage } from '../content/content';
 
 @IonicPage()
 @Component({
@@ -18,6 +19,7 @@ export class MuseoPage {
     this.classeMuseo = this.navParams.get('classe1');
     this.events.subscribe('info', (data)=> {
       console.log(this.museo[0].INFO);
+      this.openInfo(this.museo[0].INFO);
     });
   }
 
@@ -61,5 +63,12 @@ export class MuseoPage {
     //Riabilito il menu principale e disabilito quello specifico del museo
     this.menuCtrl.enable(true, "menuPrincipale");
     this.menuCtrl.enable(false, "menuMuseo");
+  }
+
+  openInfo(info: string){
+    console.log(info);
+    console.log(this.classeMuseo);
+    this.nav.push(ContentPage, {voceMenu: 'INFORMAZIONI', contenuto: info, museoClass: this.classeMuseo, contentClass: 'content_informazioni'});
+    this.nav.removeView(this.nav.last());
   }
 }

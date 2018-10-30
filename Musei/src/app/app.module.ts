@@ -13,6 +13,7 @@ import { MuseiPage } from '../pages/musei/musei';
 import { MuseoPage } from '../pages/museo/museo';
 import { RicercaMuseiProvider } from '../providers/ricerca-musei/ricerca-musei';
 import { HttpModule } from '@angular/http';
+import { ContentPage } from '../pages/content/content';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HttpModule } from '@angular/http';
 	  Splash,
 	  MuseiPage,
     MuseoPage,
+    ContentPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { HttpModule } from '@angular/http';
     HomePage,
 	  Splash,
 	  MuseiPage,
-    MuseoPage
+    MuseoPage,
+    ContentPage
   ],
   providers: [
     StatusBar,
