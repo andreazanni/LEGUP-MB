@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, MenuController, NavController, NavParams, Events } from 'ionic-angular';
+import { IonicPage, MenuController, NavController, NavParams, Events, Content } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 import { ContentPage } from '../content/content';
@@ -19,19 +19,22 @@ export class MuseoPage {
     this.classeMuseo = this.navParams.get('classe1');
     this.events.subscribe('info', (data)=> {
       console.log(this.museo[0].INFO);
-      this.openInfo(this.museo[0].INFO);
+      this.openInfo('info', this.museo[0].INFO);
     });
 
     this.events.subscribe('orari', (data)=> {
       console.log(this.museo[0].ORARI);
+      this.openInfo('orari', this.museo[0].ORARI);
     });
 
     this.events.subscribe('biglietti', (data)=> {
       console.log(this.museo[0].BIGLIETTI);
+      this.openInfo('biglietti', this.museo[0].BIGLIETTI);
     });
   }
 
   ionViewDidLoad() {
+    console.log('inizializzo la pagina MUSEO');
     var idClass = document.getElementById('paginaMuseo');
     idClass.classList.add(this.classeMuseo);
     var idCardDescrizione = document.getElementById('descrizione');
@@ -73,10 +76,28 @@ export class MuseoPage {
     this.menuCtrl.enable(false, "menuMuseo");
   }
 
-  openInfo(info: string){
-    console.log(info);
+  openInfo(servizio: string, content: string){
+    console.log(content);
     console.log(this.classeMuseo);
-    this.nav.push(ContentPage, {voceMenu: 'INFORMAZIONI', contenuto: info, museoClass: this.classeMuseo, contentClass: 'content_informazioni'});
+    this.menuCtrl.close("menuMuseo");
+    switch (servizio){
+      case 'info':
+      this.nav.push(ContentPage, {voceMenu: 'INFORMAZIONI', contenuto: content, museoClass: this.classeMuseo, contentClass: 'content_informazioni'});
+      break;
+
+      case 'orari':
+      this.nav.push(ContentPage, {voceMenu: 'ORARI', contenuto: content, museoClass: this.classeMuseo, contentClass: 'content_orari'});
+      break;
+
+      case 'biglietti':
+      this.nav.push(ContentPage, {voceMenu: 'BIGLIETTI', contenuto: content, museoClass: this.classeMuseo, contentClass: 'content_biglietti'});
+      break;
+
+      default:
+      break;
+    }
     this.nav.removeView(this.nav.last());
+    this.events.unsubscribe(servizio);
+    //console.log(this.nav.last());
   }
 }

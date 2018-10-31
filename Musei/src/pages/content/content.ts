@@ -44,6 +44,7 @@ export class ContentPage {
 
     this.menuCtrl.enable(false, "menuPrincipale");
     this.menuCtrl.enable(true, "menuMuseo");
+    console.log(this.myVoceMenu);
   }
 
   //Apre il side menu
@@ -52,7 +53,7 @@ export class ContentPage {
  }
 
   read() {
-    this.tts.speak({text: document.getElementById("museoDescrizione").innerText, locale: 'it-IT', rate: 0.88});
+    this.tts.speak({text: document.getElementById("contenuto").innerText, locale: 'it-IT', rate: 0.88});
     document.getElementById("mic").style.display = "none";
     document.getElementById("disabled-mic").style.display = "inline";
  }
