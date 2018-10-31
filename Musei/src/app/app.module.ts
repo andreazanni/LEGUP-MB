@@ -14,6 +14,8 @@ import { MuseoPage } from '../pages/museo/museo';
 import { RicercaMuseiProvider } from '../providers/ricerca-musei/ricerca-musei';
 import { HttpModule } from '@angular/http';
 import { ContentPage } from '../pages/content/content';
+import { Geolocation } from '@ionic-native/geolocation';
+import { Diagnostic } from '@ionic-native/diagnostic';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { ContentPage } from '../pages/content/content';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RicercaMuseiProvider,
     SocialSharing,
-    TextToSpeech
+    TextToSpeech,
+    Diagnostic,
+    Geolocation
   ]
 })
 export class AppModule {}

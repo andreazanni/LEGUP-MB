@@ -25667,10 +25667,42 @@ ion-navbar.toolbar {
 
 @font-face {
   font-family: 'Montserrat';
-  src: url("subset-Montserrat-Regular.eot");
-  src: url("subset-Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("subset-Montserrat-Regular.woff2") format("woff2"), url("subset-Montserrat-Regular.woff") format("woff"), url("subset-Montserrat-Regular.ttf") format("truetype"), url("subset-Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  src: url("../assets/fonts/subset-Montserrat-Regular.eot");
+  src: url("../assets/fonts/subset-Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-Regular.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-Regular.woff") format("woff"), url("../assets/fonts/subset-Montserrat-Regular.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-Regular.svg#Montserrat-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/subset-Montserrat-Light.eot");
+  src: url("../assets/fonts/subset-Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-Light.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-Light.woff") format("woff"), url("../assets/fonts/subset-Montserrat-Light.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-Light.svg#Montserrat-Light") format("svg");
+  font-weight: normal;
+  font-style: 300;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/subset-Montserrat-Regular.eot");
+  src: url("../assets/fonts/subset-Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-Regular.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-Regular.woff") format("woff"), url("../assets/fonts/subset-Montserrat-Regular.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-weight: normal;
+  font-style: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/subset-Montserrat-Bold.eot");
+  src: url("../assets/fonts/subset-Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-Bold.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-Bold.woff") format("woff"), url("../assets/fonts/subset-Montserrat-Bold.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-Bold.svg#Montserrat-Bold") format("svg");
+  font-weight: bold;
+  font-style: 700;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/subset-Montserrat-ExtraBold.eot");
+  src: url("../assets/fonts/subset-Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-ExtraBold.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-ExtraBold.woff") format("woff"), url("../assets/fonts/subset-Montserrat-ExtraBold.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-ExtraBold.svg#Montserrat-ExtraBold") format("svg");
+  font-weight: bold;
+  font-style: 800;
 }
 
 .menu-content-reveal {
@@ -25709,8 +25741,46 @@ ion-navbar.toolbar {
   background-size: 0 !important;
 }
 
-page-home .spinnerCaricamento {
-  background: none;
+page-content .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#5b4989), to(#e100ff));
+  background-image: linear-gradient(to top right, #5b4989, #e100ff);
+}
+
+page-content .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-content .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-content .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-content .museo-content {
+  display: none;
+}
+
+page-content .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-home {
+  /*.spinnerCaricamento {
+    background: none;
+  }
+*/
 }
 
 page-home .gridHome {
@@ -25855,6 +25925,11 @@ page-musei .colHome {
   padding: 0px;
 }
 
+page-musei .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 page-musei .back-musei {
   background-color: transparent;
   color: white;
@@ -25932,6 +26007,16 @@ page-museo .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+}
+
+page-museo .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-museo .vocal-button {
+  background-color: transparent;
+  color: white;
 }
 
 page-museo .museo-content {

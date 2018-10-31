@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, MenuController, NavController, NavParams, Events, Content } from 'ionic-angular';
+import { IonicPage, MenuController, NavController, NavParams, Events} from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 import { ContentPage } from '../content/content';

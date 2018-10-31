@@ -25667,10 +25667,42 @@ ion-navbar.toolbar {
 
 @font-face {
   font-family: 'Montserrat';
-  src: url("subset-Montserrat-Regular.eot");
-  src: url("subset-Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("subset-Montserrat-Regular.woff2") format("woff2"), url("subset-Montserrat-Regular.woff") format("woff"), url("subset-Montserrat-Regular.ttf") format("truetype"), url("subset-Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  src: url("../assets/fonts/subset-Montserrat-Regular.eot");
+  src: url("../assets/fonts/subset-Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-Regular.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-Regular.woff") format("woff"), url("../assets/fonts/subset-Montserrat-Regular.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-Regular.svg#Montserrat-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/subset-Montserrat-Light.eot");
+  src: url("../assets/fonts/subset-Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-Light.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-Light.woff") format("woff"), url("../assets/fonts/subset-Montserrat-Light.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-Light.svg#Montserrat-Light") format("svg");
+  font-weight: normal;
+  font-style: 300;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/subset-Montserrat-Regular.eot");
+  src: url("../assets/fonts/subset-Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-Regular.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-Regular.woff") format("woff"), url("../assets/fonts/subset-Montserrat-Regular.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-weight: normal;
+  font-style: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/subset-Montserrat-Bold.eot");
+  src: url("../assets/fonts/subset-Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-Bold.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-Bold.woff") format("woff"), url("../assets/fonts/subset-Montserrat-Bold.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-Bold.svg#Montserrat-Bold") format("svg");
+  font-weight: bold;
+  font-style: 700;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/subset-Montserrat-ExtraBold.eot");
+  src: url("../assets/fonts/subset-Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-Montserrat-ExtraBold.woff2") format("woff2"), url("../assets/fonts/subset-Montserrat-ExtraBold.woff") format("woff"), url("../assets/fonts/subset-Montserrat-ExtraBold.ttf") format("truetype"), url("../assets/fonts/subset-Montserrat-ExtraBold.svg#Montserrat-ExtraBold") format("svg");
+  font-weight: bold;
+  font-style: 800;
 }
 
 .menu-content-reveal {
@@ -25707,6 +25739,43 @@ ion-navbar.toolbar {
 
 .item-inner {
   background-size: 0 !important;
+}
+
+page-content .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#5b4989), to(#e100ff));
+  background-image: linear-gradient(to top right, #5b4989, #e100ff);
+}
+
+page-content .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-content .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-content .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-content .museo-content {
+  display: none;
+}
+
+page-home {
+  /*.spinnerCaricamento {
+    background: none;
+  }
+*/
 }
 
 page-home .gridHome {
@@ -25851,6 +25920,11 @@ page-musei .colHome {
   padding: 0px;
 }
 
+page-musei .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 page-musei .back-musei {
   background-color: transparent;
   color: white;
@@ -25930,6 +26004,20 @@ page-museo .home-button {
   float: right;
 }
 
+page-museo .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-museo .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-museo .museo-content {
+  display: none;
+}
+
 page-museo .museo_mambo .card-title {
   color: white;
   text-transform: uppercase;
@@ -25942,17 +26030,15 @@ page-museo .museo_mambo .card-title {
   padding-left: 10px;
   padding-right: 10px;
   position: absolute;
-  top: 48%;
-  height: 48%;
-}
-
-page-museo .museo-content {
-  display: none;
+  top: 38%;
+  height: 59%;
 }
 
 page-museo .museo_mambo .museo-content {
   display: block;
-  padding-top: 20%;
+  margin-top: 20%;
+  height: 78%;
+  overflow: auto;
 }
 
 page-museo .museo_mambo .museo-content p {
@@ -25965,12 +26051,55 @@ page-museo .museo_mambo .museo-content p {
 page-museo #paginaMuseo.museo_mambo {
   background-image: url("../assets/imgs/home/ArteModerna/MamboHome/mambohome.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 page-museo .museo_mambo .cardHome {
   background-color: transparent !important;
   background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(208, 47, 124, 0.7)), to(rgba(252, 103, 103, 0.7))) !important;
   background-image: linear-gradient(to top right, rgba(208, 47, 124, 0.7), rgba(252, 103, 103, 0.7)) !important;
+}
+
+page-museo .museo_musica .card-title {
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+  border-left: 1px white solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  top: 38%;
+  height: 59%;
+}
+
+page-museo .museo_musica .museo-content {
+  display: block;
+  margin-top: 20%;
+  height: 78%;
+  overflow: auto;
+}
+
+page-museo .museo_musica .museo-content p {
+  font-size: 10px !important;
+  font-weight: 600;
+  color: white;
+  text-align: justify;
+}
+
+page-museo #paginaMuseo.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaHome/musicahome.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-museo .museo_musica .cardHome {
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7))) !important;
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7)) !important;
 }
 
 .ios page-splash .scroll-content, .md page-splash .scroll-content {
