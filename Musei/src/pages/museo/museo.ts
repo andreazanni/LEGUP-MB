@@ -3,6 +3,8 @@ import { IonicPage, MenuController, NavController, NavParams, Events} from 'ioni
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 import { ContentPage } from '../content/content';
+import { InformazioniPage } from '../menu-Museo/informazioni/informazioni';
+import { OrariPage } from '../menu-Museo/orari/orari';
 
 @IonicPage()
 @Component({
@@ -82,11 +84,11 @@ export class MuseoPage {
     this.menuCtrl.close("menuMuseo");
     switch (servizio){
       case 'info':
-      this.nav.push(ContentPage, {voceMenu: 'INFORMAZIONI', contenuto: content, museoClass: this.classeMuseo, contentClass: 'content_informazioni'});
+      this.nav.push(InformazioniPage, {voceMenu: 'INFORMAZIONI', contenuto: content, museoClass: this.classeMuseo, contentClass: 'content_informazioni'});
       break;
 
       case 'orari':
-      this.nav.push(ContentPage, {voceMenu: 'ORARI', contenuto: content, museoClass: this.classeMuseo, contentClass: 'content_orari'});
+      this.nav.push(OrariPage, {voceMenu: 'ORARI', contenuto: content, museoClass: this.classeMuseo, contentClass: 'content_orari'});
       break;
 
       case 'biglietti':

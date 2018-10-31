@@ -11,6 +11,12 @@ import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-muse
 export class HomePage {
 
   constructor(public navCtrl: NavController, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+    for ( let i=0; i < this.navCtrl.length(); i++ )
+      {
+          let v = this.navCtrl.getViews()[i];
+          console.log(v.component.name);
+
+      }
   }
 
   AREA: any;

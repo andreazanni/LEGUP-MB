@@ -16,6 +16,8 @@ import { HttpModule } from '@angular/http';
 import { ContentPage } from '../pages/content/content';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Diagnostic } from '@ionic-native/diagnostic';
+import { InformazioniPage } from '../pages/menu-Museo/informazioni/informazioni';
+import { OrariPage } from '../pages/menu-Museo/orari/orari';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { Diagnostic } from '@ionic-native/diagnostic';
 	  Splash,
 	  MuseiPage,
     MuseoPage,
-    ContentPage
+    ContentPage,
+    InformazioniPage,
+    OrariPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import { Diagnostic } from '@ionic-native/diagnostic';
 	  Splash,
 	  MuseiPage,
     MuseoPage,
-    ContentPage
+    ContentPage,
+    InformazioniPage,
+    OrariPage
   ],
   providers: [
     StatusBar,
