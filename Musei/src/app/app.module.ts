@@ -16,8 +16,12 @@ import { HttpModule } from '@angular/http';
 import { ContentPage } from '../pages/content/content';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Diagnostic } from '@ionic-native/diagnostic';
-import { InformazioniPage } from '../pages/menu-Museo/informazioni/informazioni';
-import { OrariPage } from '../pages/menu-Museo/orari/orari';
+import { MmInformazioniPage } from '../pages/mm-informazioni/mm-informazioni';
+import { MmOrariPage } from '../pages/mm-orari/mm-orari';
+import { MmBigliettiPage } from '../pages/mm-biglietti/mm-biglietti';
+import { MmIlPalazzoPage } from '../pages/mm-il-palazzo/mm-il-palazzo';
+import { MmLeCollezioniPage } from '../pages/mm-le-collezioni/mm-le-collezioni';
+import { MmLaBibliotecaPage } from '../pages/mm-la-biblioteca/mm-la-biblioteca';
 
 @NgModule({
   declarations: [
@@ -27,8 +31,12 @@ import { OrariPage } from '../pages/menu-Museo/orari/orari';
 	  MuseiPage,
     MuseoPage,
     ContentPage,
-    InformazioniPage,
-    OrariPage
+    MmInformazioniPage,
+    MmOrariPage,
+    MmBigliettiPage,
+    MmIlPalazzoPage,
+    MmLeCollezioniPage,
+    MmLaBibliotecaPage
   ],
   imports: [
     BrowserModule,
@@ -43,8 +51,12 @@ import { OrariPage } from '../pages/menu-Museo/orari/orari';
 	  MuseiPage,
     MuseoPage,
     ContentPage,
-    InformazioniPage,
-    OrariPage
+    MmInformazioniPage,
+    MmOrariPage,
+    MmBigliettiPage,
+    MmIlPalazzoPage,
+    MmLeCollezioniPage,
+    MmLaBibliotecaPage
   ],
   providers: [
     StatusBar,
