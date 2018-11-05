@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, MenuController, NavController, NavParams, Events} from 'ionic-angular';
+import { IonicPage, MenuController, NavController, NavParams} from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
-import { ContentPage } from '../content/content';
-import { InformazioniPage } from '../menu-Museo/informazioni/informazioni';
-import { OrariPage } from '../menu-Museo/orari/orari';
+import { MenuPage } from '../menu/menu';
 
 @IonicPage()
 @Component({
@@ -15,28 +13,14 @@ export class MuseoPage {
 
   museo: any;
   classeMuseo: any;
+  contatore = 0;
 
-  constructor(public menuCtrl: MenuController, public nav: NavController, public navParams: NavParams, public tts: TextToSpeech, public events: Events) {
+  constructor(public menuCtrl: MenuController, public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech) {
     this.museo = this.navParams.get('musei');
     this.classeMuseo = this.navParams.get('classe1');
-    this.events.subscribe('info', (data)=> {
-      console.log(this.museo[0].INFO);
-      this.openInfo('info', this.museo[0].INFO);
-    });
-
-    this.events.subscribe('orari', (data)=> {
-      console.log(this.museo[0].ORARI);
-      this.openInfo('orari', this.museo[0].ORARI);
-    });
-
-    this.events.subscribe('biglietti', (data)=> {
-      console.log(this.museo[0].BIGLIETTI);
-      this.openInfo('biglietti', this.museo[0].BIGLIETTI);
-    });
   }
 
   ionViewDidLoad() {
-    console.log('inizializzo la pagina MUSEO');
     var idClass = document.getElementById('paginaMuseo');
     idClass.classList.add(this.classeMuseo);
     var idCardDescrizione = document.getElementById('descrizione');
@@ -44,17 +28,15 @@ export class MuseoPage {
     //calcolo altezza contenitore descrizione museo
     var idCardTitle = document.getElementById('museo_cardTitle');
     idCardDescrizione.style.height = idCardTitle.offsetHeight - idCardDescrizione.offsetTop+ "px";
-    //console.log(idCardTitle.offsetTop, idCardTitle.offsetHeight);
     //Disabilito il menu principale e abilito quello specifico del museo
     this.menuCtrl.enable(false, "menuPrincipale");
-    this.menuCtrl.enable(true, "menuMuseo");
-
   }
 
 
  //Apre il side menu
   openMenu() {
-    this.menuCtrl.open("menuMuseo");
+    this.navCtrl.push(MenuPage, {datiMuseo: this.museo, museoClass: this.classeMuseo}, {animate: true, direction: "back"});
+    this.navCtrl.removeView(this.navCtrl.last());
  }
 
   read() {
@@ -71,35 +53,10 @@ export class MuseoPage {
 
   //Associato al tasto per tornare all'home page
   goHomePage() {
-    this.nav.push(HomePage);
-    this.nav.removeView(this.nav.last());
+    this.navCtrl.push(HomePage);
+    this.navCtrl.removeView(this.navCtrl.last());
     //Riabilito il menu principale e disabilito quello specifico del museo
     this.menuCtrl.enable(true, "menuPrincipale");
-    this.menuCtrl.enable(false, "menuMuseo");
   }
 
-  openInfo(servizio: string, content: string){
-    console.log(content);
-    console.log(this.classeMuseo);
-    this.menuCtrl.close("menuMuseo");
-    switch (servizio){
-      case 'info':
-      this.nav.push(InformazioniPage, {voceMenu: 'INFORMAZIONI', contenuto: content, museoClass: this.classeMuseo, contentClass: 'content_informazioni'});
-      break;
-
-      case 'orari':
-      this.nav.push(OrariPage, {voceMenu: 'ORARI', contenuto: content, museoClass: this.classeMuseo, contentClass: 'content_orari'});
-      break;
-
-      case 'biglietti':
-      this.nav.push(ContentPage, {voceMenu: 'BIGLIETTI', contenuto: content, museoClass: this.classeMuseo, contentClass: 'content_biglietti'});
-      break;
-
-      default:
-      break;
-    }
-    this.nav.removeView(this.nav.last());
-    this.events.unsubscribe(servizio);
-    //console.log(this.nav.last());
-  }
 }

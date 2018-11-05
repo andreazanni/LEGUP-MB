@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController  } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
+import { MenuPage } from '../menu/menu';
 
 /**
  * Generated class for the MmLeCollezioniPage page.
@@ -21,25 +22,24 @@ export class MmLeCollezioniPage {
   myContenuto: string;
   myMuseoClass: string;
   myContentClass: string;
-  myNomeMuseo: string;
+  myMuseo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public menuCtrl: MenuController) {
     this.myVoceMenu = this.navParams.get('voceMenu');
     this.myContenuto = this.navParams.get('contenuto');
     this.myMuseoClass = this.navParams.get('museoClass');
     this.myContentClass = this.navParams.get('contenutoClass');
-    this.myNomeMuseo = this.navParams.get('nomeMuseo');
+    this.myMuseo = this.navParams.get('datiMuseo');
   }
 
   ionViewDidLoad() {
      // personalizzo la pagina di contenuto in base al museo e alla voce di menù selezionata
      console.log(this.myContenuto);
-     console.log(this.myNomeMuseo);
      var idClass = document.getElementById('paginaMmLeCollezioni');
      idClass.classList.add(this.myMuseoClass);
 
      document.getElementById('content_cardTitle').innerText = this.myVoceMenu;
-     document.getElementById('content_cardSubTitle').innerText = this.myNomeMuseo;
+     document.getElementById('content_cardSubTitle').innerText = this.myMuseo[0].NOME;
 
      var idCardContenuto = document.getElementById('contenuto');
      console.log(idCardContenuto);
@@ -47,7 +47,6 @@ export class MmLeCollezioniPage {
 
      var idContainerContenuto = document.getElementById('container-contenuto');
      var idContentHeader = document.getElementById('content-header');
-     var idContainerContent = document.getElementById('container-content');
      //calcolo l'altezza del contenitore contenuto sottraendo dall'altezza della pagina quella dell'header. Tolgo anche i 24px del padding che contengono il testo per far "respirare"
      //lo scrolling su lato inferiore
      idContainerContenuto.style.height = (idClass.offsetHeight - idContentHeader.offsetHeight) - 24 + "px";
@@ -56,13 +55,13 @@ export class MmLeCollezioniPage {
      console.log(idContainerContenuto.style.height);
 
      this.menuCtrl.enable(false, "menuPrincipale");
-     this.menuCtrl.enable(true, "menuMuseo");
      console.log(this.myVoceMenu);
   }
 
   //Apre il side menu
   openMenu() {
-    this.menuCtrl.open("menuMuseo");
+    this.navCtrl.push(MenuPage, {datiMuseo: this.myMuseo, museoClass: this.myMuseoClass}, {animate: true, direction: "back"});
+    this.navCtrl.removeView(this.navCtrl.last());
  }
 
   read() {
@@ -81,9 +80,7 @@ export class MmLeCollezioniPage {
   goHomePage() {
     this.navCtrl.push(HomePage);
     this.navCtrl.removeView(this.navCtrl.last());
-    //Riabilito il menu principale e disabilito quello specifico del museo
     this.menuCtrl.enable(true, "menuPrincipale");
-    this.menuCtrl.enable(false, "menuMuseo");
   }
 
 }

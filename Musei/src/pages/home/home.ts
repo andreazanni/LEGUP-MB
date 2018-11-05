@@ -11,12 +11,12 @@ import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-muse
 export class HomePage {
 
   constructor(public navCtrl: NavController, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
-    for ( let i=0; i < this.navCtrl.length(); i++ )
+    /*for ( let i=0; i < this.navCtrl.length(); i++ )
       {
           let v = this.navCtrl.getViews()[i];
-          console.log(v.component.name);
+          //console.log("Componente Home: " + v.component.name);
 
-      }
+      }*/
   }
 
   AREA: any;
@@ -26,7 +26,6 @@ export class HomePage {
   classMuseo: any;
   //Richiama il metodo che restituisce i musei associati ad un'area
   findMusei(string, isActive) {
-    console.log(isActive);
     if (isActive==false){
       let alertNotActive = this.alertCtrl.create({
         title: 'Coming soon...',
@@ -69,7 +68,7 @@ export class HomePage {
                 this.classMuseo = string;
             }
               this.navCtrl.push(MuseoPage, {musei: data, classe1: this.classMuseo});
-              console.log(this.classMuseo);
+              this.navCtrl.removeView(this.navCtrl.last());
             } else {
               //Altrimenti vado alla pagina dei musei dell'Area. Assegno le classi per area con nomenclatura "area_abbreviazionenomearea"
               switch(string){
@@ -80,6 +79,7 @@ export class HomePage {
                   this.classArea = string;
               }
                 this.navCtrl.push(MuseiPage, {musei: data, classe1: this.classArea});
+                this.navCtrl.removeView(this.navCtrl.last());
                 console.log(this.classArea);
             }
         }

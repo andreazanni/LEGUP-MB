@@ -31,7 +31,6 @@ export class MyApp {
   }
 
   onLoad(service: string) {
-    console.log(service);
 
     switch(service) {
       case "SocialService":
@@ -41,34 +40,21 @@ export class MyApp {
           alert("Errore! Non sono riuscito a connettermi con il social.");
           });
         break;
-      
-      case "InformazioniService":
-        this.events.publish('info');
-        break;
-      
-      case "OrariService":
-        this.events.publish('orari');
-        break;
-
-      case "BigliettiService":
-        this.events.publish('biglietti');
-        break;
 
       case "MuseoPiuVicinoService":
-      this.diagnostic.isLocationAvailable().then((success) => {
-        alert("Location: " + success);
-      }).catch((error) => {
-        alert(error);
-      });
+        this.diagnostic.isLocationAvailable().then((success) => {
+          alert("Location: " + success);
+        }).catch((error) => {
+          alert(error);
+        });
 
-
-      this.geolocation.getCurrentPosition().then((resp) => {
+        this.geolocation.getCurrentPosition().then((resp) => {
         console.log("Longitudine: " + resp.coords.longitude + " Latitudine: " + resp.coords.latitude);
-        var distance = this.calculateDistance(resp.coords.latitude, resp.coords.longitude) ;
+        //var distance = this.calculateDistance(resp.coords.latitude, resp.coords.longitude) ;
         //alert("Distanza: " + distance);
-       }).catch((error) => {
-         alert('Errore! Non sono riuscito a recuperare la posizione attuale');
-       });
+        }).catch((error) => {
+          alert('Errore! Non sono riuscito a recuperare la posizione attuale');
+        });
         break;
       
         default:
@@ -92,7 +78,7 @@ export class MyApp {
     
     var R = 6371e3; // metres
     var distanzaMinore = 0;
-    var museo;
+    //var museo;
 
     for (var key in musei) {
       var φ1 = this.toRad(latitudineIniziale);
@@ -109,7 +95,7 @@ export class MyApp {
 
       if(d < distanzaMinore || distanzaMinore === 0) {
         distanzaMinore = d;
-        museo = musei[key].museo;
+        //museo = musei[key].museo;
       }
 
     }
@@ -120,6 +106,6 @@ export class MyApp {
 
   toRad(Value) {
     return Value * Math.PI / 180;
-}
+  }
 }
 

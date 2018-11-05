@@ -13,7 +13,6 @@ import { MuseiPage } from '../pages/musei/musei';
 import { MuseoPage } from '../pages/museo/museo';
 import { RicercaMuseiProvider } from '../providers/ricerca-musei/ricerca-musei';
 import { HttpModule } from '@angular/http';
-import { ContentPage } from '../pages/content/content';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { MmInformazioniPage } from '../pages/mm-informazioni/mm-informazioni';
@@ -22,6 +21,7 @@ import { MmBigliettiPage } from '../pages/mm-biglietti/mm-biglietti';
 import { MmIlPalazzoPage } from '../pages/mm-il-palazzo/mm-il-palazzo';
 import { MmLeCollezioniPage } from '../pages/mm-le-collezioni/mm-le-collezioni';
 import { MmLaBibliotecaPage } from '../pages/mm-la-biblioteca/mm-la-biblioteca';
+import { MenuPage } from '../pages/menu/menu';
 
 @NgModule({
   declarations: [
@@ -30,13 +30,13 @@ import { MmLaBibliotecaPage } from '../pages/mm-la-biblioteca/mm-la-biblioteca';
 	  Splash,
 	  MuseiPage,
     MuseoPage,
-    ContentPage,
     MmInformazioniPage,
     MmOrariPage,
     MmBigliettiPage,
     MmIlPalazzoPage,
     MmLeCollezioniPage,
-    MmLaBibliotecaPage
+    MmLaBibliotecaPage,
+    MenuPage
   ],
   imports: [
     BrowserModule,
@@ -50,13 +50,13 @@ import { MmLaBibliotecaPage } from '../pages/mm-la-biblioteca/mm-la-biblioteca';
 	  Splash,
 	  MuseiPage,
     MuseoPage,
-    ContentPage,
     MmInformazioniPage,
     MmOrariPage,
     MmBigliettiPage,
     MmIlPalazzoPage,
     MmLeCollezioniPage,
-    MmLaBibliotecaPage
+    MmLaBibliotecaPage,
+    MenuPage
   ],
   providers: [
     StatusBar,
