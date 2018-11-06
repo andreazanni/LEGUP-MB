@@ -103,6 +103,10 @@
             {
               "xml": "<feature name=\"Diagnostic_Motion\"><param name=\"ios-package\" value=\"Diagnostic_Motion\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"NativePageTransitions\"><param name=\"ios-package\" value=\"NativePageTransitions\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -217,6 +221,9 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "com.telerik.plugins.nativepagetransitions": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -411,6 +418,14 @@
       "merges": [
         "cordova.plugins.diagnostic.motion"
       ]
+    },
+    {
+      "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+      "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+      "pluginId": "com.telerik.plugins.nativepagetransitions",
+      "clobbers": [
+        "window.plugins.nativepagetransitions"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -424,6 +439,7 @@
     "cordova-plugin-statusbar": "2.4.2",
     "cordova-plugin-tts": "0.2.3",
     "cordova-plugin-geolocation": "4.0.1",
-    "cordova.plugins.diagnostic": "4.0.10"
+    "cordova.plugins.diagnostic": "4.0.10",
+    "com.telerik.plugins.nativepagetransitions": "0.6.5"
   }
 }

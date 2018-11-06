@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions'
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -66,6 +67,7 @@ import { MenuPage } from '../pages/menu/menu';
     SocialSharing,
     TextToSpeech,
     Diagnostic,
+    NativePageTransitions,
     Geolocation
   ]
 })

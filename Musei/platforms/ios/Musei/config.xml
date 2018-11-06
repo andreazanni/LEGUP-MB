@@ -45,6 +45,56 @@
     <feature name="TTS">
         <param name="ios-package" value="CDVTTS" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <feature name="Diagnostic">
+        <param name="ios-package" value="Diagnostic" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Location">
+        <param name="ios-package" value="Diagnostic_Location" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Bluetooth">
+        <param name="ios-package" value="Diagnostic_Bluetooth" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Wifi">
+        <param name="ios-package" value="Diagnostic_Wifi" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Camera">
+        <param name="ios-package" value="Diagnostic_Camera" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Notifications">
+        <param name="ios-package" value="Diagnostic_Notifications" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Microphone">
+        <param name="ios-package" value="Diagnostic_Microphone" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Contacts">
+        <param name="ios-package" value="Diagnostic_Contacts" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Calendar">
+        <param name="ios-package" value="Diagnostic_Calendar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Reminders">
+        <param name="ios-package" value="Diagnostic_Reminders" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Motion">
+        <param name="ios-package" value="Diagnostic_Motion" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="NativePageTransitions">
+        <param name="ios-package" value="NativePageTransitions" />
+    </feature>
     <name>Musei</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -116,54 +166,4 @@
     <preference name="FadeSplashScreen" value="false" />
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="orientation" value="portrait" />
-    <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation" />
-    </feature>
-    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
-        <string>We use your location for full functionality of certain app features.</string>
-    </edit-config>
-    <feature name="Diagnostic">
-        <param name="ios-package" value="Diagnostic" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Location">
-        <param name="ios-package" value="Diagnostic_Location" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Bluetooth">
-        <param name="ios-package" value="Diagnostic_Bluetooth" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Wifi">
-        <param name="ios-package" value="Diagnostic_Wifi" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Camera">
-        <param name="ios-package" value="Diagnostic_Camera" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Notifications">
-        <param name="ios-package" value="Diagnostic_Notifications" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Microphone">
-        <param name="ios-package" value="Diagnostic_Microphone" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Contacts">
-        <param name="ios-package" value="Diagnostic_Contacts" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Calendar">
-        <param name="ios-package" value="Diagnostic_Calendar" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Reminders">
-        <param name="ios-package" value="Diagnostic_Reminders" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Motion">
-        <param name="ios-package" value="Diagnostic_Motion" />
-        <param name="onload" value="true" />
-    </feature>
 </widget>

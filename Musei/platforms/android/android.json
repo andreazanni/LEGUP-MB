@@ -31,6 +31,10 @@
             {
               "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.Geolocation\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"NativePageTransitions\"><param name=\"android-package\" value=\"com.telerik.plugins.nativepagetransitions.NativePageTransitions\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -150,6 +154,9 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "com.telerik.plugins.nativepagetransitions": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -310,6 +317,14 @@
       "merges": [
         "cordova.plugins.diagnostic.external_storage"
       ]
+    },
+    {
+      "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+      "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+      "pluginId": "com.telerik.plugins.nativepagetransitions",
+      "clobbers": [
+        "window.plugins.nativepagetransitions"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -322,6 +337,7 @@
     "cordova-plugin-statusbar": "2.4.2",
     "cordova-plugin-geolocation": "4.0.1",
     "cordova-plugin-tts": "0.2.3",
-    "cordova.plugins.diagnostic": "4.0.10"
+    "cordova.plugins.diagnostic": "4.0.10",
+    "com.telerik.plugins.nativepagetransitions": "0.6.5"
   }
 }

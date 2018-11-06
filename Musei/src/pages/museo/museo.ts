@@ -3,6 +3,7 @@ import { IonicPage, MenuController, NavController, NavParams} from 'ionic-angula
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 import { MenuPage } from '../menu/menu';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 @IonicPage()
 @Component({
@@ -15,7 +16,7 @@ export class MuseoPage {
   classeMuseo: any;
   contatore = 0;
 
-  constructor(public menuCtrl: MenuController, public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech) {
+  constructor(public menuCtrl: MenuController, public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public nativePageTransitions: NativePageTransitions) {
     this.museo = this.navParams.get('musei');
     this.classeMuseo = this.navParams.get('classe1');
   }
@@ -35,6 +36,11 @@ export class MuseoPage {
 
  //Apre il side menu
   openMenu() {
+    let options : NativeTransitionOptions = {
+      direction: 'right',
+      duration: 600
+    }
+    this.nativePageTransitions.flip(options);
     this.navCtrl.push(MenuPage, {datiMuseo: this.museo, museoClass: this.classeMuseo}, {animate: true, direction: "back"});
     this.navCtrl.removeView(this.navCtrl.last());
  }
