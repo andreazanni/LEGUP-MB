@@ -155,6 +155,14 @@ module.exports = [
     "merges": [
       "cordova.plugins.diagnostic.external_storage"
     ]
+  },
+  {
+    "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+    "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+    "pluginId": "com.telerik.plugins.nativepagetransitions",
+    "clobbers": [
+      "window.plugins.nativepagetransitions"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -169,7 +177,8 @@ module.exports.metadata =
   "cordova-plugin-statusbar": "2.4.2",
   "cordova-plugin-geolocation": "4.0.1",
   "cordova-plugin-tts": "0.2.3",
-  "cordova.plugins.diagnostic": "4.0.10"
+  "cordova.plugins.diagnostic": "4.0.10",
+  "com.telerik.plugins.nativepagetransitions": "0.6.5"
 };
 // BOTTOM OF METADATA
 });

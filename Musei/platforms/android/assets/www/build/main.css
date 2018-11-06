@@ -3791,8 +3791,132 @@ ion-icon::before {
   font-style: 800;
 }
 
+@font-face {
+  font-family: 'Amiri';
+  src: url("../assets/fonts/Amiri-Regular.eot");
+  src: url("../assets/fonts/Amiri-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Amiri-Regular.woff2") format("woff2"), url("../assets/fonts/Amiri-Regular.woff") format("woff"), url("../assets/fonts/Amiri-Regular.ttf") format("truetype"), url("../assets/fonts/Amiri-Regular.svg#Amiri-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Scheherazade';
+  src: url("../assets/fonts/Scheherazade-Regular.eot");
+  src: url("../assets/fonts/Scheherazade-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Scheherazade-Regular.woff2") format("woff2"), url("../assets/fonts/Scheherazade-Regular.woff") format("woff"), url("../assets/fonts/Scheherazade-Regular.ttf") format("truetype"), url("../assets/fonts/Scheherazade-Regular.svg#Scheherazade-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-ExtraLight.eot");
+  src: url("../assets/fonts/Poppins-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-ExtraLight.woff2") format("woff2"), url("../assets/fonts/Poppins-ExtraLight.woff") format("woff"), url("../assets/fonts/Poppins-ExtraLight.ttf") format("truetype"), url("../assets/fonts/Poppins-ExtraLight.svg#Poppins-ExtraLight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-SemiBold.eot");
+  src: url("../assets/fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-SemiBold.woff2") format("woff2"), url("../assets/fonts/Poppins-SemiBold.woff") format("woff"), url("../assets/fonts/Poppins-SemiBold.ttf") format("truetype"), url("../assets/fonts/Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Regular.eot");
+  src: url("../assets/fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Regular.woff2") format("woff2"), url("../assets/fonts/Poppins-Regular.woff") format("woff"), url("../assets/fonts/Poppins-Regular.ttf") format("truetype"), url("../assets/fonts/Poppins-Regular.svg#Poppins-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Scheherazade';
+  src: url("../assets/fonts/Scheherazade-Bold.eot");
+  src: url("../assets/fonts/Scheherazade-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Scheherazade-Bold.woff2") format("woff2"), url("../assets/fonts/Scheherazade-Bold.woff") format("woff"), url("../assets/fonts/Scheherazade-Bold.ttf") format("truetype"), url("../assets/fonts/Scheherazade-Bold.svg#Scheherazade-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amiri';
+  src: url("../assets/fonts/Amiri-BoldItalic.eot");
+  src: url("../assets/fonts/Amiri-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Amiri-BoldItalic.woff2") format("woff2"), url("../assets/fonts/Amiri-BoldItalic.woff") format("woff"), url("../assets/fonts/Amiri-BoldItalic.ttf") format("truetype"), url("../assets/fonts/Amiri-BoldItalic.svg#Amiri-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Light.eot");
+  src: url("../assets/fonts/Poppins-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Light.woff2") format("woff2"), url("../assets/fonts/Poppins-Light.woff") format("woff"), url("../assets/fonts/Poppins-Light.ttf") format("truetype"), url("../assets/fonts/Poppins-Light.svg#Poppins-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amiri';
+  src: url("../assets/fonts/Amiri-Bold.eot");
+  src: url("../assets/fonts/Amiri-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Amiri-Bold.woff2") format("woff2"), url("../assets/fonts/Amiri-Bold.woff") format("woff"), url("../assets/fonts/Amiri-Bold.ttf") format("truetype"), url("../assets/fonts/Amiri-Bold.svg#Amiri-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Medium.eot");
+  src: url("../assets/fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Medium.woff2") format("woff2"), url("../assets/fonts/Poppins-Medium.woff") format("woff"), url("../assets/fonts/Poppins-Medium.ttf") format("truetype"), url("../assets/fonts/Poppins-Medium.svg#Poppins-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Bold.eot");
+  src: url("../assets/fonts/Poppins-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Bold.woff2") format("woff2"), url("../assets/fonts/Poppins-Bold.woff") format("woff"), url("../assets/fonts/Poppins-Bold.ttf") format("truetype"), url("../assets/fonts/Poppins-Bold.svg#Poppins-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Black.eot");
+  src: url("../assets/fonts/Poppins-Black.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Black.woff2") format("woff2"), url("../assets/fonts/Poppins-Black.woff") format("woff"), url("../assets/fonts/Poppins-Black.ttf") format("truetype"), url("../assets/fonts/Poppins-Black.svg#Poppins-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Thin.eot");
+  src: url("../assets/fonts/Poppins-Thin.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Thin.woff2") format("woff2"), url("../assets/fonts/Poppins-Thin.woff") format("woff"), url("../assets/fonts/Poppins-Thin.ttf") format("truetype"), url("../assets/fonts/Poppins-Thin.svg#Poppins-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amiri';
+  src: url("../assets/fonts/Amiri-Italic.eot");
+  src: url("../assets/fonts/Amiri-Italic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Amiri-Italic.woff2") format("woff2"), url("../assets/fonts/Amiri-Italic.woff") format("woff"), url("../assets/fonts/Amiri-Italic.ttf") format("truetype"), url("../assets/fonts/Amiri-Italic.svg#Amiri-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-ExtraBold.eot");
+  src: url("../assets/fonts/Poppins-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Poppins-ExtraBold.ttf") format("truetype"), url("../assets/fonts/Poppins-ExtraBold.svg#Poppins-ExtraBold") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+
 body {
   font-family: "Montserrat" !important;
+}
+
+p {
+  font-family: "Poppins" !important;
 }
 
 ion-action-sheet {
@@ -25705,6 +25829,126 @@ ion-navbar.toolbar {
   font-style: 800;
 }
 
+@font-face {
+  font-family: 'Amiri';
+  src: url("../assets/fonts/Amiri-Regular.eot");
+  src: url("../assets/fonts/Amiri-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Amiri-Regular.woff2") format("woff2"), url("../assets/fonts/Amiri-Regular.woff") format("woff"), url("../assets/fonts/Amiri-Regular.ttf") format("truetype"), url("../assets/fonts/Amiri-Regular.svg#Amiri-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Scheherazade';
+  src: url("../assets/fonts/Scheherazade-Regular.eot");
+  src: url("../assets/fonts/Scheherazade-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Scheherazade-Regular.woff2") format("woff2"), url("../assets/fonts/Scheherazade-Regular.woff") format("woff"), url("../assets/fonts/Scheherazade-Regular.ttf") format("truetype"), url("../assets/fonts/Scheherazade-Regular.svg#Scheherazade-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-ExtraLight.eot");
+  src: url("../assets/fonts/Poppins-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-ExtraLight.woff2") format("woff2"), url("../assets/fonts/Poppins-ExtraLight.woff") format("woff"), url("../assets/fonts/Poppins-ExtraLight.ttf") format("truetype"), url("../assets/fonts/Poppins-ExtraLight.svg#Poppins-ExtraLight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-SemiBold.eot");
+  src: url("../assets/fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-SemiBold.woff2") format("woff2"), url("../assets/fonts/Poppins-SemiBold.woff") format("woff"), url("../assets/fonts/Poppins-SemiBold.ttf") format("truetype"), url("../assets/fonts/Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Regular.eot");
+  src: url("../assets/fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Regular.woff2") format("woff2"), url("../assets/fonts/Poppins-Regular.woff") format("woff"), url("../assets/fonts/Poppins-Regular.ttf") format("truetype"), url("../assets/fonts/Poppins-Regular.svg#Poppins-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Scheherazade';
+  src: url("../assets/fonts/Scheherazade-Bold.eot");
+  src: url("../assets/fonts/Scheherazade-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Scheherazade-Bold.woff2") format("woff2"), url("../assets/fonts/Scheherazade-Bold.woff") format("woff"), url("../assets/fonts/Scheherazade-Bold.ttf") format("truetype"), url("../assets/fonts/Scheherazade-Bold.svg#Scheherazade-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amiri';
+  src: url("../assets/fonts/Amiri-BoldItalic.eot");
+  src: url("../assets/fonts/Amiri-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Amiri-BoldItalic.woff2") format("woff2"), url("../assets/fonts/Amiri-BoldItalic.woff") format("woff"), url("../assets/fonts/Amiri-BoldItalic.ttf") format("truetype"), url("../assets/fonts/Amiri-BoldItalic.svg#Amiri-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Light.eot");
+  src: url("../assets/fonts/Poppins-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Light.woff2") format("woff2"), url("../assets/fonts/Poppins-Light.woff") format("woff"), url("../assets/fonts/Poppins-Light.ttf") format("truetype"), url("../assets/fonts/Poppins-Light.svg#Poppins-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amiri';
+  src: url("../assets/fonts/Amiri-Bold.eot");
+  src: url("../assets/fonts/Amiri-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Amiri-Bold.woff2") format("woff2"), url("../assets/fonts/Amiri-Bold.woff") format("woff"), url("../assets/fonts/Amiri-Bold.ttf") format("truetype"), url("../assets/fonts/Amiri-Bold.svg#Amiri-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Medium.eot");
+  src: url("../assets/fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Medium.woff2") format("woff2"), url("../assets/fonts/Poppins-Medium.woff") format("woff"), url("../assets/fonts/Poppins-Medium.ttf") format("truetype"), url("../assets/fonts/Poppins-Medium.svg#Poppins-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Bold.eot");
+  src: url("../assets/fonts/Poppins-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Bold.woff2") format("woff2"), url("../assets/fonts/Poppins-Bold.woff") format("woff"), url("../assets/fonts/Poppins-Bold.ttf") format("truetype"), url("../assets/fonts/Poppins-Bold.svg#Poppins-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Black.eot");
+  src: url("../assets/fonts/Poppins-Black.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Black.woff2") format("woff2"), url("../assets/fonts/Poppins-Black.woff") format("woff"), url("../assets/fonts/Poppins-Black.ttf") format("truetype"), url("../assets/fonts/Poppins-Black.svg#Poppins-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-Thin.eot");
+  src: url("../assets/fonts/Poppins-Thin.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-Thin.woff2") format("woff2"), url("../assets/fonts/Poppins-Thin.woff") format("woff"), url("../assets/fonts/Poppins-Thin.ttf") format("truetype"), url("../assets/fonts/Poppins-Thin.svg#Poppins-Thin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amiri';
+  src: url("../assets/fonts/Amiri-Italic.eot");
+  src: url("../assets/fonts/Amiri-Italic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Amiri-Italic.woff2") format("woff2"), url("../assets/fonts/Amiri-Italic.woff") format("woff"), url("../assets/fonts/Amiri-Italic.ttf") format("truetype"), url("../assets/fonts/Amiri-Italic.svg#Amiri-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../assets/fonts/Poppins-ExtraBold.eot");
+  src: url("../assets/fonts/Poppins-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Poppins-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Poppins-ExtraBold.ttf") format("truetype"), url("../assets/fonts/Poppins-ExtraBold.svg#Poppins-ExtraBold") format("svg");
+  font-weight: 800;
+  font-style: normal;
+}
+
 .menu-content-reveal {
   -webkit-box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.7) !important;
   box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.7) !important;
@@ -25739,36 +25983,6 @@ ion-navbar.toolbar {
 
 .item-inner {
   background-size: 0 !important;
-}
-
-page-content .headerContent {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 30%;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#5b4989), to(#e100ff));
-  background-image: linear-gradient(to top right, #5b4989, #e100ff);
-}
-
-page-content .sideMenu {
-  background-color: transparent;
-  color: white;
-}
-
-page-content .home-button {
-  background-color: transparent;
-  color: white;
-  margin: 0 2%;
-  float: right;
-}
-
-page-content .vocal-button {
-  background-color: transparent;
-  color: white;
-}
-
-page-content .museo-content {
-  display: none;
 }
 
 page-home {
@@ -25877,6 +26091,547 @@ page-home #card-musica .card-gradient {
 page-home #card-patrimonioindustriale .card-gradient {
   background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(43, 104, 175, 0.7)), to(rgba(145, 186, 251, 0.7)));
   background-image: linear-gradient(to top right, rgba(43, 104, 175, 0.7), rgba(145, 186, 251, 0.7));
+}
+
+page-menu .back-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-biglietti .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-biglietti .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-biglietti .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-biglietti .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-biglietti .museo-content {
+  display: none;
+}
+
+page-mm-biglietti .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-biglietti .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-biglietti .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-biglietti .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-biglietti #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-biglietti #contenuto {
+  text-align: justify;
+}
+
+page-mm-biglietti #paginaMmBiglietti.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-biglietti #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+page-mm-il-palazzo .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-il-palazzo .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-il-palazzo .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-il-palazzo .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-il-palazzo .museo-content {
+  display: none;
+}
+
+page-mm-il-palazzo .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-il-palazzo .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-il-palazzo .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-il-palazzo .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-il-palazzo #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-il-palazzo #contenuto {
+  text-align: justify;
+}
+
+page-mm-il-palazzo #paginaMmIlPalazzo.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-il-palazzo #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+page-mm-informazioni .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-informazioni .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-informazioni .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-informazioni .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-informazioni .museo-content {
+  display: none;
+}
+
+page-mm-informazioni .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-informazioni .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-informazioni .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-informazioni .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-informazioni #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-informazioni #contenuto {
+  text-align: justify;
+}
+
+page-mm-informazioni #paginaMmInformazioni.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-informazioni h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+page-mm-la-biblioteca .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-la-biblioteca .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-la-biblioteca .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-la-biblioteca .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-la-biblioteca .museo-content {
+  display: none;
+}
+
+page-mm-la-biblioteca .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-la-biblioteca .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-la-biblioteca .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-la-biblioteca .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-la-biblioteca #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-la-biblioteca #contenuto {
+  text-align: justify;
+}
+
+page-mm-la-biblioteca #paginaMmLaBiblioteca.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-la-biblioteca #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+page-mm-le-collezioni .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-le-collezioni .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-le-collezioni .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-le-collezioni .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-le-collezioni .museo-content {
+  display: none;
+}
+
+page-mm-le-collezioni .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-le-collezioni .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-le-collezioni .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-le-collezioni .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-le-collezioni #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-le-collezioni #contenuto {
+  text-align: justify;
+}
+
+page-mm-le-collezioni #paginaMmLeCollezioni.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-le-collezioni #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+page-mm-orari .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-orari .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-orari .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-orari .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-orari .museo-content {
+  display: none;
+}
+
+page-mm-orari .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-orari .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-orari .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-orari .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-orari #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-orari #contenuto {
+  text-align: justify;
+}
+
+page-mm-orari #paginaMmOrari.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-orari h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 page-musei .gridHome {

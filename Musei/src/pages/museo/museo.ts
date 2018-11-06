@@ -14,7 +14,7 @@ export class MuseoPage {
 
   museo: any;
   classeMuseo: any;
-  contatore = 0;
+  ultimo: string;
 
   constructor(public menuCtrl: MenuController, public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public nativePageTransitions: NativePageTransitions) {
     this.museo = this.navParams.get('musei');
@@ -41,7 +41,7 @@ export class MuseoPage {
       duration: 600
     }
     this.nativePageTransitions.flip(options);
-    this.navCtrl.push(MenuPage, {datiMuseo: this.museo, museoClass: this.classeMuseo}, {animate: true, direction: "back"});
+    this.navCtrl.push(MenuPage, {datiMuseo: this.museo, museoClass: this.classeMuseo, ultimo: "MuseoService"}, {animate: true, direction: "back"});
     this.navCtrl.removeView(this.navCtrl.last());
  }
 

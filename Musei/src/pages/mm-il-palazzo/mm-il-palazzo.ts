@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, MenuController  } from 'ionic-angu
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 import { MenuPage } from '../menu/menu';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 /**
  * Generated class for the MmIlPalazzoPage page.
@@ -24,7 +25,7 @@ export class MmIlPalazzoPage {
   myContentClass: string;
   myMuseo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public menuCtrl: MenuController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public menuCtrl: MenuController, public nativePageTransitions: NativePageTransitions) {
     this.myVoceMenu = this.navParams.get('voceMenu');
     this.myContenuto = this.navParams.get('contenuto');
     this.myMuseoClass = this.navParams.get('museoClass');
@@ -60,7 +61,12 @@ export class MmIlPalazzoPage {
 
   //Apre il side menu
   openMenu() {
-    this.navCtrl.push(MenuPage, {datiMuseo: this.myMuseo, museoClass: this.myMuseoClass}, {animate: true, direction: "back"});
+    let options : NativeTransitionOptions = {
+      direction: 'right',
+      duration: 600
+    }
+    this.nativePageTransitions.flip(options);
+    this.navCtrl.push(MenuPage, {datiMuseo: this.myMuseo, museoClass: this.myMuseoClass, ultimo: "PalazzoService"}, {animate: true, direction: "back"});
     this.navCtrl.removeView(this.navCtrl.last());
  }
 

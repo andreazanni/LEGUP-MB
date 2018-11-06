@@ -62,8 +62,8 @@
 		EB6FEF5CB92D4064A2536F27 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619957D91BD440A3AAAFFF4C /* AddressBook.framework */; };
 		C57E6DE7B4A6416F8C6B2F9C /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF9881309FF4F468177FC23 /* EventKit.framework */; };
 		B585EF4E842941FAAFFDD92C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F74A73A059400D9601A759 /* CoreMotion.framework */; };
-		B153367B8C1D4F63B429C93B /* NativePageTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = A5AC1F66FDA44C60A2D81E55 /* NativePageTransitions.m */; };
-		3875AFE6271848DFA8796913 /* AppDelegate+nativepagetransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB865B4A41748C181122BBC /* AppDelegate+nativepagetransitions.m */; };
+		FD227C88190642F0A67D044D /* NativePageTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4A291CD9514D7D8EF2A3B3 /* NativePageTransitions.m */; };
+		9F4984AE62134EB68EFEEE96 /* AppDelegate+nativepagetransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB63C3B1D5D4C0B8742BDF1 /* AppDelegate+nativepagetransitions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,10 +198,10 @@
 		619957D91BD440A3AAAFFF4C /* AddressBook.framework */ = {isa = PBXFileReference; name = "AddressBook.framework"; path = "System/Library/Frameworks/AddressBook.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		4CF9881309FF4F468177FC23 /* EventKit.framework */ = {isa = PBXFileReference; name = "EventKit.framework"; path = "System/Library/Frameworks/EventKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		98F74A73A059400D9601A759 /* CoreMotion.framework */ = {isa = PBXFileReference; name = "CoreMotion.framework"; path = "System/Library/Frameworks/CoreMotion.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		A5AC1F66FDA44C60A2D81E55 /* NativePageTransitions.m */ = {isa = PBXFileReference; name = "NativePageTransitions.m"; path = "com.telerik.plugins.nativepagetransitions/NativePageTransitions.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		7FB865B4A41748C181122BBC /* AppDelegate+nativepagetransitions.m */ = {isa = PBXFileReference; name = "AppDelegate+nativepagetransitions.m"; path = "com.telerik.plugins.nativepagetransitions/AppDelegate+nativepagetransitions.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		8DDAA1FA0A2144C7A098BB1B /* NativePageTransitions.h */ = {isa = PBXFileReference; name = "NativePageTransitions.h"; path = "com.telerik.plugins.nativepagetransitions/NativePageTransitions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		8DAE1934B1F4428F80AD0495 /* AppDelegate+nativepagetransitions.h */ = {isa = PBXFileReference; name = "AppDelegate+nativepagetransitions.h"; path = "com.telerik.plugins.nativepagetransitions/AppDelegate+nativepagetransitions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6E4A291CD9514D7D8EF2A3B3 /* NativePageTransitions.m */ = {isa = PBXFileReference; name = "NativePageTransitions.m"; path = "com.telerik.plugins.nativepagetransitions/NativePageTransitions.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		BAB63C3B1D5D4C0B8742BDF1 /* AppDelegate+nativepagetransitions.m */ = {isa = PBXFileReference; name = "AppDelegate+nativepagetransitions.m"; path = "com.telerik.plugins.nativepagetransitions/AppDelegate+nativepagetransitions.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		CC2D23C2ECBC4A67B2EFE7A7 /* NativePageTransitions.h */ = {isa = PBXFileReference; name = "NativePageTransitions.h"; path = "com.telerik.plugins.nativepagetransitions/NativePageTransitions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		A61B61E9BB9F400BB2EC549C /* AppDelegate+nativepagetransitions.h */ = {isa = PBXFileReference; name = "AppDelegate+nativepagetransitions.h"; path = "com.telerik.plugins.nativepagetransitions/AppDelegate+nativepagetransitions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,10 +406,10 @@
 				A663239653F24ABE9D048F07 /* Diagnostic_Calendar.h */,
 				76D84C91F42F4AB1B39D6ADD /* Diagnostic_Reminders.h */,
 				44EB87A19C60452BAE0E05DB /* Diagnostic_Motion.h */,
-				A5AC1F66FDA44C60A2D81E55 /* NativePageTransitions.m */,
-				7FB865B4A41748C181122BBC /* AppDelegate+nativepagetransitions.m */,
-				8DDAA1FA0A2144C7A098BB1B /* NativePageTransitions.h */,
-				8DAE1934B1F4428F80AD0495 /* AppDelegate+nativepagetransitions.h */,
+				6E4A291CD9514D7D8EF2A3B3 /* NativePageTransitions.m */,
+				BAB63C3B1D5D4C0B8742BDF1 /* AppDelegate+nativepagetransitions.m */,
+				CC2D23C2ECBC4A67B2EFE7A7 /* NativePageTransitions.h */,
+				A61B61E9BB9F400BB2EC549C /* AppDelegate+nativepagetransitions.h */,
 			);
 			name = Plugins;
 			path = Musei/Plugins;
@@ -577,8 +577,8 @@
 				1603B2821FE841B2AF681D6C /* Diagnostic_Calendar.m in Sources */,
 				C656A6B9A7A6461391AFB98A /* Diagnostic_Reminders.m in Sources */,
 				62A52AAD307F4BC18FF6A395 /* Diagnostic_Motion.m in Sources */,
-				B153367B8C1D4F63B429C93B /* NativePageTransitions.m in Sources */,
-				3875AFE6271848DFA8796913 /* AppDelegate+nativepagetransitions.m in Sources */,
+				FD227C88190642F0A67D044D /* NativePageTransitions.m in Sources */,
+				9F4984AE62134EB68EFEEE96 /* AppDelegate+nativepagetransitions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
