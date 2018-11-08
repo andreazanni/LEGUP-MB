@@ -46,6 +46,17 @@ app.post('/api/museo', function(req, musei){
       });
 });
 
+app.post('/api/geolocalizzazioni', function(req, musei){
+  MongoClient.connect(url, function(err, db) {
+      if (err) throw err;
+      var dbo = db.db("musei");
+      dbo.collection("geolocalizzazioni").find().toArray(function(err, result) {
+        if (err) throw err;
+        musei.json(result);
+        db.close();
+      });
+    });
+});
 
 app.listen(3000);
 console.log("App listening on port 3000");
