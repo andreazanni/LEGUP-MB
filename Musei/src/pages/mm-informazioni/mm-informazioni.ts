@@ -58,21 +58,6 @@ export class MmInformazioniPage {
 
      this.menuCtrl.enable(false, "menuPrincipale");
      this.initializeBackButton();
-
-     /*fetch('http://informa.comune.bologna.it/iperbole/rss/events/25', {mode: 'no-cors'}).then((res) => {
-      res.text().then((xmlTxt) => {
-        var domParser = new DOMParser()
-        let doc = domParser.parseFromString(xmlTxt, 'text/html')
-        doc.querySelectorAll('item').forEach((item) => {
-           let h1 = document.createElement('h1')
-            h1.textContent = item.querySelector('title').textContent
-             document.querySelector('output').appendChild(h1)
-             console.log(item.querySelector('title').textContent)
-             //console.log(document.querySelector('output').appendChild(h1))
-           })
-         })
-    })*/
-
   }
 
   ionViewWillLeave() {

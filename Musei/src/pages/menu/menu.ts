@@ -8,6 +8,8 @@ import { MmLeCollezioniPage } from '../mm-le-collezioni/mm-le-collezioni';
 import { MmLaBibliotecaPage } from '../mm-la-biblioteca/mm-la-biblioteca';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 import { MuseoPage } from '../museo/museo';
+import { MmComeRaggiungerciPage } from '../mm-come-raggiungerci/mm-come-raggiungerci';
+import { MmEventiPage } from '../mm-eventi/mm-eventi';
 
 @IonicPage()
 @Component({
@@ -95,6 +97,14 @@ export class MenuPage {
         this.navCtrl.removeView(this.navCtrl.last());
         break;
 
+      case "IndicazioniService":
+        if (animation) {
+          this.nativePageTransitions.flip(options);
+        }
+        this.navCtrl.push(MmComeRaggiungerciPage, {datiMuseo: this.museo, voceMenu: 'COME RAGGIUNGERCI', contenuto: this.museo[0].COME_RAGGIUNGERCI, museoClass: this.classe, contentClass: 'content_come_raggiungerci'});
+        this.navCtrl.removeView(this.navCtrl.last());
+        break;
+
       case "OrariService":
         if (animation) {
           this.nativePageTransitions.flip(options);
@@ -109,6 +119,13 @@ export class MenuPage {
         }
         this.navCtrl.push(MmBigliettiPage, {datiMuseo: this.museo, voceMenu: 'BIGLIETTI', contenuto: this.museo[0].BIGLIETTI, museoClass: this.classe, contentClass: 'content_biglietti'});
         this.navCtrl.removeView(this.navCtrl.last());
+        break;
+
+      case "EventiService":
+        if (animation) {
+          this.nativePageTransitions.flip(options);
+        }
+        this.navCtrl.push(MmEventiPage, {datiMuseo: this.museo, voceMenu: 'EVENTI', contenuto: this.museo[0].EVENTI, museoClass: this.classe, contentClass: 'content_eventi'});
         break;
 
         default:

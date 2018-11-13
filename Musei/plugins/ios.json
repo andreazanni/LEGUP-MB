@@ -39,10 +39,20 @@
     },
     "com.telerik.plugins.nativepagetransitions": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+      "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes",
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {
     "es6-promise-plugin": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   }

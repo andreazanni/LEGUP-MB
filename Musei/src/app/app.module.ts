@@ -22,7 +22,10 @@ import { MmBigliettiPage } from '../pages/mm-biglietti/mm-biglietti';
 import { MmIlPalazzoPage } from '../pages/mm-il-palazzo/mm-il-palazzo';
 import { MmLeCollezioniPage } from '../pages/mm-le-collezioni/mm-le-collezioni';
 import { MmLaBibliotecaPage } from '../pages/mm-la-biblioteca/mm-la-biblioteca';
+import { MmComeRaggiungerciPage } from '../pages/mm-come-raggiungerci/mm-come-raggiungerci';
+import { MmEventiPage } from '../mm-eventi/mm-eventi';
 import { MenuPage } from '../pages/menu/menu';
+import { LaunchNavigator } from '@ionic-native/launch-navigator';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,8 @@ import { MenuPage } from '../pages/menu/menu';
     MmIlPalazzoPage,
     MmLeCollezioniPage,
     MmLaBibliotecaPage,
+    MmComeRaggiungerciPage,
+    MmEventiPage,
     MenuPage
   ],
   imports: [
@@ -59,6 +64,8 @@ import { MenuPage } from '../pages/menu/menu';
     MmIlPalazzoPage,
     MmLeCollezioniPage,
     MmLaBibliotecaPage,
+    MmComeRaggiungerciPage,
+    MmEventiPage,
     MenuPage
   ],
   providers: [
@@ -70,7 +77,8 @@ import { MenuPage } from '../pages/menu/menu';
     TextToSpeech,
     Diagnostic,
     NativePageTransitions,
-    Geolocation
+    Geolocation,
+    LaunchNavigator
   ]
 })
 export class AppModule {}

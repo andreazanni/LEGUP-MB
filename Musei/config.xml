@@ -94,4 +94,8 @@
     </plugin>
     <plugin name="cordova.plugins.diagnostic" spec="^4.0.10" />
     <plugin name="com.telerik.plugins.nativepagetransitions" spec="^0.6.5" />
+    <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" spec="^4.2.2">
+        <variable name="OKHTTP_VERSION" value="3.+" />
+        <variable name="LOCATION_USAGE_DESCRIPTION" value="This app requires access to your location for navigation purposes" />
+    </plugin>
 </widget>

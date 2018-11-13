@@ -23,6 +23,7 @@
     "@ionic-native/core": "~4.12.0",
     "@ionic-native/diagnostic": "^4.16.0",
     "@ionic-native/geolocation": "^4.16.0",
+    "@ionic-native/launch-navigator": "^4.17.0",
     "@ionic-native/native-page-transitions": "^4.17.0",
     "@ionic-native/social-sharing": "^4.12.2",
     "@ionic-native/splash-screen": "^4.12.0",
@@ -32,7 +33,9 @@
     "com.telerik.plugins.nativepagetransitions": "^0.6.5",
     "cordova-android": "6.3.0",
     "cordova-ios": "4.5.5",
+    "cordova-plugin-actionsheet": "^2.3.3",
     "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-dialogs": "^2.0.1",
     "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-ionic-keyboard": "^2.1.2",
     "cordova-plugin-ionic-webview": "^2.1.0",
@@ -47,6 +50,7 @@
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "^4.2.2",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
@@ -68,7 +72,11 @@
         "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
       },
       "cordova.plugins.diagnostic": {},
-      "com.telerik.plugins.nativepagetransitions": {}
+      "com.telerik.plugins.nativepagetransitions": {},
+      "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+        "OKHTTP_VERSION": "3.+",
+        "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes"
+      }
     },
     "platforms": [
       "android",

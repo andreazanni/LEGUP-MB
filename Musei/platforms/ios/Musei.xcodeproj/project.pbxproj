@@ -64,6 +64,14 @@
 		B585EF4E842941FAAFFDD92C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F74A73A059400D9601A759 /* CoreMotion.framework */; };
 		FD227C88190642F0A67D044D /* NativePageTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4A291CD9514D7D8EF2A3B3 /* NativePageTransitions.m */; };
 		9F4984AE62134EB68EFEEE96 /* AppDelegate+nativepagetransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB63C3B1D5D4C0B8742BDF1 /* AppDelegate+nativepagetransitions.m */; };
+		416515AB26164B95AD9B93C0 /* ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C347DA3D39144C35B3E5CBAB /* ActionSheet.m */; };
+		EF0D028FFB45468D85CAB7D0 /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C2D7279AD741128EB3B63D /* CDVNotification.m */; };
+		6064F194328346FAAD4F7518 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B62EF0DBA234AFEBB5C6763 /* CDVNotification.bundle */; };
+		5F0322F3FF4D4547A1A83354 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB153F02FA84D988FB1A7E5 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		363EAC411D914464AA8296C6 /* LaunchNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D26F43AADC4F7D8500C64E /* LaunchNavigator.m */; };
+		74EB6F252E4F4999989DE6C6 /* LN_Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3053A6640818479D8BA2199E /* LN_Reachability.m */; };
+		D98DE654FD754A4C9A29E97F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F830B52A644AB18F59B7C3 /* MapKit.framework */; };
+		186CE61454804D938BC4F7AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D750F2EF2C4A71A8B17B3A /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +210,18 @@
 		BAB63C3B1D5D4C0B8742BDF1 /* AppDelegate+nativepagetransitions.m */ = {isa = PBXFileReference; name = "AppDelegate+nativepagetransitions.m"; path = "com.telerik.plugins.nativepagetransitions/AppDelegate+nativepagetransitions.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		CC2D23C2ECBC4A67B2EFE7A7 /* NativePageTransitions.h */ = {isa = PBXFileReference; name = "NativePageTransitions.h"; path = "com.telerik.plugins.nativepagetransitions/NativePageTransitions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		A61B61E9BB9F400BB2EC549C /* AppDelegate+nativepagetransitions.h */ = {isa = PBXFileReference; name = "AppDelegate+nativepagetransitions.h"; path = "com.telerik.plugins.nativepagetransitions/AppDelegate+nativepagetransitions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C347DA3D39144C35B3E5CBAB /* ActionSheet.m */ = {isa = PBXFileReference; name = "ActionSheet.m"; path = "cordova-plugin-actionsheet/ActionSheet.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		AE779A58A670408DA1329F14 /* ActionSheet.h */ = {isa = PBXFileReference; name = "ActionSheet.h"; path = "cordova-plugin-actionsheet/ActionSheet.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C2C2D7279AD741128EB3B63D /* CDVNotification.m */ = {isa = PBXFileReference; name = "CDVNotification.m"; path = "cordova-plugin-dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4E2D2448C0A94C4183646C64 /* CDVNotification.h */ = {isa = PBXFileReference; name = "CDVNotification.h"; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1B62EF0DBA234AFEBB5C6763 /* CDVNotification.bundle */ = {isa = PBXFileReference; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		1CB153F02FA84D988FB1A7E5 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		47D26F43AADC4F7D8500C64E /* LaunchNavigator.m */ = {isa = PBXFileReference; name = "LaunchNavigator.m"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LaunchNavigator.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		3053A6640818479D8BA2199E /* LN_Reachability.m */ = {isa = PBXFileReference; name = "LN_Reachability.m"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LN_Reachability.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		3767A21C0F6F41679D0C7551 /* LaunchNavigator.h */ = {isa = PBXFileReference; name = "LaunchNavigator.h"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LaunchNavigator.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		2DCB7DF640B44CBCACD8F0F4 /* LN_Reachability.h */ = {isa = PBXFileReference; name = "LN_Reachability.h"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LN_Reachability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		46F830B52A644AB18F59B7C3 /* MapKit.framework */ = {isa = PBXFileReference; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		66D750F2EF2C4A71A8B17B3A /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +243,9 @@
 				EB6FEF5CB92D4064A2536F27 /* AddressBook.framework in Frameworks */,
 				C57E6DE7B4A6416F8C6B2F9C /* EventKit.framework in Frameworks */,
 				B585EF4E842941FAAFFDD92C /* CoreMotion.framework in Frameworks */,
+				5F0322F3FF4D4547A1A83354 /* AudioToolbox.framework in Frameworks */,
+				D98DE654FD754A4C9A29E97F /* MapKit.framework in Frameworks */,
+				186CE61454804D938BC4F7AD /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +308,7 @@
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* Musei-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
+				1B62EF0DBA234AFEBB5C6763 /* CDVNotification.bundle */,
 			);
 			name = Resources;
 			path = Musei/Resources;
@@ -306,6 +330,9 @@
 				619957D91BD440A3AAAFFF4C /* AddressBook.framework */,
 				4CF9881309FF4F468177FC23 /* EventKit.framework */,
 				98F74A73A059400D9601A759 /* CoreMotion.framework */,
+				1CB153F02FA84D988FB1A7E5 /* AudioToolbox.framework */,
+				46F830B52A644AB18F59B7C3 /* MapKit.framework */,
+				66D750F2EF2C4A71A8B17B3A /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -410,6 +437,14 @@
 				BAB63C3B1D5D4C0B8742BDF1 /* AppDelegate+nativepagetransitions.m */,
 				CC2D23C2ECBC4A67B2EFE7A7 /* NativePageTransitions.h */,
 				A61B61E9BB9F400BB2EC549C /* AppDelegate+nativepagetransitions.h */,
+				C347DA3D39144C35B3E5CBAB /* ActionSheet.m */,
+				AE779A58A670408DA1329F14 /* ActionSheet.h */,
+				C2C2D7279AD741128EB3B63D /* CDVNotification.m */,
+				4E2D2448C0A94C4183646C64 /* CDVNotification.h */,
+				47D26F43AADC4F7D8500C64E /* LaunchNavigator.m */,
+				3053A6640818479D8BA2199E /* LN_Reachability.m */,
+				3767A21C0F6F41679D0C7551 /* LaunchNavigator.h */,
+				2DCB7DF640B44CBCACD8F0F4 /* LN_Reachability.h */,
 			);
 			name = Plugins;
 			path = Musei/Plugins;
@@ -510,6 +545,7 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+				6064F194328346FAAD4F7518 /* CDVNotification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +615,10 @@
 				62A52AAD307F4BC18FF6A395 /* Diagnostic_Motion.m in Sources */,
 				FD227C88190642F0A67D044D /* NativePageTransitions.m in Sources */,
 				9F4984AE62134EB68EFEEE96 /* AppDelegate+nativepagetransitions.m in Sources */,
+				416515AB26164B95AD9B93C0 /* ActionSheet.m in Sources */,
+				EF0D028FFB45468D85CAB7D0 /* CDVNotification.m in Sources */,
+				363EAC411D914464AA8296C6 /* LaunchNavigator.m in Sources */,
+				74EB6F252E4F4999989DE6C6 /* LN_Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

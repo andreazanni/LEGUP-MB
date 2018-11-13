@@ -26189,6 +26189,95 @@ page-mm-biglietti #contenuto h4 {
   text-transform: uppercase;
 }
 
+page-mm-come-raggiungerci .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-come-raggiungerci .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-come-raggiungerci .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-come-raggiungerci .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-come-raggiungerci .museo-content {
+  display: none;
+}
+
+page-mm-come-raggiungerci .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-come-raggiungerci .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-come-raggiungerci .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-come-raggiungerci .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-come-raggiungerci #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-come-raggiungerci #contenuto {
+  text-align: justify;
+}
+
+page-mm-come-raggiungerci #paginaMmComeRaggiungerci.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-come-raggiungerci #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
 page-mm-il-palazzo .headerContent {
   padding: 0;
   margin: 0;

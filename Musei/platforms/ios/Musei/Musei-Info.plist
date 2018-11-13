@@ -29,6 +29,23 @@
     <key>LSApplicationQueriesSchemes</key>
     <array>
       <string>instagram</string>
+      <string>citymapper</string>
+      <string>comgooglemaps</string>
+      <string>navigon</string>
+      <string>transit</string>
+      <string>waze</string>
+      <string>yandexnavi</string>
+      <string>uber</string>
+      <string>tomtomhome</string>
+      <string>com.sygic.aura</string>
+      <string>here-route</string>
+      <string>moovit</string>
+      <string>lyft</string>
+      <string>mapsme</string>
+      <string>cabify</string>
+      <string>baidumap</string>
+      <string>taxis99</string>
+      <string>iosamap</string>
     </array>
     <key>LSRequiresIPhoneOS</key>
     <true/>
@@ -81,7 +98,7 @@
     <key>UIViewControllerBasedStatusBarAppearance</key>
     <false/>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>This app requires access to your location when the screen is on and the app is displayed.</string>
+    <string>This app requires access to your location for navigation purposes</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>This app requires constant access to your location in order to track your position, even when the screen is off or the app is in the background.</string>
     <key>NSLocationAlwaysUsageDescription</key>
