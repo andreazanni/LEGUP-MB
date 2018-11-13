@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, ModalController, MenuController, Nav, Events, AlertController, LoadingController } from 'ionic-angular';
+import { Platform, ModalController, MenuController, Nav, AlertController, LoadingController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -20,14 +20,13 @@ export class MyApp {
   geoMusei: any;
 
   constructor(public socialSharing: SocialSharing, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, public menuCtrl: MenuController, 
-  public events: Events, public diagnostic: Diagnostic, public geolocation: Geolocation, public alertCtrl: AlertController, public loadingCtrl: LoadingController,
-  public museiService: RicercaMuseiProvider) {
+  public diagnostic: Diagnostic, public geolocation: Geolocation, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public museiService: RicercaMuseiProvider) {
 
       platform.ready().then(() => {
         statusBar.styleDefault();
 	      let splash = modalCtrl.create(Splash);
 	      splash.present();
-	      //splashScreen.hide();
+        //splashScreen.hide();
       });
 
       //Carico già all'avvio dell'app le geolocalizzazioni dei musei

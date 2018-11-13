@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 import { MmInformazioniPage } from '../mm-informazioni/mm-informazioni';
 import { MmOrariPage } from '../mm-orari/mm-orari';
 import { MmBigliettiPage } from '../mm-biglietti/mm-biglietti';
@@ -19,8 +19,9 @@ export class MenuPage {
   museo: any;
   classe: string;
   ultimo: string;
+  unregisterBackButtonAction: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public nativePageTransitions: NativePageTransitions) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public nativePageTransitions: NativePageTransitions, public platform: Platform) {
     this.museo = this.navParams.get('datiMuseo');
     this.classe = this.navParams.get('museoClass');
     this.ultimo = this.navParams.get('ultimo');
@@ -28,6 +29,21 @@ export class MenuPage {
 
   return() {
     this.onLoad(this.ultimo, false);
+  }
+
+  ionViewDidLoad() {
+    this.initializeBackButton();
+  }
+
+  ionViewWillLeave() {
+    this.unregisterBackButtonAction && this.unregisterBackButtonAction();
+  }
+
+  initializeBackButton(): void {
+    this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+      this.navCtrl.push(MuseoPage, {musei: this.museo, classe1: this.classe});
+      this.navCtrl.removeView(this.navCtrl.last());
+    });
   }
 
   onLoad(service: string, animation: boolean) {
@@ -44,6 +60,7 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MuseoPage, {musei: this.museo, classe1: this.classe});
+        this.navCtrl.removeView(this.navCtrl.last());
       break;
 
       case "PalazzoService":
@@ -51,6 +68,7 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MmIlPalazzoPage, {datiMuseo: this.museo, voceMenu: 'IL PALAZZO', contenuto: this.museo[0].IL_PALAZZO, museoClass: this.classe, contentClass: 'content_il_palazzo'});
+        this.navCtrl.removeView(this.navCtrl.last());
         break;
 
       case "CollezioniService":
@@ -58,6 +76,7 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MmLeCollezioniPage, {datiMuseo: this.museo, voceMenu: 'LE COLLEZIONI', contenuto: this.museo[0].LE_COLLEZIONI, museoClass: this.classe, contentClass: 'content_le_collezioni'});
+        this.navCtrl.removeView(this.navCtrl.last());
         break;
 
       case "BibliotecaService":
@@ -65,6 +84,7 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MmLaBibliotecaPage, {datiMuseo: this.museo, voceMenu: 'LA BIBLIOTECA', contenuto: this.museo[0].LA_BIBLIOTECA, museoClass: this.classe, contentClass: 'content_la_biblioteca'});
+        this.navCtrl.removeView(this.navCtrl.last());
         break;
 
       case "InformazioniService":
@@ -72,6 +92,7 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MmInformazioniPage, {datiMuseo: this.museo, voceMenu: 'INFORMAZIONI', contenuto: this.museo[0].INFO, museoClass: this.classe, contentClass: 'content_informazioni'});
+        this.navCtrl.removeView(this.navCtrl.last());
         break;
 
       case "OrariService":
@@ -79,6 +100,7 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MmOrariPage, {datiMuseo: this.museo, voceMenu: 'ORARI', contenuto: this.museo[0].ORARI, museoClass: this.classe, contentClass: 'content_orari'});
+        this.navCtrl.removeView(this.navCtrl.last());
         break;
 
       case "BigliettiService":
@@ -86,6 +108,7 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MmBigliettiPage, {datiMuseo: this.museo, voceMenu: 'BIGLIETTI', contenuto: this.museo[0].BIGLIETTI, museoClass: this.classe, contentClass: 'content_biglietti'});
+        this.navCtrl.removeView(this.navCtrl.last());
         break;
 
         default:

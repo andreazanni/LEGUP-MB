@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController, Platform } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { MuseoPage } from '../museo/museo';
 import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-musei';
@@ -15,8 +15,10 @@ export class MuseiPage {
   musei: any;
   classeArea: any;
   classMuseoArea: any;
+  unregisterBackButtonAction: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController,
+    public platform: Platform) {
     this.musei = this.navParams.get('musei');
     this.classeArea = this.navParams.get('classe1');
   }
@@ -52,9 +54,8 @@ export class MuseiPage {
               this.classMuseoArea = string;
           }
         }
-          this.navCtrl.push(MuseoPage, {musei: data, classe1: this.classMuseoArea});
+          this.navCtrl.push(MuseoPage, {musei: data, classe1: this.classMuseoArea, museiTotali: this.musei, classeAreaTotale: this.classeArea});
           this.navCtrl.removeView(this.navCtrl.last());
-          console.log(this.classMuseoArea);
       }
     });
   }
@@ -64,6 +65,17 @@ export class MuseiPage {
     var idClass = document.getElementById('paginaArea');
     idClass.classList.remove(this.classeArea);
     idClass.classList.add(this.classeArea);
+    this.initializeBackButton();
+  }
+
+  ionViewWillLeave() {
+    this.unregisterBackButtonAction && this.unregisterBackButtonAction();
+  }
+
+  initializeBackButton(): void {
+    this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+      this.goHomePage();
+    });
   }
 
   //Associato al tasto per tornare all'home page.

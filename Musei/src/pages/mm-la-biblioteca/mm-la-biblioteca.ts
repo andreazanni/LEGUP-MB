@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, Platform  } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 import { MenuPage } from '../menu/menu';
+import { MuseoPage } from '../museo/museo';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 /**
@@ -24,8 +25,10 @@ export class MmLaBibliotecaPage {
   myMuseoClass: string;
   myContentClass: string;
   myMuseo: any;
+  unregisterBackButtonAction: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public menuCtrl: MenuController, public nativePageTransitions: NativePageTransitions) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public menuCtrl: MenuController, public nativePageTransitions: NativePageTransitions,
+    public platform: Platform) {
     this.myVoceMenu = this.navParams.get('voceMenu');
     this.myContenuto = this.navParams.get('contenuto');
     this.myMuseoClass = this.navParams.get('museoClass');
@@ -51,12 +54,20 @@ export class MmLaBibliotecaPage {
      //calcolo l'altezza del contenitore contenuto sottraendo dall'altezza della pagina quella dell'header. Tolgo anche i 24px del padding che contengono il testo per far "respirare"
      //lo scrolling su lato inferiore
      idContainerContenuto.style.height = (idClass.offsetHeight - idContentHeader.offsetHeight) - 24 + "px";
-     console.log(idClass.offsetHeight);
-     console.log(idContentHeader.offsetHeight);
-     console.log(idContainerContenuto.style.height);
 
      this.menuCtrl.enable(false, "menuPrincipale");
-     console.log(this.myVoceMenu);
+     this.initializeBackButton();
+  }
+
+  ionViewWillLeave() {
+    this.unregisterBackButtonAction && this.unregisterBackButtonAction();
+  }
+
+  initializeBackButton(): void {
+    this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+      this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
+      this.navCtrl.removeView(this.navCtrl.last());
+    });
   }
 
   //Apre il side menu

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController, AlertController} from 'ionic-angular';
+import { NavController, LoadingController, AlertController, Platform } from 'ionic-angular';
 import { MuseiPage } from '../musei/musei';
 import { MuseoPage } from '../museo/museo';
 import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-musei';
@@ -10,7 +10,7 @@ import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-muse
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController, public platform: Platform) {
     /*for ( let i=0; i < this.navCtrl.length(); i++ )
       {
           let v = this.navCtrl.getViews()[i];
@@ -22,8 +22,24 @@ export class HomePage {
   AREA: any;
   NOME: any;
 
+  unregisterBackButtonAction: any;
   classArea: any;
   classMuseo: any;
+
+  ionViewDidLoad() {
+    this.initializeBackButton();
+  }
+
+  ionViewWillLeave() {
+    this.unregisterBackButtonAction && this.unregisterBackButtonAction();
+  }
+
+  initializeBackButton(): void {
+    this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+      this.platform.exitApp();
+    });
+  }
+
   //Richiama il metodo che restituisce i musei associati ad un'area
   findMusei(string, isActive) {
     if (isActive==false){

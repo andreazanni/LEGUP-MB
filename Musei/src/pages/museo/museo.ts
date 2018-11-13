@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, MenuController, NavController, NavParams} from 'ionic-angular';
+import { IonicPage, MenuController, NavController, NavParams, Platform} from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 import { MenuPage } from '../menu/menu';
+import { MuseiPage } from '../musei/musei';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 @IonicPage()
@@ -15,10 +16,16 @@ export class MuseoPage {
   museo: any;
   classeMuseo: any;
   ultimo: string;
+  unregisterBackButtonAction: any;
+  museiTotali: any;
+  classeAreaTotale: string;
 
-  constructor(public menuCtrl: MenuController, public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public nativePageTransitions: NativePageTransitions) {
+  constructor(public menuCtrl: MenuController, public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public nativePageTransitions: NativePageTransitions,
+    public platform: Platform) {
     this.museo = this.navParams.get('musei');
     this.classeMuseo = this.navParams.get('classe1');
+    this.museiTotali = this.navParams.get('museiTotali');
+    this.classeAreaTotale = this.navParams.get('classeAreaTotale');
   }
 
   ionViewDidLoad() {
@@ -31,8 +38,24 @@ export class MuseoPage {
     idCardDescrizione.style.height = idCardTitle.offsetHeight - idCardDescrizione.offsetTop+ "px";
     //Disabilito il menu principale e abilito quello specifico del museo
     this.menuCtrl.enable(false, "menuPrincipale");
+    
+    this.initializeBackButton();
+  }
+  
+  ionViewWillLeave() {
+    this.unregisterBackButtonAction && this.unregisterBackButtonAction();
   }
 
+  initializeBackButton(): void {
+    this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+      if (this.museiTotali != undefined && this.classeAreaTotale != undefined) {
+        this.navCtrl.push(MuseiPage, {musei: this.museiTotali, classe1: this.classeAreaTotale});
+        this.navCtrl.removeView(this.navCtrl.last());
+      } else {
+        this.goHomePage();
+      }
+    });
+  }
 
  //Apre il side menu
   openMenu() {
