@@ -1,0 +1,111 @@
+page-mm-eventi {
+
+  .headerContent {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 30%;
+    background-color: transparent !important;
+    background-image: linear-gradient(to top right, rgba(91,73,137,0.7), rgba(225,0,255,0.7));
+  }
+
+  .sideMenu {
+		background-color: transparent;
+		color: white;
+	}
+
+	.home-button {
+		background-color: transparent;
+		color: white;
+		margin: 0 2%;
+		float: right;
+	}
+
+	.vocal-button {
+		background-color: transparent;
+		color: white;
+  }
+
+  .museo-content {
+		display: none;
+  }
+
+  .button-md {
+    box-shadow: none !important;
+  }
+
+  .card-title {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin: 10% auto 5px auto;
+    border-bottom: 1px solid white;
+    width: 50%;
+  }
+
+  .card-subtitle {
+    color: white;
+    font-family: 'Amiri';
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    width: 200px;
+    margin: auto;
+    line-height: 1em;
+}
+
+
+.container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+#container-contenuto {
+  overflow: auto;
+}
+
+#contenuto {
+  text-align: justify;
+}
+
+#paginaMmEventi.museo_musica {
+    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+h4 {
+    background: -webkit-linear-gradient(45deg, rgb(91, 73, 137), rgb(225, 0, 255) 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.itemFeed {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.itemFeed img {
+    width: 50%;
+    float: left;
+    padding-top: 5px;
+    margin-right: 5px;
+}
+
+.dateItem {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+}
