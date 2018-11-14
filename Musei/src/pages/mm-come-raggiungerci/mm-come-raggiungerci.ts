@@ -35,7 +35,6 @@ export class MmComeRaggiungerciPage {
 
   ionViewDidLoad() {
      // personalizzo la pagina di contenuto in base al museo e alla voce di menù selezionata
-     console.log(this.myContenuto);
      var idClass = document.getElementById('paginaMmComeRaggiungerci');
      idClass.classList.add(this.myMuseoClass);
 
@@ -43,8 +42,14 @@ export class MmComeRaggiungerciPage {
      document.getElementById('content_cardSubTitle').innerText = this.myMuseo[0].NOME;
 
      var idCardContenuto = document.getElementById('contenuto');
-     console.log(idCardContenuto);
      idCardContenuto.innerHTML = this.myContenuto;
+     
+     let divItem = document.createElement('div')
+     divItem.className = 'contenuto';
+     idCardContenuto.appendChild(divItem);
+     divItem.appendChild(document.getElementById('descrizione-iniziale'));
+     divItem.appendChild(document.getElementById('bottone'));
+     divItem.appendChild(document.getElementById('descrizione-finale'));
 
      var idContainerContenuto = document.getElementById('container-contenuto');
      var idContentHeader = document.getElementById('content-header');
@@ -92,6 +97,13 @@ export class MmComeRaggiungerciPage {
 
   //Associato al tasto per tornare all'home page
   goHomePage() {
+    this.navCtrl.push(HomePage);
+    this.navCtrl.removeView(this.navCtrl.last());
+    this.menuCtrl.enable(true, "menuPrincipale");
+  }
+
+  //Metodo chiamato dal pulsante che va ad aprire l'app di navigazione
+  calcolaPercorso() {
     //Parte un loader per mascherare il calcolo in background del museo piu vicino
     let spinnerLoading = this.loadingCtrl.create();
     spinnerLoading.present();
@@ -133,12 +145,13 @@ export class MmComeRaggiungerciPage {
                 }
               },
             }
-  
+            
+            //Avvio l'app di calcolo percorso
             this.launchNavigator.navigate(destination, options)
-              .then(
-                success => alert('Launched navigator'),
-                error => alert('Error launching navigator: ' + error)
-              );
+            .then()
+            .catch(() => {
+              alertFinale.present();
+            })
           }).catch(() => {
             spinnerLoading.dismiss();
             alertFinale.present();
@@ -155,11 +168,6 @@ export class MmComeRaggiungerciPage {
     spinnerLoading.dismiss();
     alertAuthorized.present();
   });
-
-    //this.navCtrl.push(HomePage);
-    //this.navCtrl.removeView(this.navCtrl.last());
-    //this.menuCtrl.enable(true, "menuPrincipale");
-  }
-
+}
 
 }

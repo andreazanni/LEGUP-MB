@@ -18,9 +18,16 @@
       </div>
     </ion-card>
     <ion-card id="card-contenuto" class="container-content">
-      <div id="container-contenuto">
-        <div id="contenuto" class="content-content">
+      <div id="container-contenuto" class="container">
+        <div id="bottone">
+          <button class="portami-class" id="portami-button" ion-button (click)="calcolaPercorso()">
+              <ion-icon id="pin" name="pin"></ion-icon>
+              &nbsp;
+              Portami al Museo
+          </button>
+          <br><br>
         </div>
+        <div id="contenuto" class="content-content"></div>
       </div>
     </ion-card>
   </ion-content>

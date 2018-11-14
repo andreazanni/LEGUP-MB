@@ -82,7 +82,7 @@ export class MmEventiPage {
             let periodoItem = document.createElement('div')
             periodoItem.className = 'dateItem'
             divItem.appendChild(periodoItem)
-            let dateItem = item.querySelector('pubdate').textContent + " - " + item.querySelector('pubenddate').textContent
+            let dateItem = "("+ item.querySelector('pubdate').textContent + " - " + item.querySelector('pubenddate').textContent + ")"
             periodoItem.textContent = dateItem
             let descrizioneItem = document.createElement('p')
             divItem.appendChild(descrizioneItem)
