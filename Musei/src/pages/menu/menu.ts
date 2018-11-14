@@ -10,6 +10,7 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 import { MuseoPage } from '../museo/museo';
 import { MmComeRaggiungerciPage } from '../mm-come-raggiungerci/mm-come-raggiungerci';
 import { MmEventiPage } from '../mm-eventi/mm-eventi';
+import { MmContattiPage} from '../mm-contatti/mm-contatti';
 
 @IonicPage()
 @Component({
@@ -128,9 +129,16 @@ export class MenuPage {
         this.navCtrl.push(MmEventiPage, {datiMuseo: this.museo, voceMenu: 'EVENTI', contenuto: this.museo[0].EVENTI, museoClass: this.classe, contentClass: 'content_eventi'});
         break;
 
+      case "ContattiService":
+        if (animation) {
+          this.nativePageTransitions.flip(options);
+        }
+        this.navCtrl.push(MmContattiPage, {datiMuseo: this.museo, voceMenu: 'CONTATTI', contenuto: this.museo[0].CONTATTI, museoClass: this.classe, contentClass: 'content_contatti'});
+        break;
+
         default:
         break;
-    } 
+    }
   }
 
 }

@@ -26,6 +26,7 @@ import { MmComeRaggiungerciPage } from '../pages/mm-come-raggiungerci/mm-come-ra
 import { MmEventiPage } from '../pages/mm-eventi/mm-eventi';
 import { MenuPage } from '../pages/menu/menu';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
+import { MmContattiPage } from '../pages/mm-contatti/mm-contatti';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
     MmLaBibliotecaPage,
     MmComeRaggiungerciPage,
     MmEventiPage,
-    MenuPage
+    MenuPage,
+    MmContattiPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,8 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
     MmLaBibliotecaPage,
     MmComeRaggiungerciPage,
     MmEventiPage,
-    MenuPage
+    MenuPage,
+    MmContattiPage
   ],
   providers: [
     StatusBar,
