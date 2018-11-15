@@ -11,6 +11,8 @@ import { MuseoPage } from '../museo/museo';
 import { MmComeRaggiungerciPage } from '../mm-come-raggiungerci/mm-come-raggiungerci';
 import { MmEventiPage } from '../mm-eventi/mm-eventi';
 import { MmContattiPage} from '../mm-contatti/mm-contatti';
+import { MmSaleEspositivePage } from '../mm-sale-espositive/mm-sale-espositive';
+
 
 @IonicPage()
 @Component({
@@ -134,6 +136,13 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MmContattiPage, {datiMuseo: this.museo, voceMenu: 'CONTATTI', contenuto: this.museo[0].CONTATTI, museoClass: this.classe, contentClass: 'content_contatti'});
+        break;
+
+      case "SaleEspositiveService":
+        if (animation) {
+          this.nativePageTransitions.flip(options);
+        }
+        this.navCtrl.push(MmSaleEspositivePage, {datiMuseo: this.museo, voceMenu: 'SALE ESPOSITIVE', contenuto: this.museo[0].SALE_ESPOSITIVE, museoClass: this.classe, contentClass: 'content_sale_espositive'});
         break;
 
         default:

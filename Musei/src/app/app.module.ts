@@ -27,6 +27,7 @@ import { MmEventiPage } from '../pages/mm-eventi/mm-eventi';
 import { MenuPage } from '../pages/menu/menu';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
 import { MmContattiPage } from '../pages/mm-contatti/mm-contatti';
+import { MmSaleEspositivePage } from '../pages/mm-sale-espositive/mm-sale-espositive';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MmContattiPage } from '../pages/mm-contatti/mm-contatti';
     MmComeRaggiungerciPage,
     MmEventiPage,
     MenuPage,
-    MmContattiPage
+    MmContattiPage,
+    MmSaleEspositivePage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,8 @@ import { MmContattiPage } from '../pages/mm-contatti/mm-contatti';
     MmComeRaggiungerciPage,
     MmEventiPage,
     MenuPage,
-    MmContattiPage
+    MmContattiPage,
+    MmSaleEspositivePage
   ],
   providers: [
     StatusBar,
