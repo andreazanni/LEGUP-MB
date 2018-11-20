@@ -211,6 +211,62 @@ module.exports = [
     "merges": [
       "launchnavigator"
     ]
+  },
+  {
+    "id": "cordova-universal-clipboard.Clipboard",
+    "file": "plugins/cordova-universal-clipboard/www/clipboard.js",
+    "pluginId": "cordova-universal-clipboard",
+    "clobbers": [
+      "cordova.plugins.clipboard"
+    ]
+  },
+  {
+    "id": "cordova-instagram-plugin.InstagramPlugin",
+    "file": "plugins/cordova-instagram-plugin/www/CDVInstagramPlugin.js",
+    "pluginId": "cordova-instagram-plugin",
+    "clobbers": [
+      "Instagram"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.Camera",
+    "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "Camera"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.CameraPopoverOptions",
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "CameraPopoverOptions"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.camera",
+    "file": "plugins/cordova-plugin-camera/www/Camera.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "navigator.camera"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.CameraPopoverHandle",
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "CameraPopoverHandle"
+    ]
+  },
+  {
+    "id": "cordova-plugin-market.Market",
+    "file": "plugins/cordova-plugin-market/www/market.js",
+    "pluginId": "cordova-plugin-market",
+    "clobbers": [
+      "cordova.plugins.market"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -229,7 +285,11 @@ module.exports.metadata =
   "com.telerik.plugins.nativepagetransitions": "0.6.5",
   "cordova-plugin-actionsheet": "2.3.3",
   "cordova-plugin-dialogs": "2.0.1",
-  "uk.co.workingedge.phonegap.plugin.launchnavigator": "4.2.2"
+  "uk.co.workingedge.phonegap.plugin.launchnavigator": "4.2.2",
+  "cordova-universal-clipboard": "0.1.0",
+  "cordova-instagram-plugin": "0.5.7",
+  "cordova-plugin-camera": "4.0.3",
+  "cordova-plugin-market": "1.2.0"
 };
 // BOTTOM OF METADATA
 });

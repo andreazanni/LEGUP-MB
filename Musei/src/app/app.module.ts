@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { NativePageTransitions } from '@ionic-native/native-page-transitions'
+import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -24,17 +25,20 @@ import { MmLeCollezioniPage } from '../pages/mm-le-collezioni/mm-le-collezioni';
 import { MmLaBibliotecaPage } from '../pages/mm-la-biblioteca/mm-la-biblioteca';
 import { MmComeRaggiungerciPage } from '../pages/mm-come-raggiungerci/mm-come-raggiungerci';
 import { MmEventiPage } from '../pages/mm-eventi/mm-eventi';
+import { MmCondivisioneSocialPage } from '../pages/mm-condivisione-social/mm-condivisione-social';
 import { MenuPage } from '../pages/menu/menu';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
 import { MmContattiPage } from '../pages/mm-contatti/mm-contatti';
+import { Instagram } from '@ionic-native/instagram';
+import { Market } from '@ionic-native/market';
 import { MmSaleEspositivePage } from '../pages/mm-sale-espositive/mm-sale-espositive';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-	  Splash,
-	  MuseiPage,
+    Splash,
+    MuseiPage,
     MuseoPage,
     MmInformazioniPage,
     MmOrariPage,
@@ -46,6 +50,7 @@ import { MmSaleEspositivePage } from '../pages/mm-sale-espositive/mm-sale-esposi
     MmEventiPage,
     MenuPage,
     MmContattiPage,
+    MmCondivisioneSocialPage,
     MmSaleEspositivePage
   ],
   imports: [
@@ -59,8 +64,8 @@ import { MmSaleEspositivePage } from '../pages/mm-sale-espositive/mm-sale-esposi
   entryComponents: [
     MyApp,
     HomePage,
-	  Splash,
-	  MuseiPage,
+    Splash,
+    MuseiPage,
     MuseoPage,
     MmInformazioniPage,
     MmOrariPage,
@@ -72,6 +77,7 @@ import { MmSaleEspositivePage } from '../pages/mm-sale-espositive/mm-sale-esposi
     MmEventiPage,
     MenuPage,
     MmContattiPage,
+    MmCondivisioneSocialPage,
     MmSaleEspositivePage
   ],
   providers: [
@@ -84,7 +90,11 @@ import { MmSaleEspositivePage } from '../pages/mm-sale-espositive/mm-sale-esposi
     Diagnostic,
     NativePageTransitions,
     Geolocation,
-    LaunchNavigator
+    LaunchNavigator,
+    Instagram,
+    Camera,
+    Market
   ]
 })
 export class AppModule {}
+

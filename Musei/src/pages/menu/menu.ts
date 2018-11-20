@@ -11,8 +11,10 @@ import { MuseoPage } from '../museo/museo';
 import { MmComeRaggiungerciPage } from '../mm-come-raggiungerci/mm-come-raggiungerci';
 import { MmEventiPage } from '../mm-eventi/mm-eventi';
 import { MmContattiPage} from '../mm-contatti/mm-contatti';
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { Instagram } from '@ionic-native/instagram';
+import { MmCondivisioneSocialPage } from '../mm-condivisione-social/mm-condivisione-social';
 import { MmSaleEspositivePage } from '../mm-sale-espositive/mm-sale-espositive';
-
 
 @IonicPage()
 @Component({
@@ -26,7 +28,8 @@ export class MenuPage {
   ultimo: string;
   unregisterBackButtonAction: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public nativePageTransitions: NativePageTransitions, public platform: Platform) {
+  constructor(public socialSharing: SocialSharing, public navCtrl: NavController, public navParams: NavParams, public nativePageTransitions: NativePageTransitions, public platform: Platform,
+    public instagram: Instagram) {
     this.museo = this.navParams.get('datiMuseo');
     this.classe = this.navParams.get('museoClass');
     this.ultimo = this.navParams.get('ultimo');
@@ -92,6 +95,14 @@ export class MenuPage {
         this.navCtrl.removeView(this.navCtrl.last());
         break;
 
+      case "SaleEspositiveService":
+        if (animation) {
+          this.nativePageTransitions.flip(options);
+        }
+        this.navCtrl.push(MmSaleEspositivePage, {datiMuseo: this.museo, voceMenu: 'SALE ESPOSITIVE', contenuto: this.museo[0].SALE_ESPOSITIVE, museoClass: this.classe, contentClass: 'content_sale_espositive'});
+        this.navCtrl.removeView(this.navCtrl.last());
+        break;
+
       case "InformazioniService":
         if (animation) {
           this.nativePageTransitions.flip(options);
@@ -129,6 +140,15 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MmEventiPage, {datiMuseo: this.museo, voceMenu: 'EVENTI', contenuto: this.museo[0].EVENTI, museoClass: this.classe, contentClass: 'content_eventi'});
+        this.navCtrl.removeView(this.navCtrl.last());
+        break;
+
+      case "SocialService":
+        if (animation) {
+          this.nativePageTransitions.flip(options);
+        }
+        this.navCtrl.push(MmCondivisioneSocialPage, {datiMuseo: this.museo, voceMenu: 'CONDIVISIONE SOCIAL', museoClass: this.classe, contentClass: 'content_condivisione_social'});
+        this.navCtrl.removeView(this.navCtrl.last());
         break;
 
       case "ContattiService":
@@ -136,13 +156,7 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MmContattiPage, {datiMuseo: this.museo, voceMenu: 'CONTATTI', contenuto: this.museo[0].CONTATTI, museoClass: this.classe, contentClass: 'content_contatti'});
-        break;
-
-      case "SaleEspositiveService":
-        if (animation) {
-          this.nativePageTransitions.flip(options);
-        }
-        this.navCtrl.push(MmSaleEspositivePage, {datiMuseo: this.museo, voceMenu: 'SALE ESPOSITIVE', contenuto: this.museo[0].SALE_ESPOSITIVE, museoClass: this.classe, contentClass: 'content_sale_espositive'});
+        this.navCtrl.removeView(this.navCtrl.last());
         break;
 
         default:
@@ -151,3 +165,4 @@ export class MenuPage {
   }
 
 }
+

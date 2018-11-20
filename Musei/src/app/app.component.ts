@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { Splash } from '../pages/splash/splash';
-import { SocialSharing } from '@ionic-native/social-sharing';
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { Geolocation } from '@ionic-native/geolocation';
 import { RicercaMuseiProvider } from '../providers/ricerca-musei/ricerca-musei';
@@ -19,7 +18,7 @@ export class MyApp {
   page: any;
   geoMusei: any;
 
-  constructor(public socialSharing: SocialSharing, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, public menuCtrl: MenuController, 
+  constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, public menuCtrl: MenuController, 
   public diagnostic: Diagnostic, public geolocation: Geolocation, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public museiService: RicercaMuseiProvider) {
 
       platform.ready().then(() => {
@@ -38,14 +37,6 @@ export class MyApp {
   onLoad(service: string) {
 
     switch(service) {
-      case "SocialService":
-        this.socialSharing.canShareVia("instagram").then(() => {
-          this.socialSharing.shareViaInstagram("Museo Archeologia", null);
-        }).catch((err) => {
-          alert("Errore! Non sono riuscito a connettermi con il social.");
-          });
-        break;
-
       case "MuseoPiuVicinoService":
         //Parte un loader per mascherare il calcolo in background del museo piu vicino
         let spinnerLoading = this.loadingCtrl.create();

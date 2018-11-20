@@ -122,5 +122,37 @@
     },
     "is_top_level": false,
     "variables": {}
+  },
+  "cordova-instagram-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-instagram-plugin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-universal-clipboard": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/Visigo/CordovaClipboard.git"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-camera@4.0.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-market": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-market"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

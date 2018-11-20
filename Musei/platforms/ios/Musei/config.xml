@@ -175,4 +175,17 @@
     <feature name="LaunchNavigator">
         <param name="ios-package" value="LaunchNavigator" />
     </feature>
+    <feature name="Clipboard">
+        <param name="ios-package" value="CDVClipboard" />
+    </feature>
+    <feature name="Instagram">
+        <param name="ios-package" value="CDVInstagramPlugin" />
+    </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <preference name="CameraUsesGeolocation" value="false" />
+    <feature name="Market">
+        <param name="ios-package" value="CDVMarket" />
+    </feature>
 </widget>

@@ -5,7 +5,6 @@ import { HomePage } from '../home/home';
 import { MenuPage } from '../menu/menu';
 import { MuseoPage } from '../museo/museo';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
-import { not } from '@angular/compiler/src/output/output_ast';
 /**
  * Generated class for the MmSaleEspositivePage page.
  *
@@ -37,7 +36,6 @@ export class MmSaleEspositivePage {
 
   ionViewDidLoad() {
      // personalizzo la pagina di contenuto in base al museo e alla voce di menù selezionata
-     console.log(this.myContenuto);
      var idClass = document.getElementById('paginaMmSaleEspositive');
      idClass.classList.add(this.myMuseoClass);
 
@@ -53,21 +51,21 @@ export class MmSaleEspositivePage {
      this.menuCtrl.enable(false, "menuPrincipale");
      this.initializeBackButton();
 
-    for (let i in this.myContenuto){
+     let array = [];
+     array = Array.from(this.myContenuto)
+
+     for (let i in array){
       let divSala = document.createElement('div')
       divSala.className = "sala"
       idCardContenuto.appendChild(divSala)
       let titoloSala = document.createElement('h4')
-      titoloSala.textContent = this.myContenuto[i].NUMERO + " - " + this.myContenuto[i].NOME
+      titoloSala.textContent = array[i].NUMERO + " - " + array[i].NOME
       divSala.appendChild(titoloSala)
       let immagineSala = document.createElement('img')
-      immagineSala.src = this.myContenuto[i].IMMAGINE
+      immagineSala.src = array[i].IMMAGINE
       divSala.appendChild(immagineSala)
-      immagineSala.insertAdjacentHTML('afterend', this.myContenuto[i].DESCRIZIONE)
-
-    }
-
-
+      immagineSala.insertAdjacentHTML('afterend', array[i].DESCRIZIONE)
+     }
   }
 
   ionViewWillLeave() {

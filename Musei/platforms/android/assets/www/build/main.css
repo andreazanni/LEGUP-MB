@@ -26100,6 +26100,10 @@ page-menu .back-button {
   float: right;
 }
 
+page-menu .scroll-content {
+  overflow: auto;
+}
+
 page-mm-biglietti .headerContent {
   padding: 0;
   margin: 0;
@@ -26276,6 +26280,319 @@ page-mm-come-raggiungerci #contenuto h4 {
   -webkit-background-clip: text;
   font-weight: 600 !important;
   text-transform: uppercase;
+}
+
+page-mm-come-raggiungerci #portami-button {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+  width: 100%;
+}
+
+page-mm-condivisione-social .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-condivisione-social .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-condivisione-social .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-condivisione-social .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-condivisione-social .museo-content {
+  display: none;
+}
+
+page-mm-condivisione-social .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-condivisione-social .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-condivisione-social .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-condivisione-social .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-condivisione-social #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-condivisione-social #contenuto {
+  text-align: justify;
+}
+
+page-mm-condivisione-social #paginaMmCondivisioneSocial.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-condivisione-social #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+page-mm-condivisione-social .social-class {
+  width: 100%;
+}
+
+page-mm-condivisione-social #instagram-button, page-mm-condivisione-social #instagram-install-button {
+  background: -webkit-linear-gradient(45deg, #dd884a, #a639a8 80%);
+}
+
+page-mm-condivisione-social #whatsapp-button, page-mm-condivisione-social #whatsapp-install-button {
+  background: -webkit-linear-gradient(45deg, #4add5e, #13a305 80%);
+}
+
+page-mm-condivisione-social #facebook-button, page-mm-condivisione-social #facebook-install-button {
+  background: -webkit-linear-gradient(45deg, #4067b1, #4a6aa9 80%);
+}
+
+page-mm-condivisione-social #twitter-button, page-mm-condivisione-social #twitter-install-button {
+  background: -webkit-linear-gradient(45deg, #26a5f4, #219ff0 80%);
+}
+
+page-mm-contatti .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-contatti .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-contatti .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-contatti .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-contatti .museo-content {
+  display: none;
+}
+
+page-mm-contatti .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-contatti .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-contatti .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-contatti .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-contatti #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-contatti #contenuto {
+  text-align: justify;
+}
+
+page-mm-contatti #paginaMmContatti.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-contatti #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+page-mm-eventi .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-eventi .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-eventi .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-eventi .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-eventi .museo-content {
+  display: none;
+}
+
+page-mm-eventi .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-eventi .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-eventi .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-eventi .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-eventi #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-eventi #contenuto {
+  text-align: justify;
+}
+
+page-mm-eventi #paginaMmEventi.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-eventi h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+page-mm-eventi .itemFeed {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+page-mm-eventi .itemFeed img {
+  width: 50%;
+  float: left;
+  padding-top: 5px;
+  margin-right: 5px;
+}
+
+page-mm-eventi .dateItem {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  padding-bottom: 10px;
 }
 
 page-mm-il-palazzo .headerContent {
@@ -26721,6 +27038,108 @@ page-mm-orari h4 {
   -webkit-background-clip: text;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+page-mm-sale-espositive .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-sale-espositive .sideMenu {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-sale-espositive .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+}
+
+page-mm-sale-espositive .vocal-button {
+  background-color: transparent;
+  color: white;
+}
+
+page-mm-sale-espositive .museo-content {
+  display: none;
+}
+
+page-mm-sale-espositive .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-sale-espositive .card-title {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mm-sale-espositive .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 200px;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-sale-espositive .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-sale-espositive #container-contenuto {
+  overflow: auto;
+}
+
+page-mm-sale-espositive #contenuto {
+  text-align: justify;
+}
+
+page-mm-sale-espositive #paginaMmSaleEspositive.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-sale-espositive #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+page-mm-sale-espositive .sala {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+page-mm-sale-espositive .sala img {
+  width: 50%;
+  float: left;
+  padding-top: 5px;
+  margin-right: 5px;
 }
 
 page-musei .gridHome {

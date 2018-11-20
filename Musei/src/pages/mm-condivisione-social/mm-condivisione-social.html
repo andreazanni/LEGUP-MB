@@ -1,0 +1,92 @@
+<ion-content id="paginaMmCondivisioneSocial" class="card-background-page">
+  <ion-card id="content-header" class="headerContent">
+    <button class="sideMenu" ion-button menuToggle (click)="openMenu()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <button class="vocal-button" id="mic" ion-button icon-only (click)="read()">
+      <ion-icon name="mic"></ion-icon>
+    </button>
+    <button class="vocal-button" id="disabled-mic" style="display:none" ion-button icon-only (click)="stopRead()">
+      <ion-icon name="mic-off"></ion-icon>
+    </button>
+    <button class="home-button" ion-button icon-only (click)="goHomePage()">
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <div class="card-head">
+      <div class="card-title" id="content_cardTitle"></div>
+      <div class="card-subtitle" id="content_cardSubTitle"></div>
+    </div>
+  </ion-card>
+  <ion-card id="card-contenuto" class="container-content">
+    <div id="container-contenuto" class="container">
+      Seleziona l'app che preferisci per condividere la tua esperienza al museo:
+      <br>
+      <br>
+      <div id="bottone-instagram">
+        <button class="social-class" id="instagram-button" ion-button (click)="instagram()">
+            <ion-icon name="logo-instagram"></ion-icon>
+            &nbsp;
+            Instagram
+        </button>
+        <br><br>
+      </div>
+      <div id="bottone-installa-instagram">
+        <button class="social-class" id="instagram-install-button" ion-button (click)="installaInstagram()">
+            <ion-icon name="logo-instagram"></ion-icon>
+            &nbsp;
+            Installa Instagram
+        </button>
+        <br><br>
+      </div>
+      <div id="bottone-facebook">
+        <button class="social-class" id="facebook-button" ion-button (click)="facebook()">
+            <ion-icon name="logo-facebook"></ion-icon>
+            &nbsp;
+            Facebook
+        </button>
+        <br><br>
+      </div>
+      <div id="bottone-installa-facebook">
+        <button class="social-class" id="facebook-install-button" ion-button (click)="installaFacebook()">
+            <ion-icon name="logo-facebook"></ion-icon>
+            &nbsp;
+            Installa Facebook
+        </button>
+        <br><br>
+      </div>
+      <div id="bottone-twitter">
+        <button class="social-class" id="twitter-button" ion-button (click)="twitter()">
+            <ion-icon name="logo-twitter"></ion-icon>
+            &nbsp;
+            Twitter
+        </button>
+        <br><br>
+      </div>
+      <div id="bottone-installa-twitter">
+        <button class="social-class" id="twitter-install-button" ion-button (click)="installaTwitter()">
+            <ion-icon name="logo-twitter"></ion-icon>
+            &nbsp;
+            Installa Twitter
+        </button>
+        <br><br>
+      </div>
+      <div id="bottone-whatsapp">
+        <button class="social-class" id="whatsapp-button" ion-button (click)="whatsapp()">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            &nbsp;
+            WhatsApp
+        </button>
+        <br><br>
+      </div>
+      <div id="bottone-installa-whatsapp">
+        <button class="social-class" id="whatsapp-button" ion-button (click)="installaWhatsapp()">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            &nbsp;
+            Installa WhatsApp
+        </button>
+        <br><br>
+      </div>
+      <div id="contenuto" class="content-content"></div>
+    </div>
+  </ion-card>
+</ion-content>

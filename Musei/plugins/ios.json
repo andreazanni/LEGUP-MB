@@ -43,6 +43,15 @@
     "uk.co.workingedge.phonegap.plugin.launchnavigator": {
       "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes",
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-instagram-plugin": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-market": {
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {
@@ -53,6 +62,9 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-universal-clipboard": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   }
