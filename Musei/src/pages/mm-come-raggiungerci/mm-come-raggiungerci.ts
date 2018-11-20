@@ -128,7 +128,7 @@ export class MmComeRaggiungerciPage {
         //Rilevo la posizione e do 20 secondi di tempo per farcela
         this.geolocation.getCurrentPosition({timeout: 20000}).then((resp) => {
           spinnerLoading.dismiss();
-            let destination = [44.4928659, 11.3502549]
+            let destination = [this.myMuseo[0].LATITUDINE, this.myMuseo[0].LONGITUDINE];
             let options: LaunchNavigatorOptions = {
               start: [resp.coords.latitude, resp.coords.longitude],
               transportMode: "walking",
@@ -145,7 +145,7 @@ export class MmComeRaggiungerciPage {
                 }
               },
             }
-            
+
             //Avvio l'app di calcolo percorso
             this.launchNavigator.navigate(destination, options)
             .then()
