@@ -15,6 +15,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { Instagram } from '@ionic-native/instagram';
 import { MmCondivisioneSocialPage } from '../mm-condivisione-social/mm-condivisione-social';
 import { MmSaleEspositivePage } from '../mm-sale-espositive/mm-sale-espositive';
+import { MmPercorsiATemaPage } from '../mm-percorsi-a-tema/mm-percorsi-a-tema';
 
 @IonicPage()
 @Component({
@@ -101,6 +102,13 @@ export class MenuPage {
         }
         this.navCtrl.push(MmSaleEspositivePage, {datiMuseo: this.museo, voceMenu: 'SALE ESPOSITIVE', contenuto: this.museo[0].SALE_ESPOSITIVE, museoClass: this.classe, contentClass: 'content_sale_espositive'});
         this.navCtrl.removeView(this.navCtrl.last());
+        break;
+
+      case "PercorsiATemaService":
+        if (animation) {
+          this.nativePageTransitions.flip(options);
+        }
+        this.navCtrl.push(MmPercorsiATemaPage, {datiMuseo: this.museo, voceMenu: 'PERCORSI A TEMA', contenuto: this.museo[0].PERCORSI_A_TEMA, museoClass: this.classe, contentClass: 'content_percorsi_a_tema'});
         break;
 
       case "InformazioniService":
