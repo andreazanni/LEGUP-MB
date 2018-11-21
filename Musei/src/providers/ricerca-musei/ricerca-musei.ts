@@ -56,4 +56,20 @@ export class RicercaMuseiProvider {
     });
   }
 
+  //Restituisce tutte le info dell'istituzione
+  getIstituzione() {
+    return new Promise(resolve => {
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      this.http.post('http://www.omniservicetest.it/node/Musei/api/istituzione', {headers: headers})
+        .map(res => res.json())
+        .subscribe(data => {
+          resolve(data);
+        }, error => {
+          console.log(error);
+        });
+    });
+  }
+
 }

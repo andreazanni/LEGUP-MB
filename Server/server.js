@@ -23,8 +23,8 @@ app.post('/api/musei', function(req, musei){
         if (err) throw err;
         var dbo = db.db("musei");
         var query = { AREA: req.body.AREA };
-		    //Ordino i musei alfabeticamente
-		    var mySort = { NOME: 1 };
+		//Ordino i musei alfabeticamente
+		var mySort = { NOME: 1 };
         dbo.collection("musei").find(query).sort(mySort).toArray(function(err, result) {
           if (err) throw err;
           musei.json(result);
@@ -33,30 +33,43 @@ app.post('/api/musei', function(req, musei){
       });
 });
 
-app.post('/api/museo', function(req, musei){
+app.post('/api/museo', function(req, museo){
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
         var dbo = db.db("musei");
         var query = { NOME: req.body.NOME };
         dbo.collection("musei").find(query).toArray(function(err, result) {
           if (err) throw err;
-          musei.json(result);
+          museo.json(result);
           db.close();
         });
       });
 });
 
-app.post('/api/geolocalizzazioni', function(req, musei){
-  MongoClient.connect(url, function(err, db) {
-      if (err) throw err;
-      var dbo = db.db("musei");
-      dbo.collection("geolocalizzazioni").find().toArray(function(err, result) {
+app.post('/api/geolocalizzazioni', function(req, geo){
+    MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        musei.json(result);
-        db.close();
+        var dbo = db.db("musei");
+        dbo.collection("geolocalizzazioni").find().toArray(function(err, result) {
+          if (err) throw err;
+          geo.json(result);
+          db.close();
+        });
       });
-    });
 });
+
+app.post('/api/istituzione', function(req, istituzione){
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("musei");
+        dbo.collection("istituzione").find().toArray(function(err, result) {
+          if (err) throw err;
+          istituzione.json(result);
+          db.close();
+        });
+      });
+});
+
 
 app.listen(3000);
 console.log("App listening on port 3000");

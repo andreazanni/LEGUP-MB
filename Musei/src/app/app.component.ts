@@ -8,6 +8,9 @@ import { Splash } from '../pages/splash/splash';
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { Geolocation } from '@ionic-native/geolocation';
 import { RicercaMuseiProvider } from '../providers/ricerca-musei/ricerca-musei';
+import { MpInformazioniGeneraliPage } from '../pages/mp-informazioni-generali/mp-informazioni-generali';
+import { MpLeAreeMusealiPage } from '../pages/mp-le-aree-museali/mp-le-aree-museali';
+import { MpContattiPage } from '../pages/mp-contatti/mp-contatti';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,6 +20,7 @@ export class MyApp {
   rootPage:any = HomePage;
   page: any;
   geoMusei: any;
+  istituzione: any;
 
   constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, public menuCtrl: MenuController, 
   public diagnostic: Diagnostic, public geolocation: Geolocation, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public museiService: RicercaMuseiProvider) {
@@ -31,6 +35,11 @@ export class MyApp {
       //Carico già all'avvio dell'app le geolocalizzazioni dei musei
       this.museiService.getGeolocalizzazioni().then((data) => {
         this.geoMusei = data;
+      })
+
+      //Carico già all'avvio dell'app le informazioni generali sull'istituzione
+      this.museiService.getIstituzione().then((data) => {
+        this.istituzione = data;
       })
   }
 
@@ -80,6 +89,21 @@ export class MyApp {
           spinnerLoading.dismiss();
           alertAuthorized.present();
         });
+        break;
+
+      case "InformazioniGeneraliService":
+        this.nav.push(MpInformazioniGeneraliPage, {voceMenu: 'INFORMAZIONI GENERALI', contenuto: this.istituzione[0].INFORMAZIONI_GENERALI });
+        this.nav.removeView(this.nav.last());
+        break;
+
+      case "ContattiGeneraliService":
+        this.nav.push(MpContattiPage, {voceMenu: 'CONTATTI', contenuto: this.istituzione[0].CONTATTI});
+        this.nav.removeView(this.nav.last());
+        break;
+
+      case "AreeMusealiService":
+        this.nav.push(MpLeAreeMusealiPage, {voceMenu: 'LE AREE MUSEALI', contenuto: this.istituzione[0].AREE_MUSEALI});
+        this.nav.removeView(this.nav.last());
         break;
       
         default:

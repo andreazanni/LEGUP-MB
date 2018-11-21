@@ -6,21 +6,25 @@
     </ion-header>
     <ion-content>
         <ion-list>
-            <button ion-item (click)=onLoad(LoginService)>
+            <button ion-item (click)="onLoad('LoginService')">
                 <ion-icon name="contact" item-left></ion-icon>
                 Login
+            </button>
+            <button ion-item (click)="onLoad('InformazioniGeneraliService')">
+                <ion-icon name="information-circle" item-left></ion-icon>
+                Informazioni generali
+            </button>
+            <button ion-item (click)="onLoad('AreeMusealiService')">
+                <ion-icon name="list-box" item-left></ion-icon>
+                Le Aree Museali
+            </button>            
+            <button ion-item (click)="onLoad('ContattiGeneraliService')">
+                <ion-icon name="chatbubbles" item-left></ion-icon>
+                Contatti
             </button>
             <button ion-item (click)="onLoad('MuseoPiuVicinoService')">
                 <ion-icon name="walk" item-left></ion-icon>
                 Il museo più vicino a te
-            </button>
-            <button ion-item (click)=onLoad(LoginService)>
-                <ion-icon name="information-circle" item-left></ion-icon>
-                Informazioni generali
-            </button>
-            <button ion-item (click)=onLoad(LoginService)>
-                <ion-icon name="chatbubbles" item-left></ion-icon>
-                Contatti
             </button>      
         </ion-list>
     </ion-content>

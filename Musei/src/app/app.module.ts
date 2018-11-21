@@ -32,6 +32,9 @@ import { MmContattiPage } from '../pages/mm-contatti/mm-contatti';
 import { Instagram } from '@ionic-native/instagram';
 import { Market } from '@ionic-native/market';
 import { MmSaleEspositivePage } from '../pages/mm-sale-espositive/mm-sale-espositive';
+import { MpInformazioniGeneraliPage } from '../pages/mp-informazioni-generali/mp-informazioni-generali';
+import { MpLeAreeMusealiPage } from '../pages/mp-le-aree-museali/mp-le-aree-museali';
+import { MpContattiPage } from '../pages/mp-contatti/mp-contatti';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,10 @@ import { MmSaleEspositivePage } from '../pages/mm-sale-espositive/mm-sale-esposi
     MenuPage,
     MmContattiPage,
     MmCondivisioneSocialPage,
-    MmSaleEspositivePage
+    MmSaleEspositivePage,
+    MpInformazioniGeneraliPage,
+    MpContattiPage,
+    MpLeAreeMusealiPage
   ],
   imports: [
     BrowserModule,
@@ -78,7 +84,10 @@ import { MmSaleEspositivePage } from '../pages/mm-sale-espositive/mm-sale-esposi
     MenuPage,
     MmContattiPage,
     MmCondivisioneSocialPage,
-    MmSaleEspositivePage
+    MmSaleEspositivePage,
+    MpInformazioniGeneraliPage,
+    MpContattiPage,
+    MpLeAreeMusealiPage
   ],
   providers: [
     StatusBar,
