@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController, Platform  } from 'ionic-angular';
+import { Component, ViewChildren, QueryList } from '@angular/core';
+import { IonicPage, NavController, NavParams, MenuController, Platform, Slides  } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 import { MenuPage } from '../menu/menu';
@@ -25,6 +25,9 @@ export class MmPercorsiATemaPage {
   myContentClass: string;
   myMuseo: any;
   unregisterBackButtonAction: any;
+
+  //@ViewChild(Slides) slides: Slides;
+  @ViewChildren(Slides) slides: QueryList<Slides>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public menuCtrl: MenuController, public nativePageTransitions: NativePageTransitions,
     public platform: Platform) {
@@ -80,6 +83,11 @@ export class MmPercorsiATemaPage {
         immaginePercorso.src = arrayContenuto[nPercorso].IMMAGINE;
         contentSlide.appendChild(immaginePercorso);
         immaginePercorso.insertAdjacentHTML('afterend', arrayContenuto[nPercorso].DESCRIZIONE);
+        let descrizionePercorsoArray = contentSlide.getElementsByTagName('P');
+        let descrizionePercorso: any
+        descrizionePercorso = descrizionePercorsoArray[0];
+        console.log(descrizionePercorso, descrizionePercorso.offsetHeight);
+
 
         //popolo le slide degli step di ogni percorso
         while(nSteps <= 3){
@@ -125,6 +133,40 @@ export class MmPercorsiATemaPage {
     // }
   }
 
+  ionViewDidEnter(){
+    let contenuto = document.getElementById('contenuto');
+    let cardSlidesArray = contenuto.getElementsByTagName('ion-card');
+    for (let i = 0; i < cardSlidesArray.length; i++){
+      let cardSlide: any;
+      cardSlide = cardSlidesArray[i];
+      console.log(cardSlidesArray);
+      console.log(cardSlide);
+      let slidearray = cardSlide.getElementsByTagName('ion-slide');
+      let slide: any;
+      slide = slidearray[0];
+      let h4Array = slide.getElementsByTagName('h4');
+      let h4: any;
+      h4 = h4Array[0];
+      let h3Array;
+      let h3;
+      let h3OffsetHeight;
+
+        h3Array = slide.getElementsByTagName('h3');
+        h3 = h3Array[0];
+        h3OffsetHeight = h3.offsetHeight + 4;
+
+      let pArray = slide.getElementsByTagName('p');
+      let p: any;
+      p = pArray[0];
+      // let imgSlideArray = idSlideCard.getElementsByTagName('IMG');
+      // let imgSlide =
+      //idSlideCard.style.height = 'auto';
+      cardSlide.style.height = h4.offsetHeight + 14 + h3OffsetHeight + p.offsetHeight + 22 +'px';
+
+    }
+
+  }
+
   ionViewWillLeave() {
     this.unregisterBackButtonAction && this.unregisterBackButtonAction();
   }
@@ -165,6 +207,58 @@ export class MmPercorsiATemaPage {
     this.navCtrl.removeView(this.navCtrl.last());
     this.menuCtrl.enable(true, "menuPrincipale");
   }
+
+  //calcolo l'altezza della card in base alla lunghezza del contenuto
+  slideChanged(indexSlider,SlideCard){
+
+    let cardSliderArray = this.slides.toArray();
+    let cardSlider = cardSliderArray[indexSlider];
+    // console.log(indexSlider,SlideCard);
+    // console.log("Slide numero:",cardSliderArray[indexSlider]);
+    // console.log(this.slides);
+    let idSlideCard = document.getElementById(SlideCard)
+    //let currentIndex = this.slides[indexSlider].getActiveIndex();
+    let currentIndex = cardSlider.getActiveIndex();
+    // console.log(cardSlider._slides.length);
+    // console.log(cardSlider.length);
+    // console.log('Current index is', currentIndex);
+    if(currentIndex != cardSlider._slides.length){
+      let h4Array = idSlideCard.getElementsByTagName('h4');
+      let h4: any;
+      h4 = h4Array[currentIndex];
+      let h3Array;
+      let h3;
+      let h3OffsetHeight;
+      if (currentIndex == 0){
+        h3Array = idSlideCard.getElementsByTagName('h3');
+        h3 = h3Array[currentIndex];
+        h3OffsetHeight = h3.offsetHeight + 4;
+      }
+      else{
+        h3OffsetHeight = 0;
+      }
+      let pArray = idSlideCard.getElementsByTagName('p');
+      let p: any;
+      p = pArray[currentIndex];
+      // let imgSlideArray = idSlideCard.getElementsByTagName('IMG');
+      // let imgSlide =
+      //idSlideCard.style.height = 'auto';
+      idSlideCard.style.height = h4.offsetHeight + 14 + h3OffsetHeight + p.offsetHeight + 22 +'px';
+      // console.log(idSlideCard.style.height);
+    }
+
+
+
+
+
+  }
+
+
+
+  adjustSlideHeight(){
+
+  }
+
 
 
 }

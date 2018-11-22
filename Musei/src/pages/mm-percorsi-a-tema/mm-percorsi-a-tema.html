@@ -20,8 +20,8 @@
   <ion-card id="card-contenuto" class="container-content">
     <div id="container-contenuto">
       <div id="contenuto" class="content-content">
-        <ion-card id='slideCard-0'>
-          <ion-slides pager>
+        <ion-card id='slideCard-0' >
+          <ion-slides pager (ionSlideDidChange)="slideChanged(0,'slideCard-0')">
             <ion-slide id='slide-00'>
 
             </ion-slide>
@@ -40,7 +40,7 @@
           </ion-slides>
         </ion-card>
         <ion-card id='slideCard-1'>
-          <ion-slides pager>
+          <ion-slides pager (ionSlideDidChange)="slideChanged(1,'slideCard-1')">
             <ion-slide id='slide-10'>
 
             </ion-slide>
@@ -59,12 +59,12 @@
           </ion-slides>
         </ion-card>
         <ion-card id='slideCard-2'>
-          <ion-slides pager>
+          <ion-slides pager (ionSlideDidChange)="slideChanged(2,'slideCard-2')">
             <ion-slide id='slide-20'>
-              <h1>Slide 3</h1>
+
             </ion-slide>
             <ion-slide id='slide-21'>
-              <h1>Slide 3</h1>
+
             </ion-slide>
             <ion-slide id='slide-22'>
 
@@ -78,7 +78,7 @@
           </ion-slides>
         </ion-card>
         <ion-card id='slideCard-3'>
-          <ion-slides pager>
+          <ion-slides pager (ionSlideDidChange)="slideChanged(3,'slideCard-3')">
             <ion-slide id='slide-30'>
 
             </ion-slide>
@@ -97,7 +97,7 @@
           </ion-slides>
         </ion-card>
         <ion-card id='slideCard-4'>
-          <ion-slides pager>
+          <ion-slides pager (ionSlideDidChange)="slideChanged(4,'slideCard-4')">
             <ion-slide id='slide-40'>
 
             </ion-slide>
@@ -116,7 +116,7 @@
           </ion-slides>
         </ion-card>
         <ion-card id='slideCard-5'>
-          <ion-slides pager>
+          <ion-slides pager (ionSlideDidChange)="slideChanged(5,'slideCard-5')">
             <ion-slide id='slide-50'>
 
             </ion-slide>
@@ -135,7 +135,7 @@
           </ion-slides>
         </ion-card>
         <ion-card id='slideCard-6'>
-          <ion-slides pager>
+          <ion-slides pager (ionSlideDidChange)="slideChanged(6,'slideCard-6')">
             <ion-slide id='slide-60'>
 
             </ion-slide>
@@ -154,7 +154,7 @@
           </ion-slides>
         </ion-card>
         <ion-card id='slideCard-7'>
-          <ion-slides pager>
+          <ion-slides pager (ionSlideDidChange)="slideChanged(7,'slideCard-7')">
             <ion-slide id='slide-70'>
 
             </ion-slide>
@@ -173,7 +173,7 @@
           </ion-slides>
         </ion-card>
         <ion-card id='slideCard-8'>
-          <ion-slides pager>
+          <ion-slides pager (ionSlideDidChange)="slideChanged(8,'slideCard-8')">
             <ion-slide id='slide-80'>
 
             </ion-slide>
@@ -192,7 +192,7 @@
           </ion-slides>
         </ion-card>
         <ion-card id='slideCard-9'>
-          <ion-slides pager>
+          <ion-slides pager (ionSlideDidChange)="slideChanged(9,'slideCard-9')">
             <ion-slide id='slide-90'>
 
             </ion-slide>
