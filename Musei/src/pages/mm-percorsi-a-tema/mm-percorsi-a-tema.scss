@@ -116,6 +116,7 @@ div.slide-zoom {
 
 #contenuto ion-card{
  margin-bottom: 30px !important;
+ -webkit-transition: height 0.5s;
  transition: height 0.5s;
 }
 
