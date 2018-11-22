@@ -158,10 +158,13 @@ export class MmPercorsiATemaPage {
       let pArray = slide.getElementsByTagName('p');
       let p: any;
       p = pArray[0];
+      let imgArray = slide.getElementsByTagName('img');
+      let img: any;
+      img = imgArray[0];
       // let imgSlideArray = idSlideCard.getElementsByTagName('IMG');
       // let imgSlide =
       //idSlideCard.style.height = 'auto';
-      cardSlide.style.height = h4.offsetHeight + 14 + h3OffsetHeight + p.offsetHeight + 22 +'px';
+      cardSlide.style.height = h4.offsetHeight + 14 + h3OffsetHeight + (p.offsetHeight>img.offsetHeight ? p.offsetHeight : img.offsetHeight) + 22 +'px';
 
     }
 
@@ -240,10 +243,13 @@ export class MmPercorsiATemaPage {
       let pArray = idSlideCard.getElementsByTagName('p');
       let p: any;
       p = pArray[currentIndex];
+      let imgArray = idSlideCard.getElementsByTagName('img');
+      let img: any;
+      img = imgArray[currentIndex];
       // let imgSlideArray = idSlideCard.getElementsByTagName('IMG');
       // let imgSlide =
       //idSlideCard.style.height = 'auto';
-      idSlideCard.style.height = h4.offsetHeight + 14 + h3OffsetHeight + p.offsetHeight + 22 +'px';
+      idSlideCard.style.height = h4.offsetHeight + 14 + h3OffsetHeight + (p.offsetHeight>img.offsetHeight ? p.offsetHeight : img.offsetHeight) + 22 +'px';
       // console.log(idSlideCard.style.height);
     }
 
