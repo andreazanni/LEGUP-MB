@@ -11,19 +11,37 @@ page-mm-eventi {
 
   .sideMenu {
 		background-color: transparent;
-		color: white;
-	}
+    color: white;
+    height: 20%;
+  }
+  
+  #menu {
+    font-size: 7vw;
+  }
 
 	.home-button {
 		background-color: transparent;
 		color: white;
 		margin: 0 2%;
-		float: right;
-	}
+    float: right;
+    height: 20%;
+  }
+  
+  #home-icon {
+    font-size: 7vw;
+  }
 
 	.vocal-button {
 		background-color: transparent;
 		color: white;
+  }
+
+  #vocal {
+    font-size: 7vw;
+  }
+
+  #vocal-off {
+    font-size: 7vw;
   }
 
   .museo-content {
@@ -36,7 +54,7 @@ page-mm-eventi {
 
   .card-title {
     font-family: 'Montserrat';
-    font-size: 20px;
+    font-size: 5.5vw;
     font-weight: 600;
     color: white;
     text-align: center;
@@ -50,8 +68,8 @@ page-mm-eventi {
     font-family: 'Amiri';
     text-transform: uppercase;
     text-align: center;
-    font-size: 12px;
-    width: 200px;
+    font-size: 3vw;
+    width: 50vw;
     margin: auto;
     line-height: 1em;
 }
@@ -68,10 +86,12 @@ page-mm-eventi {
 
 #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 #paginaMmEventi.museo_musica {
@@ -87,6 +107,7 @@ h4 {
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 10px;
+    font-size: 4vw;
 }
 
 .itemFeed {
@@ -104,8 +125,16 @@ h4 {
 .dateItem {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 3.5vw;
   padding-bottom: 10px;
+}
+
+.card-ios p, .card-md p, .card-wp p {
+  font-size: 3.5vw;
+}
+
+.card-ios h3, .card-ios h4, .card-ios h5, .card-ios h6, .card-md h3, .card-md h4, .card-md h5, .card-md h6, .card-wp h3, .card-wp h4, .card-wp h5, .card-wp h6 {
+  font-size: 3.5vw;
 }
 
 }

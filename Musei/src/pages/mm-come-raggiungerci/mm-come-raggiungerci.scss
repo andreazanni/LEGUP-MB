@@ -9,40 +9,59 @@ page-mm-come-raggiungerci {
         background-image: linear-gradient(to top right, rgba(91,73,137,0.7), rgba(225,0,255,0.7));
       }
     
-      .sideMenu {
-            background-color: transparent;
-            color: white;
-        }
-    
-        .home-button {
-            background-color: transparent;
-            color: white;
-            margin: 0 2%;
-            float: right;
-        }
-    
-        .vocal-button {
-            background-color: transparent;
-            color: white;
+    .sideMenu {
+        background-color: transparent;
+        color: white;
+        height: 20%;
       }
     
-      .museo-content {
-            display: none;
+    #menu {
+      font-size: 7vw;
+    }
+    
+    .home-button {
+        background-color: transparent;
+        color: white;
+        margin: 0 2%;
+        float: right;
+        height: 20%;
       }
     
-      .button-md {
+    #home-icon {
+      font-size: 7vw;
+    }
+    
+    .vocal-button {
+        background-color: transparent;
+        color: white;
+        height: 20%;
+      }
+
+    #vocal {
+      font-size: 7vw;
+    }
+
+    #vocal-off {
+      font-size: 7vw;
+    }
+    
+    .museo-content {
+        display: none;
+    }
+    
+    .button-md {
         box-shadow: none !important;
-      }
+    }
     
       .card-title {
         font-family: 'Montserrat';
-        font-size: 20px;
+        font-size: 5.5vw;
         font-weight: 600;
         color: white;
         text-align: center;
         margin: 10% auto 5px auto;
         border-bottom: 1px solid white;
-        width: 50%;
+        width: 70%;
       }
     
       .card-subtitle {
@@ -50,8 +69,8 @@ page-mm-come-raggiungerci {
         font-family: 'Amiri';
         text-transform: uppercase;
         text-align: center;
-        font-size: 12px;
-        width: 200px;
+        font-size: 3vw;
+        width: 70vw;
         margin: auto;
         line-height: 1em;
     }
@@ -73,6 +92,7 @@ page-mm-come-raggiungerci {
     
     #contenuto {
       text-align: justify;
+      font-size: 3.5vw;
     }
     
     #paginaMmComeRaggiungerci.museo_musica {
@@ -87,10 +107,16 @@ page-mm-come-raggiungerci {
         -webkit-background-clip: text;
         font-weight: 600 !important;
         text-transform: uppercase;
+        font-size: 4vw;
     }
 
     #portami-button {
       background-image: linear-gradient(to top right, rgba(91,73,137,0.7), rgba(225,0,255,0.7));
-      width: 100%;
+      width: 99%;
+      font-size: 3.5vw;
+    }
+
+    .card-ios p, .card-md p, .card-wp p {
+      font-size: 3.5vw;
     }
 }

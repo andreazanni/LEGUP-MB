@@ -10,12 +10,17 @@ page-museo {
 	.card-title {
 		height: 100%;
 		text-align: center;
-		font-size: 18px;
+		font-size: 4vw;
 	}
 
 	.sideMenu {
 		background-color: transparent;
 		color: white;
+		height: 8%;
+	}
+
+	#menu {
+		font-size: 7vw;
 	}
 
 	.home-button {
@@ -23,17 +28,30 @@ page-museo {
 		color: white;
 		margin: 0 2%;
 		float: right;
-  }
+		height: 8%;
+	}
+	
+	#home-icon {
+		font-size: 7vw;
+	}
 
   .button-md {
     box-shadow: none !important;
   }
 
-
 	.vocal-button {
 		background-color: transparent;
 		color: white;
-  }
+		height: 8%;
+	}
+	
+	#vocal {
+		font-size: 7vw;
+	}
+
+	#vocal-off {
+		font-size: 7vw;
+	}
 
   .museo-content {
 		display: none;
@@ -45,7 +63,7 @@ page-museo {
 		color: white;
 		text-transform: uppercase;
 		text-align: left;
-		font-size: 16px;
+		font-size: 4vw;
     font-weight: 700;
 		border-left: 1px white solid;
 		margin-left: 10px;
@@ -65,7 +83,7 @@ page-museo {
 	}
 
 	.museo_mambo .museo-content p {
-		font-size: 10px !important;
+		font-size: 2.8vw !important;
     font-weight: 600;
     color: white;
 		text-align: justify;
@@ -88,7 +106,7 @@ page-museo {
 		color: white;
 		text-transform: uppercase;
 		text-align: left;
-		font-size: 16px;
+		font-size: 4vw;
     font-weight: 700;
 		border-left: 1px white solid;
 		margin-left: 10px;
@@ -108,7 +126,7 @@ page-museo {
 	}
 
 	.museo_musica .museo-content p {
-		font-size: 10px !important;
+		font-size: 2.8vw !important;
     font-weight: 600;
     color: white;
 		text-align: justify;

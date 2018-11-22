@@ -10,20 +10,39 @@ page-mm-condivisione-social {
     }
     
     .sideMenu {
-            background-color: transparent;
-            color: white;
-        }
+        background-color: transparent;
+        color: white;
+        height: 20%;
+    }
+
+    #menu {
+        font-size: 7vw;
+    }
     
-        .home-button {
-            background-color: transparent;
-            color: white;
-            margin: 0 2%;
-            float: right;
-        }
+    .home-button {
+        background-color: transparent;
+        color: white;
+        margin: 0 2%;
+        float: right;
+        height: 20%;
+    }
+
+    #home-icon {
+        font-size: 7vw;
+    }
     
-        .vocal-button {
-            background-color: transparent;
-            color: white;
+    .vocal-button {
+        background-color: transparent;
+        color: white;
+        height: 20%;
+    }
+
+    #vocal {
+        font-size: 7vw;
+    }
+
+    #vocal-off {
+        font-size: 7vw;
     }
     
     .museo-content {
@@ -36,13 +55,13 @@ page-mm-condivisione-social {
     
     .card-title {
         font-family: 'Montserrat';
-        font-size: 20px;
+        font-size: 5.5vw;
         font-weight: 600;
         color: white;
         text-align: center;
         margin: 10% auto 5px auto;
         border-bottom: 1px solid white;
-        width: 50%;
+        width: 70%;
     }
     
     .card-subtitle {
@@ -50,29 +69,31 @@ page-mm-condivisione-social {
         font-family: 'Amiri';
         text-transform: uppercase;
         text-align: center;
-        font-size: 12px;
-        width: 200px;
+        font-size: 3vw;
+        width: 70vw;
         margin: auto;
         line-height: 1em;
     }
     
     
     .container-content {
-    width: 100%;
-    border-radius: 0;
-    margin: 0;
-    padding: 12px;
-    position: absolute;
-    overflow: auto;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 12px;
+        position: absolute;
+        overflow: auto;
     
     }
     
     #container-contenuto {
-    overflow: auto;
+        overflow: auto;
+        font-size: 3.5vw;
     }
     
     #contenuto {
-    text-align: justify;
+        text-align: justify;
+        font-size: 3.5vw;
     }
     
     #paginaMmCondivisioneSocial.museo_musica {
@@ -87,6 +108,7 @@ page-mm-condivisione-social {
         -webkit-background-clip: text;
         font-weight: 600 !important;
         text-transform: uppercase;
+        font-size: 4vw;
     }
     
     .social-class {
@@ -95,17 +117,25 @@ page-mm-condivisione-social {
 
     #instagram-button, #instagram-install-button {
         background: -webkit-linear-gradient(45deg, rgb(221, 136, 74), rgb(166, 57, 168) 80%);
+        font-size: 3.5vw;
     }
 
     #whatsapp-button, #whatsapp-install-button {
         background: -webkit-linear-gradient(45deg, rgb(74, 221, 94), rgb(19, 163, 5) 80%);
+        font-size: 3.5vw;
     }
 
     #facebook-button, #facebook-install-button  {
         background: -webkit-linear-gradient(45deg, rgb(64, 103, 177), rgb(74, 106, 169) 80%);
+        font-size: 3.5vw;
     }
 
     #twitter-button, #twitter-install-button {
         background: -webkit-linear-gradient(45deg, rgb(38, 165, 244), rgb(33, 159, 240) 80%);
+        font-size: 3.5vw;
+    }
+
+    .card-ios p, .card-md p, .card-wp p {
+        font-size: 3.5vw;
     }
 }

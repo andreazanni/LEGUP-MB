@@ -12,19 +12,38 @@ page-mm-informazioni {
 
   .sideMenu {
 		background-color: transparent;
-		color: white;
-	}
+    color: white;
+    height: 20%;
+  }
+  
+  #menu {
+    font-size: 7vw;
+  }
 
 	.home-button {
 		background-color: transparent;
 		color: white;
 		margin: 0 2%;
-		float: right;
-	}
+    float: right;
+    height: 20%;
+  }
+  
+  #home-icon {
+    font-size: 7vw;
+  }
 
 	.vocal-button {
 		background-color: transparent;
-		color: white;
+    color: white;
+    height: 20%;
+  }
+
+  #vocal {
+    font-size: 7vw;
+  }
+
+  #vocal-off {
+    font-size: 7vw
   }
 
   .museo-content {
@@ -37,7 +56,7 @@ page-mm-informazioni {
 
   .card-title {
     font-family: 'Montserrat';
-    font-size: 20px;
+    font-size: 5.5vw;
     font-weight: 600;
     color: white;
     text-align: center;
@@ -51,8 +70,8 @@ page-mm-informazioni {
     font-family: 'Amiri';
     text-transform: uppercase;
     text-align: center;
-    font-size: 12px;
-    width: 200px;
+    font-size: 3vw;
+    width: 50vw;
     margin: auto;
     line-height: 1em;
 }
@@ -70,10 +89,12 @@ page-mm-informazioni {
 
 #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 #paginaMmInformazioni.museo_musica {
@@ -88,6 +109,15 @@ h4 {
     -webkit-background-clip: text;
     font-weight: 600;
     text-transform: uppercase;
+    font-size: 4vw;
+}
+
+.card-ios p, .card-md p, .card-wp p {
+  font-size: 3.5vw;
+}
+
+.card-ios h3, .card-ios h4, .card-ios h5, .card-ios h6, .card-md h3, .card-md h4, .card-md h5, .card-md h6, .card-wp h3, .card-wp h4, .card-wp h5, .card-wp h6 {
+  font-size: 3.5vw;
 }
 
 }

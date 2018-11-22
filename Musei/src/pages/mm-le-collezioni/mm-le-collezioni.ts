@@ -38,7 +38,6 @@ export class MmLeCollezioniPage {
 
   ionViewDidLoad() {
      // personalizzo la pagina di contenuto in base al museo e alla voce di menù selezionata
-     console.log(this.myContenuto);
      var idClass = document.getElementById('paginaMmLeCollezioni');
      idClass.classList.add(this.myMuseoClass);
 
@@ -46,7 +45,6 @@ export class MmLeCollezioniPage {
      document.getElementById('content_cardSubTitle').innerText = this.myMuseo[0].NOME;
 
      var idCardContenuto = document.getElementById('contenuto');
-     console.log(idCardContenuto);
      idCardContenuto.innerHTML = this.myContenuto;
 
      var idContainerContenuto = document.getElementById('container-contenuto');
