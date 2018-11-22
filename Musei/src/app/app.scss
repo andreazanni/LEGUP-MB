@@ -268,12 +268,14 @@
       overflow: hidden;
     }
 
-  .item-block, .content, .toolbar-background {
-    background: linear-gradient(to right, #a4b2bc 0%,#eaf0f2 100%);
+  .item-block, .toolbar-background {
+    //background: linear-gradient(to right, #a4b2bc 0%,#eaf0f2 100%);
   }
 
   .toolbar-title {
-    color: white;
+    background: -webkit-linear-gradient(45deg, rgb(0, 0, 0), rgb(200, 200, 200) 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -284,7 +286,10 @@
   }
 
 .item-block {
-  color: white;
+  color: Black;
+  background: -webkit-linear-gradient(45deg, rgb(0, 0, 0), rgb(200, 200, 200) 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
@@ -294,3 +299,10 @@
   background-size: 0 !important;
 }
 
+#menuPrincipale{
+  //background: black;
+}
+
+ion-icon::before {
+  display: block;
+}
