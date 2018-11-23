@@ -273,9 +273,9 @@
   }
 
   .toolbar-title {
-    background: -webkit-linear-gradient(45deg, rgb(0, 0, 0), rgb(200, 200, 200) 80%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    // background: -webkit-linear-gradient(45deg, rgb(0, 0, 0), rgb(200, 200, 200) 80%);
+    // -webkit-text-fill-color: transparent;
+    // -webkit-background-clip: text;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -287,9 +287,9 @@
 
 .item-block {
   color: Black;
-  background: -webkit-linear-gradient(45deg, rgb(0, 0, 0), rgb(200, 200, 200) 80%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+  //  background: -webkit-linear-gradient(45deg, rgb(0, 0, 0), rgb(200, 200, 200) 80%);
+  //    -webkit-text-fill-color: transparent;
+  //    -webkit-background-clip: text;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
@@ -311,7 +311,7 @@ ion-icon::before {
   font-size: 3.5vw;
 }
 
-.toolbar-title-ios, .toolbar-title-md, .toolbar-title-wp { 
+.toolbar-title-ios, .toolbar-title-md, .toolbar-title-wp {
   font-size: 4vw;
 }
 
@@ -323,4 +323,20 @@ ion-icon::before {
   transform: translateX(80%);
   transition-delay: 0s;
   transition-property: none;
+}
+
+.gradientLoop{
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
 }
