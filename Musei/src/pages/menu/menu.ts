@@ -76,7 +76,7 @@ export class MenuPage {
         if (animation) {
           this.nativePageTransitions.flip(options);
         }
-        this.navCtrl.push(MmIlPalazzoPage, {datiMuseo: this.museo, voceMenu: 'IL PALAZZO', contenuto: this.museo[0].IL_PALAZZO, museoClass: this.classe, contentClass: 'content_il_palazzo'});
+        this.navCtrl.push(MmIlPalazzoPage, {datiMuseo: this.museo, voceMenu: 'PALAZZO', contenuto: this.museo[0].IL_PALAZZO, museoClass: this.classe, contentClass: 'content_il_palazzo'});
         this.navCtrl.removeView(this.navCtrl.last());
         break;
 
@@ -84,7 +84,7 @@ export class MenuPage {
         if (animation) {
           this.nativePageTransitions.flip(options);
         }
-        this.navCtrl.push(MmLeCollezioniPage, {datiMuseo: this.museo, voceMenu: 'LE COLLEZIONI', contenuto: this.museo[0].LE_COLLEZIONI, museoClass: this.classe, contentClass: 'content_le_collezioni'});
+        this.navCtrl.push(MmLeCollezioniPage, {datiMuseo: this.museo, voceMenu: 'COLLEZIONI', contenuto: this.museo[0].LE_COLLEZIONI, museoClass: this.classe, contentClass: 'content_le_collezioni'});
         this.navCtrl.removeView(this.navCtrl.last());
         break;
 
@@ -92,7 +92,7 @@ export class MenuPage {
         if (animation) {
           this.nativePageTransitions.flip(options);
         }
-        this.navCtrl.push(MmLaBibliotecaPage, {datiMuseo: this.museo, voceMenu: 'LA BIBLIOTECA', contenuto: this.museo[0].LA_BIBLIOTECA, museoClass: this.classe, contentClass: 'content_la_biblioteca'});
+        this.navCtrl.push(MmLaBibliotecaPage, {datiMuseo: this.museo, voceMenu: 'BIBLIOTECA', contenuto: this.museo[0].LA_BIBLIOTECA, museoClass: this.classe, contentClass: 'content_la_biblioteca'});
         this.navCtrl.removeView(this.navCtrl.last());
         break;
 

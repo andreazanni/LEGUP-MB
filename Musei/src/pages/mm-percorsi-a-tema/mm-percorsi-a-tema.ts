@@ -46,7 +46,6 @@ export class MmPercorsiATemaPage {
 
      document.getElementById('content_cardTitle').innerText = this.myVoceMenu;
      document.getElementById('content_cardSubTitle').innerText = this.myMuseo[0].NOME;
-     var idCardContenuto = document.getElementById('contenuto');
 
      var idContainerContenuto = document.getElementById('container-contenuto');
      var idContentHeader = document.getElementById('content-header');

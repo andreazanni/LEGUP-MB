@@ -25958,13 +25958,10 @@ ion-navbar.toolbar {
   overflow: hidden;
 }
 
-.item-block, .content, .toolbar-background {
-  background: -webkit-gradient(linear, left top, right top, from(#a4b2bc), to(#eaf0f2));
-  background: linear-gradient(to right, #a4b2bc 0%, #eaf0f2 100%);
-}
-
 .toolbar-title {
-  color: white;
+  background: -webkit-linear-gradient(45deg, black, #c8c8c8 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -25975,7 +25972,10 @@ ion-navbar.toolbar {
 }
 
 .item-block {
-  color: white;
+  color: Black;
+  background: -webkit-linear-gradient(45deg, black, #c8c8c8 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
@@ -25983,6 +25983,31 @@ ion-navbar.toolbar {
 
 .item-inner {
   background-size: 0 !important;
+}
+
+ion-icon::before {
+  display: block;
+}
+
+.size-button {
+  font-size: 3.5vw;
+}
+
+.toolbar-title-ios, .toolbar-title-md, .toolbar-title-wp {
+  font-size: 4vw;
+}
+
+.menu-inner {
+  width: 80%;
+}
+
+.menu-content .menu-content-reveal .menu-content-open {
+  -webkit-transform: translateX(80%);
+  transform: translateX(80%);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-property: none;
+  transition-property: none;
 }
 
 page-home {
@@ -26012,7 +26037,7 @@ page-home .card-title {
   padding: 50% 0;
   height: 100%;
   text-align: center;
-  font-size: 18px;
+  font-size: 4vw;
 }
 
 page-home .colHome {
@@ -26055,12 +26080,22 @@ page-home .card-gradient {
 
 page-home .card-title {
   text-align: left;
-  padding: 50% 5px;
+  padding: 45% 5px;
   height: 100%;
-  font-size: 16px;
+  font-size: 4vw;
   font-weight: 700;
   color: white;
   text-transform: uppercase;
+}
+
+page-home #open-menu {
+  width: 0;
+  height: 100%;
+  border-top: 5vw solid transparent;
+  border-left: 4vw solid rgba(255, 255, 255, 0.5);
+  border-bottom: 5vw solid transparent;
+  position: absolute;
+  z-index: 10;
 }
 
 page-home #card-artemoderna .card-gradient {
@@ -26104,6 +26139,14 @@ page-menu .scroll-content {
   overflow: auto;
 }
 
+page-menu .size-button {
+  font-size: 3.5vw;
+}
+
+page-menu .toolbar-title-ios, page-menu .toolbar-title-md, page-menu .toolbar-title-wp {
+  font-size: 4vw;
+}
+
 page-mm-biglietti .headerContent {
   padding: 0;
   margin: 0;
@@ -26117,6 +26160,11 @@ page-mm-biglietti .headerContent {
 page-mm-biglietti .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-biglietti #menu {
+  font-size: 7vw;
 }
 
 page-mm-biglietti .home-button {
@@ -26124,11 +26172,25 @@ page-mm-biglietti .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-biglietti #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-biglietti .vocal-button {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-biglietti #vocal {
+  font-size: 7vw;
+}
+
+page-mm-biglietti #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-biglietti .museo-content {
@@ -26142,7 +26204,7 @@ page-mm-biglietti .button-md {
 
 page-mm-biglietti .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -26156,8 +26218,8 @@ page-mm-biglietti .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 50vw;
   margin: auto;
   line-height: 1em;
 }
@@ -26177,6 +26239,7 @@ page-mm-biglietti #container-contenuto {
 
 page-mm-biglietti #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-biglietti #paginaMmBiglietti.museo_musica {
@@ -26191,6 +26254,11 @@ page-mm-biglietti #contenuto h4 {
   -webkit-background-clip: text;
   font-weight: 600 !important;
   text-transform: uppercase;
+  font-size: 4vw;
+}
+
+page-mm-biglietti .card-ios p, page-mm-biglietti .card-md p, page-mm-biglietti .card-wp p {
+  font-size: 3.5vw;
 }
 
 page-mm-come-raggiungerci .headerContent {
@@ -26206,6 +26274,11 @@ page-mm-come-raggiungerci .headerContent {
 page-mm-come-raggiungerci .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-come-raggiungerci #menu {
+  font-size: 7vw;
 }
 
 page-mm-come-raggiungerci .home-button {
@@ -26213,11 +26286,25 @@ page-mm-come-raggiungerci .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-come-raggiungerci #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-come-raggiungerci .vocal-button {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-come-raggiungerci #vocal {
+  font-size: 7vw;
+}
+
+page-mm-come-raggiungerci #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-come-raggiungerci .museo-content {
@@ -26231,13 +26318,13 @@ page-mm-come-raggiungerci .button-md {
 
 page-mm-come-raggiungerci .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
   margin: 10% auto 5px auto;
   border-bottom: 1px solid white;
-  width: 50%;
+  width: 70%;
 }
 
 page-mm-come-raggiungerci .card-subtitle {
@@ -26245,8 +26332,8 @@ page-mm-come-raggiungerci .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 70vw;
   margin: auto;
   line-height: 1em;
 }
@@ -26266,6 +26353,7 @@ page-mm-come-raggiungerci #container-contenuto {
 
 page-mm-come-raggiungerci #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-come-raggiungerci #paginaMmComeRaggiungerci.museo_musica {
@@ -26280,12 +26368,18 @@ page-mm-come-raggiungerci #contenuto h4 {
   -webkit-background-clip: text;
   font-weight: 600 !important;
   text-transform: uppercase;
+  font-size: 4vw;
 }
 
 page-mm-come-raggiungerci #portami-button {
   background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
   background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
-  width: 100%;
+  width: 99%;
+  font-size: 3.5vw;
+}
+
+page-mm-come-raggiungerci .card-ios p, page-mm-come-raggiungerci .card-md p, page-mm-come-raggiungerci .card-wp p {
+  font-size: 3.5vw;
 }
 
 page-mm-condivisione-social .headerContent {
@@ -26301,6 +26395,11 @@ page-mm-condivisione-social .headerContent {
 page-mm-condivisione-social .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-condivisione-social #menu {
+  font-size: 7vw;
 }
 
 page-mm-condivisione-social .home-button {
@@ -26308,11 +26407,25 @@ page-mm-condivisione-social .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-condivisione-social #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-condivisione-social .vocal-button {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-condivisione-social #vocal {
+  font-size: 7vw;
+}
+
+page-mm-condivisione-social #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-condivisione-social .museo-content {
@@ -26326,13 +26439,13 @@ page-mm-condivisione-social .button-md {
 
 page-mm-condivisione-social .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
   margin: 10% auto 5px auto;
   border-bottom: 1px solid white;
-  width: 50%;
+  width: 70%;
 }
 
 page-mm-condivisione-social .card-subtitle {
@@ -26340,8 +26453,8 @@ page-mm-condivisione-social .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 70vw;
   margin: auto;
   line-height: 1em;
 }
@@ -26357,10 +26470,12 @@ page-mm-condivisione-social .container-content {
 
 page-mm-condivisione-social #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 page-mm-condivisione-social #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-condivisione-social #paginaMmCondivisioneSocial.museo_musica {
@@ -26375,6 +26490,7 @@ page-mm-condivisione-social #contenuto h4 {
   -webkit-background-clip: text;
   font-weight: 600 !important;
   text-transform: uppercase;
+  font-size: 4vw;
 }
 
 page-mm-condivisione-social .social-class {
@@ -26383,18 +26499,26 @@ page-mm-condivisione-social .social-class {
 
 page-mm-condivisione-social #instagram-button, page-mm-condivisione-social #instagram-install-button {
   background: -webkit-linear-gradient(45deg, #dd884a, #a639a8 80%);
+  font-size: 3.5vw;
 }
 
 page-mm-condivisione-social #whatsapp-button, page-mm-condivisione-social #whatsapp-install-button {
   background: -webkit-linear-gradient(45deg, #4add5e, #13a305 80%);
+  font-size: 3.5vw;
 }
 
 page-mm-condivisione-social #facebook-button, page-mm-condivisione-social #facebook-install-button {
   background: -webkit-linear-gradient(45deg, #4067b1, #4a6aa9 80%);
+  font-size: 3.5vw;
 }
 
 page-mm-condivisione-social #twitter-button, page-mm-condivisione-social #twitter-install-button {
   background: -webkit-linear-gradient(45deg, #26a5f4, #219ff0 80%);
+  font-size: 3.5vw;
+}
+
+page-mm-condivisione-social .card-ios p, page-mm-condivisione-social .card-md p, page-mm-condivisione-social .card-wp p {
+  font-size: 3.5vw;
 }
 
 page-mm-contatti .headerContent {
@@ -26410,6 +26534,11 @@ page-mm-contatti .headerContent {
 page-mm-contatti .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-contatti #menu {
+  font-size: 7vw;
 }
 
 page-mm-contatti .home-button {
@@ -26417,11 +26546,25 @@ page-mm-contatti .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-contatti #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-contatti .vocal-button {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-contatti #vocal {
+  font-size: 7vw;
+}
+
+page-mm-contatti #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-contatti .museo-content {
@@ -26435,7 +26578,7 @@ page-mm-contatti .button-md {
 
 page-mm-contatti .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -26449,8 +26592,8 @@ page-mm-contatti .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 50vw;
   margin: auto;
   line-height: 1em;
 }
@@ -26466,10 +26609,12 @@ page-mm-contatti .container-content {
 
 page-mm-contatti #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 page-mm-contatti #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-contatti #paginaMmContatti.museo_musica {
@@ -26484,6 +26629,11 @@ page-mm-contatti #contenuto h4 {
   -webkit-background-clip: text;
   font-weight: 600 !important;
   text-transform: uppercase;
+  font-size: 4vw;
+}
+
+page-mm-contatti .card-ios p, page-mm-contatti .card-md p, page-mm-contatti .card-wp p {
+  font-size: 3.5vw;
 }
 
 page-mm-eventi .headerContent {
@@ -26499,6 +26649,11 @@ page-mm-eventi .headerContent {
 page-mm-eventi .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-eventi #menu {
+  font-size: 7vw;
 }
 
 page-mm-eventi .home-button {
@@ -26506,11 +26661,24 @@ page-mm-eventi .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-eventi #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-eventi .vocal-button {
   background-color: transparent;
   color: white;
+}
+
+page-mm-eventi #vocal {
+  font-size: 7vw;
+}
+
+page-mm-eventi #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-eventi .museo-content {
@@ -26524,7 +26692,7 @@ page-mm-eventi .button-md {
 
 page-mm-eventi .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -26538,8 +26706,8 @@ page-mm-eventi .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 50vw;
   margin: auto;
   line-height: 1em;
 }
@@ -26555,10 +26723,12 @@ page-mm-eventi .container-content {
 
 page-mm-eventi #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 page-mm-eventi #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-eventi #paginaMmEventi.museo_musica {
@@ -26574,6 +26744,7 @@ page-mm-eventi h4 {
   font-weight: 600;
   text-transform: uppercase;
   padding-bottom: 10px;
+  font-size: 4vw;
 }
 
 page-mm-eventi .itemFeed {
@@ -26591,8 +26762,16 @@ page-mm-eventi .itemFeed img {
 page-mm-eventi .dateItem {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 3.5vw;
   padding-bottom: 10px;
+}
+
+page-mm-eventi .card-ios p, page-mm-eventi .card-md p, page-mm-eventi .card-wp p {
+  font-size: 3.5vw;
+}
+
+page-mm-eventi .card-ios h3, page-mm-eventi .card-ios h4, page-mm-eventi .card-ios h5, page-mm-eventi .card-ios h6, page-mm-eventi .card-md h3, page-mm-eventi .card-md h4, page-mm-eventi .card-md h5, page-mm-eventi .card-md h6, page-mm-eventi .card-wp h3, page-mm-eventi .card-wp h4, page-mm-eventi .card-wp h5, page-mm-eventi .card-wp h6 {
+  font-size: 3.5vw;
 }
 
 page-mm-il-palazzo .headerContent {
@@ -26608,6 +26787,11 @@ page-mm-il-palazzo .headerContent {
 page-mm-il-palazzo .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-il-palazzo #menu {
+  font-size: 7vw;
 }
 
 page-mm-il-palazzo .home-button {
@@ -26615,11 +26799,25 @@ page-mm-il-palazzo .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-il-palazzo #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-il-palazzo .vocal-button {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-il-palazzo #vocal {
+  font-size: 7vw;
+}
+
+page-mm-il-palazzo #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-il-palazzo .museo-content {
@@ -26633,7 +26831,7 @@ page-mm-il-palazzo .button-md {
 
 page-mm-il-palazzo .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -26647,8 +26845,8 @@ page-mm-il-palazzo .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 50vw;
   margin: auto;
   line-height: 1em;
 }
@@ -26664,10 +26862,12 @@ page-mm-il-palazzo .container-content {
 
 page-mm-il-palazzo #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 page-mm-il-palazzo #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-il-palazzo #paginaMmIlPalazzo.museo_musica {
@@ -26682,6 +26882,15 @@ page-mm-il-palazzo #contenuto h4 {
   -webkit-background-clip: text;
   font-weight: 600 !important;
   text-transform: uppercase;
+  font-size: 4vw;
+}
+
+page-mm-il-palazzo .card-ios p, page-mm-il-palazzo .card-md p, page-mm-il-palazzo .card-wp p {
+  font-size: 3.5vw;
+}
+
+page-mm-il-palazzo .card-ios h3, page-mm-il-palazzo .card-ios h4, page-mm-il-palazzo .card-ios h5, page-mm-il-palazzo .card-ios h6, page-mm-il-palazzo .card-md h3, page-mm-il-palazzo .card-md h4, page-mm-il-palazzo .card-md h5, page-mm-il-palazzo .card-md h6, page-mm-il-palazzo .card-wp h3, page-mm-il-palazzo .card-wp h4, page-mm-il-palazzo .card-wp h5, page-mm-il-palazzo .card-wp h6 {
+  font-size: 3.5vw;
 }
 
 page-mm-informazioni .headerContent {
@@ -26697,6 +26906,11 @@ page-mm-informazioni .headerContent {
 page-mm-informazioni .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-informazioni #menu {
+  font-size: 7vw;
 }
 
 page-mm-informazioni .home-button {
@@ -26704,11 +26918,25 @@ page-mm-informazioni .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-informazioni #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-informazioni .vocal-button {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-informazioni #vocal {
+  font-size: 7vw;
+}
+
+page-mm-informazioni #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-informazioni .museo-content {
@@ -26722,7 +26950,7 @@ page-mm-informazioni .button-md {
 
 page-mm-informazioni .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -26736,8 +26964,8 @@ page-mm-informazioni .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 50vw;
   margin: auto;
   line-height: 1em;
 }
@@ -26753,10 +26981,12 @@ page-mm-informazioni .container-content {
 
 page-mm-informazioni #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 page-mm-informazioni #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-informazioni #paginaMmInformazioni.museo_musica {
@@ -26771,6 +27001,15 @@ page-mm-informazioni h4 {
   -webkit-background-clip: text;
   font-weight: 600;
   text-transform: uppercase;
+  font-size: 4vw;
+}
+
+page-mm-informazioni .card-ios p, page-mm-informazioni .card-md p, page-mm-informazioni .card-wp p {
+  font-size: 3.5vw;
+}
+
+page-mm-informazioni .card-ios h3, page-mm-informazioni .card-ios h4, page-mm-informazioni .card-ios h5, page-mm-informazioni .card-ios h6, page-mm-informazioni .card-md h3, page-mm-informazioni .card-md h4, page-mm-informazioni .card-md h5, page-mm-informazioni .card-md h6, page-mm-informazioni .card-wp h3, page-mm-informazioni .card-wp h4, page-mm-informazioni .card-wp h5, page-mm-informazioni .card-wp h6 {
+  font-size: 3.5vw;
 }
 
 page-mm-la-biblioteca .headerContent {
@@ -26786,6 +27025,11 @@ page-mm-la-biblioteca .headerContent {
 page-mm-la-biblioteca .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-la-biblioteca #menu {
+  font-size: 7vw;
 }
 
 page-mm-la-biblioteca .home-button {
@@ -26793,11 +27037,25 @@ page-mm-la-biblioteca .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-la-biblioteca #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-la-biblioteca .vocal-button {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-la-biblioteca #vocal {
+  font-size: 7vw;
+}
+
+page-mm-la-biblioteca #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-la-biblioteca .museo-content {
@@ -26811,7 +27069,7 @@ page-mm-la-biblioteca .button-md {
 
 page-mm-la-biblioteca .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -26825,8 +27083,8 @@ page-mm-la-biblioteca .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 50vw;
   margin: auto;
   line-height: 1em;
 }
@@ -26842,10 +27100,12 @@ page-mm-la-biblioteca .container-content {
 
 page-mm-la-biblioteca #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 page-mm-la-biblioteca #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-la-biblioteca #paginaMmLaBiblioteca.museo_musica {
@@ -26860,6 +27120,15 @@ page-mm-la-biblioteca #contenuto h4 {
   -webkit-background-clip: text;
   font-weight: 600 !important;
   text-transform: uppercase;
+  font-size: 4vw;
+}
+
+page-mm-la-biblioteca .card-ios p, page-mm-la-biblioteca .card-md p, page-mm-la-biblioteca .card-wp p {
+  font-size: 3.5vw;
+}
+
+page-mm-la-biblioteca .card-ios h3, page-mm-la-biblioteca .card-ios h4, page-mm-la-biblioteca .card-ios h5, page-mm-la-biblioteca .card-ios h6, page-mm-la-biblioteca .card-md h3, page-mm-la-biblioteca .card-md h4, page-mm-la-biblioteca .card-md h5, page-mm-la-biblioteca .card-md h6, page-mm-la-biblioteca .card-wp h3, page-mm-la-biblioteca .card-wp h4, page-mm-la-biblioteca .card-wp h5, page-mm-la-biblioteca .card-wp h6 {
+  font-size: 3.5vw;
 }
 
 page-mm-le-collezioni .headerContent {
@@ -26875,6 +27144,11 @@ page-mm-le-collezioni .headerContent {
 page-mm-le-collezioni .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-le-collezioni #menu {
+  font-size: 7vw;
 }
 
 page-mm-le-collezioni .home-button {
@@ -26882,11 +27156,25 @@ page-mm-le-collezioni .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-le-collezioni #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-le-collezioni .vocal-button {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-le-collezioni #vocal {
+  font-size: 7vw;
+}
+
+page-mm-le-collezioni #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-le-collezioni .museo-content {
@@ -26900,7 +27188,7 @@ page-mm-le-collezioni .button-md {
 
 page-mm-le-collezioni .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -26914,8 +27202,8 @@ page-mm-le-collezioni .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 50vw;
   margin: auto;
   line-height: 1em;
 }
@@ -26931,10 +27219,12 @@ page-mm-le-collezioni .container-content {
 
 page-mm-le-collezioni #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 page-mm-le-collezioni #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-le-collezioni #paginaMmLeCollezioni.museo_musica {
@@ -26949,6 +27239,15 @@ page-mm-le-collezioni #contenuto h4 {
   -webkit-background-clip: text;
   font-weight: 600 !important;
   text-transform: uppercase;
+  font-size: 3.5vw;
+}
+
+page-mm-le-collezioni .card-ios p, page-mm-le-collezioni .card-md p, page-mm-le-collezioni .card-wp p {
+  font-size: 3.5vw;
+}
+
+page-mm-le-collezioni .card-ios h3, page-mm-le-collezioni .card-ios h4, page-mm-le-collezioni .card-ios h5, page-mm-le-collezioni .card-ios h6, page-mm-le-collezioni .card-md h3, page-mm-le-collezioni .card-md h4, page-mm-le-collezioni .card-md h5, page-mm-le-collezioni .card-md h6, page-mm-le-collezioni .card-wp h3, page-mm-le-collezioni .card-wp h4, page-mm-le-collezioni .card-wp h5, page-mm-le-collezioni .card-wp h6 {
+  font-size: 3.5vw;
 }
 
 page-mm-orari .headerContent {
@@ -26964,6 +27263,11 @@ page-mm-orari .headerContent {
 page-mm-orari .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-orari #menu {
+  font-size: 7vw;
 }
 
 page-mm-orari .home-button {
@@ -26971,11 +27275,25 @@ page-mm-orari .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-orari #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-orari .vocal-button {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-orari #vocal {
+  font-size: 7vw;
+}
+
+page-mm-orari #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-orari .museo-content {
@@ -26989,7 +27307,7 @@ page-mm-orari .button-md {
 
 page-mm-orari .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
@@ -27003,8 +27321,8 @@ page-mm-orari .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 50vw;
   margin: auto;
   line-height: 1em;
 }
@@ -27020,10 +27338,12 @@ page-mm-orari .container-content {
 
 page-mm-orari #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 page-mm-orari #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-orari #paginaMmOrari.museo_musica {
@@ -27038,6 +27358,200 @@ page-mm-orari h4 {
   -webkit-background-clip: text;
   font-weight: 600;
   text-transform: uppercase;
+  font-size: 4vw;
+}
+
+page-mm-orari .card-ios p, page-mm-orari .card-md p, page-mm-orari .card-wp p {
+  font-size: 3.5vw;
+}
+
+page-mm-orari .card-ios h3, page-mm-orari .card-ios h4, page-mm-orari .card-ios h5, page-mm-orari .card-ios h6, page-mm-orari .card-md h3, page-mm-orari .card-md h4, page-mm-orari .card-md h5, page-mm-orari .card-md h6, page-mm-orari .card-wp h3, page-mm-orari .card-wp h4, page-mm-orari .card-wp h5, page-mm-orari .card-wp h6 {
+  font-size: 3.5vw;
+}
+
+page-mm-percorsi-a-tema {
+  /* Style the header: fixed position (always stay at the top) */
+  /* The progress container (grey background) */
+  /* The progress bar (scroll indicator) */
+}
+
+page-mm-percorsi-a-tema .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(91, 73, 137, 0.7)), to(rgba(225, 0, 255, 0.7)));
+  background-image: linear-gradient(to top right, rgba(91, 73, 137, 0.7), rgba(225, 0, 255, 0.7));
+}
+
+page-mm-percorsi-a-tema .sideMenu {
+  background-color: transparent;
+  color: white;
+  height: 20%;
+}
+
+page-mm-percorsi-a-tema #menu {
+  font-size: 7vw;
+}
+
+page-mm-percorsi-a-tema .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+  height: 20%;
+}
+
+page-mm-percorsi-a-tema #home-icon {
+  font-size: 7vw;
+}
+
+page-mm-percorsi-a-tema .vocal-button {
+  background-color: transparent;
+  color: white;
+  height: 20%;
+}
+
+page-mm-percorsi-a-tema #vocal {
+  font-size: 7vw;
+}
+
+page-mm-percorsi-a-tema #vocal-off {
+  font-size: 7vw;
+}
+
+page-mm-percorsi-a-tema .museo-content {
+  display: none;
+}
+
+page-mm-percorsi-a-tema .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mm-percorsi-a-tema .card-title {
+  font-family: 'Montserrat';
+  font-size: 5.5vw;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 70%;
+}
+
+page-mm-percorsi-a-tema .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3vw;
+  width: 70vw;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mm-percorsi-a-tema .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mm-percorsi-a-tema #container-contenuto {
+  overflow: auto;
+  font-size: 3.5vw;
+}
+
+page-mm-percorsi-a-tema #contenuto {
+  text-align: justify;
+  font-size: 3.5vw;
+}
+
+page-mm-percorsi-a-tema #paginaMmPercorsiATema.museo_musica {
+  background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+page-mm-percorsi-a-tema #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #5b4989, #e100ff 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-size: 4vw;
+}
+
+page-mm-percorsi-a-tema .card-ios p, page-mm-percorsi-a-tema .card-md p, page-mm-percorsi-a-tema .card-wp p {
+  font-size: 3.5vw;
+}
+
+page-mm-percorsi-a-tema .card-ios h3, page-mm-percorsi-a-tema .card-md h3, page-mm-percorsi-a-tema .card-wp h3 {
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+page-mm-percorsi-a-tema .sala {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+page-mm-percorsi-a-tema .sala img {
+  width: 50%;
+  float: left;
+  padding-top: 5px;
+  margin-right: 5px;
+}
+
+page-mm-percorsi-a-tema div.slide-zoom {
+  display: none;
+}
+
+page-mm-percorsi-a-tema .contentSlide {
+  padding: 10px 10px 20px;
+}
+
+page-mm-percorsi-a-tema #contenuto ion-card {
+  margin-bottom: 30px !important;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
+page-mm-percorsi-a-tema .contentSlide p {
+  text-align: justify;
+  padding: 10px 0;
+  font-size: 3.5vw;
+}
+
+page-mm-percorsi-a-tema .contentSlide img {
+  padding-top: 10px;
+  float: left;
+  margin-right: 10px;
+}
+
+page-mm-percorsi-a-tema .header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+page-mm-percorsi-a-tema .progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+page-mm-percorsi-a-tema .progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
 }
 
 page-mm-sale-espositive .headerContent {
@@ -27053,6 +27567,11 @@ page-mm-sale-espositive .headerContent {
 page-mm-sale-espositive .sideMenu {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-sale-espositive #menu {
+  font-size: 7vw;
 }
 
 page-mm-sale-espositive .home-button {
@@ -27060,11 +27579,25 @@ page-mm-sale-espositive .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 20%;
+}
+
+page-mm-sale-espositive #home-icon {
+  font-size: 7vw;
 }
 
 page-mm-sale-espositive .vocal-button {
   background-color: transparent;
   color: white;
+  height: 20%;
+}
+
+page-mm-sale-espositive #vocal {
+  font-size: 7vw;
+}
+
+page-mm-sale-espositive #vocal-off {
+  font-size: 7vw;
 }
 
 page-mm-sale-espositive .museo-content {
@@ -27078,13 +27611,13 @@ page-mm-sale-espositive .button-md {
 
 page-mm-sale-espositive .card-title {
   font-family: 'Montserrat';
-  font-size: 20px;
+  font-size: 5.5vw;
   font-weight: 600;
   color: white;
   text-align: center;
   margin: 10% auto 5px auto;
   border-bottom: 1px solid white;
-  width: 50%;
+  width: 70%;
 }
 
 page-mm-sale-espositive .card-subtitle {
@@ -27092,10 +27625,18 @@ page-mm-sale-espositive .card-subtitle {
   font-family: 'Amiri';
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
-  width: 200px;
+  font-size: 3vw;
+  width: 70vw;
   margin: auto;
   line-height: 1em;
+}
+
+page-mm-sale-espositive .card-ios p, page-mm-sale-espositive .card-md p, page-mm-sale-espositive .card-wp p {
+  font-size: 3.5vw;
+}
+
+page-mm-sale-espositive .card-ios h3, page-mm-sale-espositive .card-ios h4, page-mm-sale-espositive .card-ios h5, page-mm-sale-espositive .card-ios h6, page-mm-sale-espositive .card-md h3, page-mm-sale-espositive .card-md h4, page-mm-sale-espositive .card-md h5, page-mm-sale-espositive .card-md h6, page-mm-sale-espositive .card-wp h3, page-mm-sale-espositive .card-wp h4, page-mm-sale-espositive .card-wp h5, page-mm-sale-espositive .card-wp h6 {
+  font-size: 3.5vw;
 }
 
 page-mm-sale-espositive .container-content {
@@ -27109,10 +27650,12 @@ page-mm-sale-espositive .container-content {
 
 page-mm-sale-espositive #container-contenuto {
   overflow: auto;
+  font-size: 3.5vw;
 }
 
 page-mm-sale-espositive #contenuto {
   text-align: justify;
+  font-size: 3.5vw;
 }
 
 page-mm-sale-espositive #paginaMmSaleEspositive.museo_musica {
@@ -27128,6 +27671,7 @@ page-mm-sale-espositive #contenuto h4 {
   font-weight: 600 !important;
   text-transform: uppercase;
   padding-bottom: 10px;
+  font-size: 3.5vw;
 }
 
 page-mm-sale-espositive .sala {
@@ -27140,6 +27684,305 @@ page-mm-sale-espositive .sala img {
   float: left;
   padding-top: 5px;
   margin-right: 5px;
+}
+
+page-mp-contatti .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(29, 29, 29, 0.7)), to(rgba(102, 102, 102, 0.7)));
+  background-image: linear-gradient(to top right, rgba(29, 29, 29, 0.7), rgba(102, 102, 102, 0.7));
+}
+
+page-mp-contatti .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+  height: 20%;
+}
+
+page-mp-contatti #home-icon {
+  font-size: 7vw;
+}
+
+page-mp-contatti .vocal-button {
+  background-color: transparent;
+  color: white;
+  height: 20%;
+}
+
+page-mp-contatti #vocal {
+  font-size: 7vw;
+}
+
+page-mp-contatti #vocal-off {
+  font-size: 7vw;
+}
+
+page-mp-contatti .museo-content {
+  display: none;
+}
+
+page-mp-contatti .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mp-contatti .card-title {
+  font-family: 'Montserrat';
+  font-size: 5.5vw;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 50%;
+}
+
+page-mp-contatti .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3vw;
+  width: 50vw;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mp-contatti .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mp-contatti #container-contenuto {
+  overflow: auto;
+}
+
+page-mp-contatti #contenuto {
+  text-align: justify;
+}
+
+page-mp-contatti #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #1d1d1d, #666666 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  font-size: 4vw;
+}
+
+page-mp-contatti .card-ios p, page-mp-contatti .card-md p, page-mp-contatti .card-wp p {
+  font-size: 3.5vw;
+}
+
+page-mp-informazioni-generali .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(29, 29, 29, 0.7)), to(rgba(102, 102, 102, 0.7)));
+  background-image: linear-gradient(to top right, rgba(29, 29, 29, 0.7), rgba(102, 102, 102, 0.7));
+}
+
+page-mp-informazioni-generali .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+  height: 20%;
+}
+
+page-mp-informazioni-generali #home-icon {
+  font-size: 7vw;
+}
+
+page-mp-informazioni-generali .vocal-button {
+  background-color: transparent;
+  color: white;
+  height: 20%;
+}
+
+page-mp-informazioni-generali #vocal {
+  font-size: 7vw;
+}
+
+page-mp-informazioni-generali #vocal-off {
+  font-size: 7vw;
+}
+
+page-mp-informazioni-generali .museo-content {
+  display: none;
+}
+
+page-mp-informazioni-generali .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mp-informazioni-generali .card-title {
+  font-family: 'Montserrat';
+  font-size: 5.5vw;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 80%;
+}
+
+page-mp-informazioni-generali .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3vw;
+  width: 50vw;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mp-informazioni-generali .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mp-informazioni-generali #container-contenuto {
+  overflow: auto;
+  font-size: 3.5vw;
+}
+
+page-mp-informazioni-generali #contenuto {
+  text-align: justify;
+  font-size: 3.5vw;
+}
+
+page-mp-informazioni-generali #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #1d1d1d, #666666 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  font-size: 3.5vw;
+}
+
+page-mp-informazioni-generali .card-ios p, page-mp-informazioni-generali .card-md p, page-mp-informazioni-generali .card-wp p {
+  font-size: 3.5vw;
+}
+
+page-mp-informazioni-generali .card-ios h3, page-mp-informazioni-generali .card-ios h4, page-mp-informazioni-generali .card-ios h5, page-mp-informazioni-generali .card-ios h6, page-mp-informazioni-generali .card-md h3, page-mp-informazioni-generali .card-md h4, page-mp-informazioni-generali .card-md h5, page-mp-informazioni-generali .card-md h6, page-mp-informazioni-generali .card-wp h3, page-mp-informazioni-generali .card-wp h4, page-mp-informazioni-generali .card-wp h5, page-mp-informazioni-generali .card-wp h6 {
+  font-size: 3.5vw;
+}
+
+page-mp-le-aree-museali .headerContent {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 30%;
+  background-color: transparent !important;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(29, 29, 29, 0.7)), to(rgba(102, 102, 102, 0.7)));
+  background-image: linear-gradient(to top right, rgba(29, 29, 29, 0.7), rgba(102, 102, 102, 0.7));
+}
+
+page-mp-le-aree-museali .home-button {
+  background-color: transparent;
+  color: white;
+  margin: 0 2%;
+  float: right;
+  height: 20%;
+}
+
+page-mp-le-aree-museali #home-icon {
+  font-size: 7vw;
+}
+
+page-mp-le-aree-museali .vocal-button {
+  background-color: transparent;
+  color: white;
+  height: 20%;
+}
+
+page-mp-le-aree-museali #vocal {
+  font-size: 7vw;
+}
+
+page-mp-le-aree-museali #vocal-off {
+  font-size: 7vw;
+}
+
+page-mp-le-aree-museali .museo-content {
+  display: none;
+}
+
+page-mp-le-aree-museali .button-md {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-mp-le-aree-museali .card-title {
+  font-family: 'Montserrat';
+  font-size: 5.5vw;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin: 10% auto 5px auto;
+  border-bottom: 1px solid white;
+  width: 70%;
+}
+
+page-mp-le-aree-museali .card-subtitle {
+  color: white;
+  font-family: 'Amiri';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3vw;
+  width: 70vw;
+  margin: auto;
+  line-height: 1em;
+}
+
+page-mp-le-aree-museali .container-content {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 12px;
+  position: absolute;
+  overflow: auto;
+}
+
+page-mp-le-aree-museali #container-contenuto {
+  overflow: auto;
+  font-size: 3.5vw;
+}
+
+page-mp-le-aree-museali #contenuto {
+  text-align: justify;
+  font-size: 3.5vw;
+}
+
+page-mp-le-aree-museali #contenuto h4 {
+  background: -webkit-linear-gradient(45deg, #1d1d1d, #666666 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  font-size: 3.5vw;
+}
+
+page-mp-le-aree-museali .card-ios p, page-mp-le-aree-museali .card-md p, page-mp-le-aree-museali .card-wp p {
+  font-size: 3.5vw;
 }
 
 page-musei .gridHome {
@@ -27159,10 +28002,10 @@ page-musei .cardHome {
 }
 
 page-musei .card-title {
-  padding: 20% 0;
+  padding: 17.5vw 0;
   height: 100%;
   text-align: center;
-  font-size: 16px;
+  font-size: 4vw;
   font-weight: 700;
   text-transform: uppercase;
   color: white;
@@ -27193,6 +28036,11 @@ page-musei .back-musei {
   color: white;
   float: left;
   position: absolute;
+  height: 30%;
+}
+
+page-musei #arrow {
+  font-size: 7vw;
 }
 
 page-musei #row-1 .cardHome {
@@ -27252,12 +28100,17 @@ page-museo .cardHome {
 page-museo .card-title {
   height: 100%;
   text-align: center;
-  font-size: 18px;
+  font-size: 4vw;
 }
 
 page-museo .sideMenu {
   background-color: transparent;
   color: white;
+  height: 8%;
+}
+
+page-museo #menu {
+  font-size: 7vw;
 }
 
 page-museo .home-button {
@@ -27265,6 +28118,11 @@ page-museo .home-button {
   color: white;
   margin: 0 2%;
   float: right;
+  height: 8%;
+}
+
+page-museo #home-icon {
+  font-size: 7vw;
 }
 
 page-museo .button-md {
@@ -27275,6 +28133,15 @@ page-museo .button-md {
 page-museo .vocal-button {
   background-color: transparent;
   color: white;
+  height: 8%;
+}
+
+page-museo #vocal {
+  font-size: 7vw;
+}
+
+page-museo #vocal-off {
+  font-size: 7vw;
 }
 
 page-museo .museo-content {
@@ -27285,7 +28152,7 @@ page-museo .museo_mambo .card-title {
   color: white;
   text-transform: uppercase;
   text-align: left;
-  font-size: 16px;
+  font-size: 4vw;
   font-weight: 700;
   border-left: 1px white solid;
   margin-left: 10px;
@@ -27305,7 +28172,7 @@ page-museo .museo_mambo .museo-content {
 }
 
 page-museo .museo_mambo .museo-content p {
-  font-size: 10px !important;
+  font-size: 2.8vw !important;
   font-weight: 600;
   color: white;
   text-align: justify;
@@ -27327,7 +28194,7 @@ page-museo .museo_musica .card-title {
   color: white;
   text-transform: uppercase;
   text-align: left;
-  font-size: 16px;
+  font-size: 4vw;
   font-weight: 700;
   border-left: 1px white solid;
   margin-left: 10px;
@@ -27347,7 +28214,7 @@ page-museo .museo_musica .museo-content {
 }
 
 page-museo .museo_musica .museo-content p {
-  font-size: 10px !important;
+  font-size: 2.8vw !important;
   font-weight: 600;
   color: white;
   text-align: justify;
