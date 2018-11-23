@@ -102,7 +102,7 @@ export class MyApp {
         break;
 
       case "AreeMusealiService":
-        this.nav.push(MpLeAreeMusealiPage, {voceMenu: 'LE AREE MUSEALI', contenuto: this.istituzione[0].AREE_MUSEALI});
+        this.nav.push(MpLeAreeMusealiPage, {voceMenu: 'AREE MUSEALI', contenuto: this.istituzione[0].AREE_MUSEALI});
         this.nav.removeView(this.nav.last());
         break;
       

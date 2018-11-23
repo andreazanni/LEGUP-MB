@@ -306,3 +306,21 @@
 ion-icon::before {
   display: block;
 }
+
+.size-button {
+  font-size: 3.5vw;
+}
+
+.toolbar-title-ios, .toolbar-title-md, .toolbar-title-wp { 
+  font-size: 4vw;
+}
+
+.menu-inner {
+  width: 80%;
+}
+
+.menu-content .menu-content-reveal .menu-content-open {
+  transform: translateX(80%);
+  transition-delay: 0s;
+  transition-property: none;
+}
