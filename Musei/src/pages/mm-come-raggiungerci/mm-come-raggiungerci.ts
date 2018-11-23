@@ -22,6 +22,10 @@ export class MmComeRaggiungerciPage {
   myContentClass: string;
   myMuseo: any;
   unregisterBackButtonAction: any;
+  alertAperti: boolean;
+  alertAuthorized: any;
+  alertEnabled: any;
+  alertFinale: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public menuCtrl: MenuController, public nativePageTransitions: NativePageTransitions,
     public platform: Platform, public diagnostic: Diagnostic, public launchNavigator: LaunchNavigator, public alertCtrl: AlertController, public geolocation: Geolocation,
@@ -31,6 +35,48 @@ export class MmComeRaggiungerciPage {
     this.myMuseoClass = this.navParams.get('museoClass');
     this.myContentClass = this.navParams.get('contenutoClass');
     this.myMuseo = this.navParams.get('datiMuseo');
+
+    this.creaAlerts();
+  }
+
+  creaAlerts() {
+    //Preparo tutti i popup da mostrare
+    this.alertAuthorized = this.alertCtrl.create({
+      title: "Si prega di autorizzare la localizzazione del dispositivo per poter utilizzare questa funzionalita', grazie.",
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            this.alertAperti = false;
+            this.creaAlerts();
+          }
+        }
+      ]
+    });
+    this.alertEnabled = this.alertCtrl.create({
+      title: "Si prega di abilitare la localizzazione del dispositivo per poter utilizzare questa funzionalita', grazie.",
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            this.alertAperti = false;
+            this.creaAlerts();
+          }
+        }
+      ]
+    });
+    this.alertFinale = this.alertCtrl.create({
+      title: "Purtroppo non sono riuscito a localizzare il tuo dispositivo.",
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            this.alertAperti = false;
+            this.creaAlerts();
+          }
+        }
+      ]
+    });  
   }
 
   ionViewDidLoad() {
@@ -67,8 +113,16 @@ export class MmComeRaggiungerciPage {
 
   initializeBackButton(): void {
     this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
-      this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
-      this.navCtrl.removeView(this.navCtrl.last());
+      if (this.alertAperti) {
+        this.alertAuthorized.dismiss();
+        this.alertEnabled.dismiss();
+        this.alertFinale.dismiss();
+        this.alertAperti = false;
+        this.creaAlerts();
+      } else {
+        this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
+        this.navCtrl.removeView(this.navCtrl.last());
+      }
     });
   }
 
@@ -106,20 +160,7 @@ export class MmComeRaggiungerciPage {
   calcolaPercorso() {
     //Parte un loader per mascherare il calcolo in background del museo piu vicino
     let spinnerLoading = this.loadingCtrl.create();
-    spinnerLoading.present();
-    //Preparo tutti i popup da mostrare
-    let alertAuthorized = this.alertCtrl.create({
-      title: "Si prega di autorizzare la localizzazione del dispositivo per poter utilizzare questa funzionalita', grazie.",
-      buttons: ['OK']
-    });
-    let alertEnabled = this.alertCtrl.create({
-      title: "Si prega di abilitare la localizzazione del dispositivo per poter utilizzare questa funzionalita', grazie.",
-      buttons: ['OK']
-    });
-    let alertFinale = this.alertCtrl.create({
-      title: "Purtroppo non sono riuscito a localizzare il tuo dispositivo.",
-      buttons: ['OK']
-    });   
+    spinnerLoading.present(); 
     //Per prima cosa controllo se è stata autorizzata la localizzazione
     this.diagnostic.isLocationAuthorized().then(() => {
     //Poi controllo se la localizzazione è abilitata
@@ -150,23 +191,43 @@ export class MmComeRaggiungerciPage {
             this.launchNavigator.navigate(destination, options)
             .then()
             .catch(() => {
-              alertFinale.present();
-            })
+              this.alertFinale.present();
+              this.alertFinale.onDidDismiss(() => {
+                this.creaAlerts();
+              })
+              this.alertAperti = true;
+            });
           }).catch(() => {
             spinnerLoading.dismiss();
-            alertFinale.present();
+            this.alertFinale.present();
+            this.alertFinale.onDidDismiss(() => {
+              this.creaAlerts();
+            });
+            this.alertAperti = true;
         });
       } else {
         spinnerLoading.dismiss();
-        alertEnabled.present();
+        this.alertEnabled.present();
+        this.alertEnabled.onDidDismiss(() => {
+          this.creaAlerts();
+        });
+        this.alertAperti = true;
       }
     }).catch(() => {
       spinnerLoading.dismiss();
-      alertEnabled.present();
+      this.alertEnabled.present();
+      this.alertEnabled.onDidDismiss(() => {
+        this.creaAlerts();
+      });
+      this.alertAperti = true;
     });
   }).catch(() => {
     spinnerLoading.dismiss();
-    alertAuthorized.present();
+    this.alertAuthorized.present();
+    this.alertAuthorized.onDidDismiss(() => {
+      this.creaAlerts();
+    });
+    this.alertAperti = true;
   });
 }
 

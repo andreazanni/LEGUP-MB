@@ -30,6 +30,9 @@ export class MmCondivisioneSocialPage {
   myContentClass: string;
   myMuseo: any;
   unregisterBackButtonAction: any;
+  alertTwitter: any;
+  alertFacebook: any;
+  alertAperti: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public menuCtrl: MenuController, public nativePageTransitions: NativePageTransitions,
     public platform: Platform, public camera: Camera, public instagramSocial: Instagram, public socialSharing: SocialSharing, public alertCtrl: AlertController, public market: Market) {
@@ -38,6 +41,79 @@ export class MmCondivisioneSocialPage {
     this.myMuseoClass = this.navParams.get('museoClass');
     this.myContentClass = this.navParams.get('contenutoClass');
     this.myMuseo = this.navParams.get('datiMuseo');
+    
+    this.creaAlerts();
+  }
+
+  creaAlerts() {
+    const options: CameraOptions = {
+      quality: 80,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+
+    this.alertTwitter = this.alertCtrl.create({
+      title: "Vuoi anche scattare una foto e condividerla su Twitter?",
+      buttons: [
+        {
+          text: "VAI DIRETTAMENTE SU TWITTER",
+          handler: () => {
+            this.alertAperti = false;
+            this.creaAlerts();
+            this.socialSharing.shareViaTwitter("")
+            .catch((err) => {
+              alert(err);
+            })
+          }
+        },
+        {
+          text: "SCATTA FOTO",
+          handler: () => {
+            this.alertAperti = false;
+            this.creaAlerts();
+            this.camera.getPicture(options).then((imageData) => {
+              let base64Image = 'data:image/jpeg;base64,' + imageData;
+              this.socialSharing.shareViaTwitter("", base64Image)
+              .catch((err) => {
+                alert(err);
+              })
+            });
+          }
+        },
+      ]
+    });
+
+    this.alertFacebook = this.alertCtrl.create({
+      title: "Vuoi anche scattare una foto e condividerla su Facebook?",
+      buttons: [
+        {
+          text: "VAI DIRETTAMENTE SU FACEBOOK",
+          handler: () => {
+            this.alertAperti = false;
+            this.creaAlerts();
+              this.socialSharing.shareViaFacebook("")
+              .catch((err) => {
+                alert(err);
+              })
+          }
+        },
+        {
+          text: "SCATTA FOTO",
+          handler: () => {
+            this.alertAperti = false;
+            this.creaAlerts();
+            this.camera.getPicture(options).then((imageData) => {
+              let base64Image = 'data:image/jpeg;base64,' + imageData;
+              this.socialSharing.shareViaFacebook("", base64Image)
+              .catch((err) => {
+                alert(err);
+              })
+            });
+          }
+        },
+      ]
+    });
   }
 
   ionViewDidLoad() {
@@ -107,8 +183,15 @@ export class MmCondivisioneSocialPage {
 
   initializeBackButton(): void {
     this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
-      this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
-      this.navCtrl.removeView(this.navCtrl.last());
+      if (this.alertAperti) {
+        this.alertFacebook.dismiss();
+        this.alertTwitter.dismiss();
+        this.alertAperti = false;
+        this.creaAlerts();
+      } else {
+        this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
+        this.navCtrl.removeView(this.navCtrl.last());
+      }
     });
   }
 
@@ -157,77 +240,19 @@ export class MmCondivisioneSocialPage {
   }
 
   facebook() {
-    const options: CameraOptions = {
-      quality: 80,
-      destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
-    }
-
-    let alertPhoto = this.alertCtrl.create({
-      title: "Vuoi anche scattare una foto e condividerla su Facebook?",
-      buttons: [
-        {
-          text: "VAI DIRETTAMENTE SU FACEBOOK",
-          handler: () => {
-              this.socialSharing.shareViaFacebook("")
-              .catch((err) => {
-                alert(err);
-              })
-          }
-        },
-        {
-          text: "SCATTA FOTO",
-          handler: () => {
-            this.camera.getPicture(options).then((imageData) => {
-              let base64Image = 'data:image/jpeg;base64,' + imageData;
-              this.socialSharing.shareViaFacebook("", base64Image)
-              .catch((err) => {
-                alert(err);
-              })
-            });
-          }
-        },
-      ]
+    this.alertFacebook.present();
+    this.alertFacebook.onDidDismiss(() => {
+      this.creaAlerts();
     });
-    alertPhoto.present();
+    this.alertAperti = true;
   }
 
   twitter() {
-    const options: CameraOptions = {
-      quality: 80,
-      destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
-    }
-
-    let alertPhoto = this.alertCtrl.create({
-      title: "Vuoi anche scattare una foto e condividerla su Twitter?",
-      buttons: [
-        {
-          text: "VAI DIRETTAMENTE SU TWITTER",
-          handler: () => {
-              this.socialSharing.shareViaTwitter("")
-              .catch((err) => {
-                alert(err);
-              })
-          }
-        },
-        {
-          text: "SCATTA FOTO",
-          handler: () => {
-            this.camera.getPicture(options).then((imageData) => {
-              let base64Image = 'data:image/jpeg;base64,' + imageData;
-              this.socialSharing.shareViaTwitter("", base64Image)
-              .catch((err) => {
-                alert(err);
-              })
-            });
-          }
-        },
-      ]
+    this.alertTwitter.present();
+    this.alertTwitter.onDidDismiss(() => {
+      this.creaAlerts();
     });
-    alertPhoto.present();
+    this.alertAperti = true;
   }
 
   whatsapp() {

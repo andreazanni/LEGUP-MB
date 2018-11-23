@@ -17,6 +17,12 @@ export class HomePage {
           //console.log("Componente Home: " + v.component.name);
 
       }*/
+      this.creaAlert();
+
+
+    this.alertNotActive.onDidDismiss(() => {
+      this.creaAlert();
+    })
   }
 
   AREA: any;
@@ -25,6 +31,23 @@ export class HomePage {
   unregisterBackButtonAction: any;
   classArea: any;
   classMuseo: any;
+  alertNotActive: any;
+  alertAperto: boolean;
+
+  creaAlert() {
+    this.alertNotActive = this.alertCtrl.create({
+      title: 'Coming soon...',
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            this.alertAperto = false;
+            this.creaAlert();
+          }
+        }
+      ]
+    });
+  }
 
   ionViewDidLoad() {
     this.initializeBackButton();
@@ -36,19 +59,26 @@ export class HomePage {
 
   initializeBackButton(): void {
     this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
-      this.platform.exitApp();
+      if (this.alertAperto) {
+        this.alertAperto = false;
+        this.alertNotActive.dismiss();
+        this.creaAlert();
+      } else {
+        this.platform.exitApp();
+      }
     });
   }
 
   //Richiama il metodo che restituisce i musei associati ad un'area
   findMusei(string, isActive) {
     if (isActive==false){
-      let alertNotActive = this.alertCtrl.create({
-        title: 'Coming soon...',
-        buttons: ['OK']
-      });
-      alertNotActive.present();
+      this.alertNotActive.present();
+      this.alertNotActive.onDidDismiss(() => {
+        this.creaAlert();
+      })
+      this.alertAperto = true;
     } else {
+      this.alertAperto = false;
       //spinner loading
       let spinnerLoading = this.loadingCtrl.create({
         dismissOnPageChange: true

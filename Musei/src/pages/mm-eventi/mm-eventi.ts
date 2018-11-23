@@ -26,6 +26,8 @@ export class MmEventiPage {
   myContentClass: string;
   myMuseo: any;
   unregisterBackButtonAction: any;
+  alert: any;
+  alertAperto: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public menuCtrl: MenuController, public nativePageTransitions: NativePageTransitions, public loadingCtrl: LoadingController,
     public platform: Platform, public alertCtrl: AlertController) {
@@ -35,6 +37,23 @@ export class MmEventiPage {
     this.myMuseoClass = this.navParams.get('museoClass');
     this.myContentClass = this.navParams.get('contenutoClass');
     this.myMuseo = this.navParams.get('datiMuseo');
+
+    this.creaAlert();
+  }
+
+  creaAlert() {
+    this.alert = this.alertCtrl.create({
+      title: "Purtroppo non sono riuscito a recuperare gli eventi. Si prega di riprovare più tardi, grazie.",
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            this.alertAperto = false;
+            this.creaAlert();
+          }
+        }
+      ]   
+    });
   }
 
   ionViewDidLoad() {
@@ -98,11 +117,11 @@ export class MmEventiPage {
       })
       .catch(() => {
         spinnerLoading.dismiss();
-        let alert = this.alertCtrl.create({
-          title: "Purtroppo non sono riuscito a recuperare gli eventi. Si prega di riprovare più tardi, grazie.",
-          buttons: ['OK']
+        this.alert.present();
+        this.alert.onDidDismiss(() => {
+          this.creaAlert();
         });
-        alert.present();
+        this.alertAperto = true;
       });
   }
 
@@ -112,8 +131,14 @@ export class MmEventiPage {
 
   initializeBackButton(): void {
     this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+      if(this.alertAperto) {
+        this.alert.dismiss();
+        this.alertAperto = false;
+        this.creaAlert();
+      } else {
       this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
       this.navCtrl.removeView(this.navCtrl.last());
+      }
     });
   }
 
