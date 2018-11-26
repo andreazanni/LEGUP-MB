@@ -6,23 +6,23 @@
     </ion-header>
     <ion-content>
         <ion-list>
-            <button class="size-button gradientLoop" ion-item (click)="onLoad('LoginService')">
+            <button class="size-button button-fade gradientLoop" ion-item (click)="onLoad('LoginService')">
                 <ion-icon name="contact" item-left></ion-icon>
                 Login
             </button>
-            <button class="size-button gradientLoop" ion-item (click)="onLoad('InformazioniGeneraliService')">
+            <button class="size-button button-fade gradientLoop" ion-item (click)="onLoad('InformazioniGeneraliService')">
                 <ion-icon name="information-circle" item-left></ion-icon>
                 Informazioni generali
             </button>
-            <button class="size-button gradientLoop" ion-item (click)="onLoad('AreeMusealiService')">
+            <button class="size-button button-fade gradientLoop" ion-item (click)="onLoad('AreeMusealiService')">
                 <ion-icon name="list-box" item-left></ion-icon>
                 Aree Museali
             </button>
-            <button class="size-button gradientLoop" ion-item (click)="onLoad('ContattiGeneraliService')">
+            <button class="size-button button-fade gradientLoop" ion-item (click)="onLoad('ContattiGeneraliService')">
                 <ion-icon name="chatbubbles" item-left></ion-icon>
                 Contatti
             </button>
-            <button class="size-button gradientLoop" ion-item (click)="onLoad('MuseoPiuVicinoService')">
+            <button #myElement class="size-button button-fade gradientLoop" ion-item (click)="onLoad('MuseoPiuVicinoService')">
                 <ion-icon name="walk" item-left></ion-icon>
                 Museo più vicino a te
             </button>
