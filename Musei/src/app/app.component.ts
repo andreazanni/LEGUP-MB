@@ -11,6 +11,7 @@ import { RicercaMuseiProvider } from '../providers/ricerca-musei/ricerca-musei';
 import { MpInformazioniGeneraliPage } from '../pages/mp-informazioni-generali/mp-informazioni-generali';
 import { MpLeAreeMusealiPage } from '../pages/mp-le-aree-museali/mp-le-aree-museali';
 import { MpContattiPage } from '../pages/mp-contatti/mp-contatti';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,13 +24,22 @@ export class MyApp {
   istituzione: any;
 
   constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, public menuCtrl: MenuController, 
-  public diagnostic: Diagnostic, public geolocation: Geolocation, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public museiService: RicercaMuseiProvider) {
+  public diagnostic: Diagnostic, public geolocation: Geolocation, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public museiService: RicercaMuseiProvider,
+  public tts: TextToSpeech) {
 
       platform.ready().then(() => {
         statusBar.styleDefault();
 	      let splash = modalCtrl.create(Splash);
 	      splash.present();
         //splashScreen.hide();
+
+        //Intercetto quando l'app va in background o viene chiusa per stoppare la lettura vocale
+        document.addEventListener("pause", () => {
+          document.getElementById("mic").style.display = "inline";
+          document.getElementById("disabled-mic").style.display = "none";
+          this.tts.speak("");
+        }, false);
+
       });
 
       //Carico già all'avvio dell'app le geolocalizzazioni dei musei

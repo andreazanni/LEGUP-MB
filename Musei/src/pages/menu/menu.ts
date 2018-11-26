@@ -16,6 +16,7 @@ import { Instagram } from '@ionic-native/instagram';
 import { MmCondivisioneSocialPage } from '../mm-condivisione-social/mm-condivisione-social';
 import { MmSaleEspositivePage } from '../mm-sale-espositive/mm-sale-espositive';
 import { MmPercorsiATemaPage } from '../mm-percorsi-a-tema/mm-percorsi-a-tema';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @IonicPage()
 @Component({
@@ -30,7 +31,7 @@ export class MenuPage {
   unregisterBackButtonAction: any;
 
   constructor(public socialSharing: SocialSharing, public navCtrl: NavController, public navParams: NavParams, public nativePageTransitions: NativePageTransitions, public platform: Platform,
-    public instagram: Instagram) {
+    public instagram: Instagram, public tts: TextToSpeech) {
     this.museo = this.navParams.get('datiMuseo');
     this.classe = this.navParams.get('museoClass');
     this.ultimo = this.navParams.get('ultimo');
@@ -50,6 +51,7 @@ export class MenuPage {
 
   initializeBackButton(): void {
     this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+      this.tts.speak("");
       this.navCtrl.push(MuseoPage, {musei: this.museo, classe1: this.classe});
       this.navCtrl.removeView(this.navCtrl.last());
     });
@@ -62,8 +64,10 @@ export class MenuPage {
       duration: 600
     }
 
-    switch(service) {
+    this.tts.speak("");
 
+    switch(service) {
+      
       case "MuseoService":
         if (animation) {
           this.nativePageTransitions.flip(options);

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController, AlertController
 import { HomePage } from '../home/home';
 import { MuseoPage } from '../museo/museo';
 import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-musei';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @IonicPage()
 @Component({
@@ -18,7 +19,7 @@ export class MuseiPage {
   unregisterBackButtonAction: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController,
-    public platform: Platform) {
+    public platform: Platform, public tts: TextToSpeech) {
     this.musei = this.navParams.get('musei');
     this.classeArea = this.navParams.get('classe1');
   }
@@ -54,6 +55,7 @@ export class MuseiPage {
               this.classMuseoArea = string;
           }
         }
+          this.tts.speak("");
           this.navCtrl.push(MuseoPage, {musei: data, classe1: this.classMuseoArea, museiTotali: this.musei, classeAreaTotale: this.classeArea});
           this.navCtrl.removeView(this.navCtrl.last());
       }
@@ -80,6 +82,7 @@ export class MuseiPage {
 
   //Associato al tasto per tornare all'home page.
   goHomePage() {
+    this.tts.speak("");
     this.navCtrl.push(HomePage);
     this.navCtrl.removeView(this.navCtrl.last());
     //Ho notato che ogni volta viene creata il tag di una pagina musei o museo. Bisogna gestire il fatto di utilizzare sempre e solo una pagina per area e museo, in modo da non creare n. pagine.

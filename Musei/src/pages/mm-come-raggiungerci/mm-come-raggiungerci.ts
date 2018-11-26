@@ -120,6 +120,7 @@ export class MmComeRaggiungerciPage {
         this.alertAperti = false;
         this.creaAlerts();
       } else {
+        this.stopRead();
         this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
         this.navCtrl.removeView(this.navCtrl.last());
       }
@@ -128,6 +129,7 @@ export class MmComeRaggiungerciPage {
 
   //Apre il side menu
   openMenu() {
+    this.stopRead();
     let options : NativeTransitionOptions = {
       direction: 'right',
       duration: 600
@@ -151,6 +153,7 @@ export class MmComeRaggiungerciPage {
 
   //Associato al tasto per tornare all'home page
   goHomePage() {
+    this.stopRead();
     this.navCtrl.push(HomePage);
     this.navCtrl.removeView(this.navCtrl.last());
     this.menuCtrl.enable(true, "menuPrincipale");
@@ -158,6 +161,7 @@ export class MmComeRaggiungerciPage {
 
   //Metodo chiamato dal pulsante che va ad aprire l'app di navigazione
   calcolaPercorso() {
+    this.stopRead();
     //Parte un loader per mascherare il calcolo in background del museo piu vicino
     let spinnerLoading = this.loadingCtrl.create();
     spinnerLoading.present(); 

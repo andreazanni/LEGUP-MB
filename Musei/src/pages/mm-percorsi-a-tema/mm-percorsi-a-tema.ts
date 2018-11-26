@@ -175,6 +175,7 @@ export class MmPercorsiATemaPage {
 
   initializeBackButton(): void {
     this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+      this.stopRead();
       this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
       this.navCtrl.removeView(this.navCtrl.last());
     });
@@ -182,6 +183,7 @@ export class MmPercorsiATemaPage {
 
   //Apre il side menu
   openMenu() {
+    this.stopRead();
     let options : NativeTransitionOptions = {
       direction: 'right',
       duration: 600
@@ -205,6 +207,7 @@ export class MmPercorsiATemaPage {
 
   //Associato al tasto per tornare all'home page
   goHomePage() {
+    this.stopRead();
     this.navCtrl.push(HomePage);
     this.navCtrl.removeView(this.navCtrl.last());
     this.menuCtrl.enable(true, "menuPrincipale");

@@ -69,6 +69,7 @@ export class MpInformazioniGeneraliPage {
 
   //Associato al tasto per tornare all'home page
   goHomePage() {
+    this.stopRead();
     this.navCtrl.push(HomePage);
     this.navCtrl.removeView(this.navCtrl.last());
     this.menuCtrl.enable(true, "menuPrincipale");

@@ -38,7 +38,6 @@ export class MmContattiPage {
 
   ionViewDidLoad() {
      // personalizzo la pagina di contenuto in base al museo e alla voce di menù selezionata
-     console.log(this.myContenuto);
      var idClass = document.getElementById('paginaMmContatti');
      idClass.classList.add(this.myMuseoClass);
 
@@ -46,7 +45,6 @@ export class MmContattiPage {
      document.getElementById('content_cardSubTitle').innerText = this.myMuseo[0].NOME;
 
      var idCardContenuto = document.getElementById('contenuto');
-     console.log(idCardContenuto);
      idCardContenuto.innerHTML = this.myContenuto;
 
      var idContainerContenuto = document.getElementById('container-contenuto');
@@ -65,6 +63,7 @@ export class MmContattiPage {
 
   initializeBackButton(): void {
     this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
+      this.stopRead();
       this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
       this.navCtrl.removeView(this.navCtrl.last());
     });
@@ -72,6 +71,7 @@ export class MmContattiPage {
 
   //Apre il side menu
   openMenu() {
+    this.stopRead();
     let options : NativeTransitionOptions = {
       direction: 'right',
       duration: 600
@@ -95,6 +95,7 @@ export class MmContattiPage {
 
   //Associato al tasto per tornare all'home page
   goHomePage() {
+    this.stopRead();
     this.navCtrl.push(HomePage);
     this.navCtrl.removeView(this.navCtrl.last());
     this.menuCtrl.enable(true, "menuPrincipale");

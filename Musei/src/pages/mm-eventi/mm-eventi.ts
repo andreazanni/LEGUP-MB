@@ -136,14 +136,16 @@ export class MmEventiPage {
         this.alertAperto = false;
         this.creaAlert();
       } else {
-      this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
-      this.navCtrl.removeView(this.navCtrl.last());
+        this.stopRead();
+        this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
+        this.navCtrl.removeView(this.navCtrl.last());
       }
     });
   }
 
   //Apre il side menu
   openMenu() {
+    this.stopRead();
     let options : NativeTransitionOptions = {
       direction: 'right',
       duration: 600
@@ -167,6 +169,7 @@ export class MmEventiPage {
 
   //Associato al tasto per tornare all'home page
   goHomePage() {
+    this.stopRead();
     this.navCtrl.push(HomePage);
     this.navCtrl.removeView(this.navCtrl.last());
     this.menuCtrl.enable(true, "menuPrincipale");

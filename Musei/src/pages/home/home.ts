@@ -3,6 +3,7 @@ import { NavController, LoadingController, AlertController, Platform } from 'ion
 import { MuseiPage } from '../musei/musei';
 import { MuseoPage } from '../museo/museo';
 import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-musei';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @Component({
   selector: 'page-home',
@@ -10,7 +11,8 @@ import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-muse
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController, public platform: Platform) {
+  constructor(public navCtrl: NavController, public museiService: RicercaMuseiProvider, public loadingCtrl: LoadingController, public alertCtrl: AlertController, public platform: Platform,
+    public tts: TextToSpeech) {
     /*for ( let i=0; i < this.navCtrl.length(); i++ )
       {
           let v = this.navCtrl.getViews()[i];
@@ -64,6 +66,7 @@ export class HomePage {
         this.alertNotActive.dismiss();
         this.creaAlert();
       } else {
+        this.tts.speak("");
         this.platform.exitApp();
       }
     });
@@ -113,6 +116,7 @@ export class HomePage {
               default:
                 this.classMuseo = string;
             }
+              this.tts.speak("");
               this.navCtrl.push(MuseoPage, {musei: data, classe1: this.classMuseo});
               this.navCtrl.removeView(this.navCtrl.last());
             } else {
@@ -124,6 +128,7 @@ export class HomePage {
                 default:
                   this.classArea = string;
               }
+                this.tts.speak("");
                 this.navCtrl.push(MuseiPage, {musei: data, classe1: this.classArea});
                 this.navCtrl.removeView(this.navCtrl.last());
                 console.log(this.classArea);

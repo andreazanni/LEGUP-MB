@@ -59,6 +59,7 @@ export class MuseoPage {
 
  //Apre il side menu
   openMenu() {
+    this.stopRead();
     let options : NativeTransitionOptions = {
       direction: 'right',
       duration: 600
@@ -82,6 +83,7 @@ export class MuseoPage {
 
   //Associato al tasto per tornare all'home page
   goHomePage() {
+    this.stopRead();
     this.navCtrl.push(HomePage);
     this.navCtrl.removeView(this.navCtrl.last());
     //Riabilito il menu principale e disabilito quello specifico del museo

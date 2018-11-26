@@ -189,6 +189,7 @@ export class MmCondivisioneSocialPage {
         this.alertAperti = false;
         this.creaAlerts();
       } else {
+        this.stopRead();
         this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
         this.navCtrl.removeView(this.navCtrl.last());
       }
@@ -197,6 +198,7 @@ export class MmCondivisioneSocialPage {
 
   //Apre il side menu
   openMenu() {
+    this.stopRead();
     let options : NativeTransitionOptions = {
       direction: 'right',
       duration: 600
@@ -207,7 +209,7 @@ export class MmCondivisioneSocialPage {
  }
 
   read() {
-    this.tts.speak({text: document.getElementById("contenuto").innerText, locale: 'it-IT', rate: 0.88});
+    this.tts.speak({text: document.getElementById("card-contenuto").innerText, locale: 'it-IT', rate: 0.88});
     document.getElementById("mic").style.display = "none";
     document.getElementById("disabled-mic").style.display = "inline";
  }
@@ -220,12 +222,14 @@ export class MmCondivisioneSocialPage {
 
   //Associato al tasto per tornare all'home page
   goHomePage() {
+    this.stopRead();
     this.navCtrl.push(HomePage);
     this.navCtrl.removeView(this.navCtrl.last());
     this.menuCtrl.enable(true, "menuPrincipale");
   }
 
   instagram() {
+    this.stopRead();
     const options: CameraOptions = {
       quality: 50,
       destinationType: this.camera.DestinationType.DATA_URL,
@@ -240,6 +244,7 @@ export class MmCondivisioneSocialPage {
   }
 
   facebook() {
+    this.stopRead();
     this.alertFacebook.present();
     this.alertFacebook.onDidDismiss(() => {
       this.creaAlerts();
@@ -248,6 +253,7 @@ export class MmCondivisioneSocialPage {
   }
 
   twitter() {
+    this.stopRead();
     this.alertTwitter.present();
     this.alertTwitter.onDidDismiss(() => {
       this.creaAlerts();
@@ -256,6 +262,7 @@ export class MmCondivisioneSocialPage {
   }
 
   whatsapp() {
+    this.stopRead();
     const options: CameraOptions = {
       quality: 80,
       destinationType: this.camera.DestinationType.DATA_URL,
@@ -273,6 +280,7 @@ export class MmCondivisioneSocialPage {
   }
 
   installaWhatsapp() {
+    this.stopRead();
     if(this.platform.is('ios')) {
       this.market.open('id310633997');
     } else {
@@ -281,6 +289,7 @@ export class MmCondivisioneSocialPage {
   }
 
   installaFacebook() {
+    this.stopRead();
     if(this.platform.is('ios')) {
       this.market.open('id284882215');
     } else {
@@ -289,6 +298,7 @@ export class MmCondivisioneSocialPage {
   }
 
   installaTwitter() {
+    this.stopRead();
     if(this.platform.is('ios')) {
       this.market.open('id333903271');
     } else {
@@ -297,6 +307,7 @@ export class MmCondivisioneSocialPage {
   }
 
   installaInstagram() {
+    this.stopRead();
     if(this.platform.is('ios')) {
       this.market.open('id389801252');
     } else {
