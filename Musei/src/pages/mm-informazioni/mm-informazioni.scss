@@ -15,7 +15,7 @@ page-mm-informazioni {
     color: white;
     height: 20%;
   }
-  
+
   #menu {
     font-size: 7vw;
   }
@@ -27,7 +27,7 @@ page-mm-informazioni {
     float: right;
     height: 20%;
   }
-  
+
   #home-icon {
     font-size: 7vw;
   }
@@ -98,9 +98,12 @@ page-mm-informazioni {
 }
 
 #paginaMmInformazioni.museo_musica {
-    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
-    background-size: cover;
-    background-position: center;
+    // background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+    // background-size: cover;
+    // background-position: center;
+    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content13.jpg");
+  background-size: contain;
+  background-position: top;
 }
 
 h4 {

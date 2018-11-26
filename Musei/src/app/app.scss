@@ -265,28 +265,32 @@
   }
 
   .scroll-content {
+    //background: linear-gradient(to right, #a4b2bc 0%,#eaf0f2 100%);
       overflow: hidden;
     }
 
   .item-block, .toolbar-background {
-    //background: linear-gradient(to right, #a4b2bc 0%,#eaf0f2 100%);
+    background: linear-gradient(to right, #a4b2bc 0%,#eaf0f2 100%);
+
   }
 
   .toolbar-title {
-    // background: -webkit-linear-gradient(45deg, rgb(0, 0, 0), rgb(200, 200, 200) 80%);
-    // -webkit-text-fill-color: transparent;
-    // -webkit-background-clip: text;
+    //  background: -webkit-linear-gradient(45deg, rgb(0, 0, 0), rgb(200, 200, 200) 80%);
+    //  -webkit-text-fill-color: transparent;
+    //  -webkit-background-clip: text;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
+    color: white;
   }
 
   .item-block .item-inner, .toolbar-background, .item-block:last-child  {
     border: none !important;
+
   }
 
 .item-block {
-  color: Black;
+  color: white;
   //  background: -webkit-linear-gradient(45deg, rgb(0, 0, 0), rgb(200, 200, 200) 80%);
   //    -webkit-text-fill-color: transparent;
   //    -webkit-background-clip: text;
@@ -325,12 +329,14 @@ ion-icon::before {
   transition-property: none;
 }
 
-.gradientLoop{
-  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-animation: hue 10s infinite linear;
-}
+// .gradientLoop{
+//   background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+// 	-webkit-background-clip: text;
+// 	-webkit-text-fill-color: transparent;
+// 	-webkit-animation: hue 10s infinite linear;
+// }
+
+
 
 @-webkit-keyframes hue {
   from {
@@ -355,4 +361,8 @@ ion-icon::before {
   /* override to make sure it's not inherited from other styles */
   -webkit-animation-duration:0;
   animation-duration:0;
+}
+
+.menu-inner > ion-content{
+  background: linear-gradient(to right, #a4b2bc 0%,#eaf0f2 100%);
 }

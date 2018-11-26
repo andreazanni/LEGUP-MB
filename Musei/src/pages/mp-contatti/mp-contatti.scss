@@ -20,7 +20,7 @@ page-mp-contatti {
     #home-icon {
       font-size: 7vw;
     }
-  
+
     .vocal-button {
         background-color: transparent;
         color: white;
@@ -34,15 +34,15 @@ page-mp-contatti {
     #vocal-off {
       font-size: 7vw;
     }
-  
+
     .museo-content {
           display: none;
     }
-  
+
     .button-md {
       box-shadow: none !important;
     }
-  
+
     .card-title {
       font-family: 'Montserrat';
       font-size: 5.5vw;
@@ -53,7 +53,7 @@ page-mp-contatti {
       border-bottom: 1px solid white;
       width: 50%;
     }
-  
+
     .card-subtitle {
       color: white;
       font-family: 'Amiri';
@@ -64,8 +64,8 @@ page-mp-contatti {
       margin: auto;
       line-height: 1em;
   }
-  
-  
+
+
   .container-content {
     width: 100%;
     border-radius: 0;
@@ -73,17 +73,17 @@ page-mp-contatti {
     padding: 12px;
     position: absolute;
     overflow: auto;
-  
+
   }
-  
+
   #container-contenuto {
     overflow: auto;
   }
-  
+
   #contenuto {
     text-align: justify;
   }
-  
+
   #contenuto h4 {
       background: -webkit-linear-gradient(45deg, rgb(29, 29, 29), rgb(102, 102, 102) 80%);
       -webkit-text-fill-color: transparent;
@@ -97,5 +97,7 @@ page-mp-contatti {
     font-size: 3.5vw;
   }
 
+
+
 }
-  
+

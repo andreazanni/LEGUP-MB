@@ -14,7 +14,7 @@ page-mm-il-palazzo {
     color: white;
     height: 20%;
   }
-  
+
   #menu {
     font-size: 7vw;
   }
@@ -26,7 +26,7 @@ page-mm-il-palazzo {
     float: right;
     height: 20%;
   }
-  
+
   #home-icon {
     font-size: 7vw;
   }
@@ -97,9 +97,9 @@ page-mm-il-palazzo {
 }
 
 #paginaMmIlPalazzo.museo_musica {
-    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
-    background-size: cover;
-    background-position: center;
+    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content7.jpg");
+    background-size: contain;
+    background-position: top;
 }
 
 #contenuto h4 {
@@ -118,5 +118,7 @@ page-mm-il-palazzo {
 .card-ios h3, .card-ios h4, .card-ios h5, .card-ios h6, .card-md h3, .card-md h4, .card-md h5, .card-md h6, .card-wp h3, .card-wp h4, .card-wp h5, .card-wp h6 {
   font-size: 3.5vw;
 }
+
+
 
 }

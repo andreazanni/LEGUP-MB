@@ -14,7 +14,7 @@ page-mm-eventi {
     color: white;
     height: 20%;
   }
-  
+
   #menu {
     font-size: 7vw;
   }
@@ -26,7 +26,7 @@ page-mm-eventi {
     float: right;
     height: 20%;
   }
-  
+
   #home-icon {
     font-size: 7vw;
   }
@@ -95,9 +95,12 @@ page-mm-eventi {
 }
 
 #paginaMmEventi.museo_musica {
-    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
-    background-size: cover;
-    background-position: center;
+    // background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+    // background-size: cover;
+    // background-position: center;
+    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content14.jpg");
+  background-size: contain;
+  background-position: top;
 }
 
 h4 {

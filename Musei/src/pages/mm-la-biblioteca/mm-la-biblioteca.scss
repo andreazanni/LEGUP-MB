@@ -14,7 +14,7 @@ page-mm-la-biblioteca {
     color: white;
     height: 20%;
   }
-  
+
   #menu {
     font-size: 7vw;
   }
@@ -26,7 +26,7 @@ page-mm-la-biblioteca {
     float: right;
     height: 20%;
   }
-  
+
   #home-icon {
     font-size: 7vw;
   }
@@ -97,9 +97,12 @@ page-mm-la-biblioteca {
 }
 
 #paginaMmLaBiblioteca.museo_musica {
-    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
-    background-size: cover;
-    background-position: center;
+    // background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+    // background-size: cover;
+    // background-position: center;
+    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content14.jpg");
+  background-size: contain;
+  background-position: top;
 }
 
 #contenuto h4 {

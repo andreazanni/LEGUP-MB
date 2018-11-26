@@ -14,7 +14,7 @@ page-mm-percorsi-a-tema {
     color: white;
     height: 20%;
   }
-  
+
   #menu {
     font-size: 7vw;
   }
@@ -26,7 +26,7 @@ page-mm-percorsi-a-tema {
     float: right;
     height: 20%;
   }
-  
+
   #home-icon {
     font-size: 7vw;
   }
@@ -97,9 +97,12 @@ page-mm-percorsi-a-tema {
 }
 
 #paginaMmPercorsiATema.museo_musica {
-    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
-    background-size: cover;
-    background-position: center;
+    // background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+    // background-size: cover;
+    // background-position: center;
+    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content14.jpg");
+  background-size: contain;
+  background-position: top;
 }
 
 #contenuto h4 {

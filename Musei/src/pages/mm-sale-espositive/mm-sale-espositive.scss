@@ -14,7 +14,7 @@ page-mm-sale-espositive {
     color: white;
     height: 20%;
   }
-  
+
   #menu {
     font-size: 7vw;
   }
@@ -104,9 +104,12 @@ page-mm-sale-espositive {
 }
 
 #paginaMmSaleEspositive.museo_musica {
-    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
-    background-size: cover;
-    background-position: center;
+    // background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+    // background-size: cover;
+    // background-position: center;
+    background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content7.jpg");
+  background-size: contain;
+  background-position: top;
 }
 
 #contenuto h4 {

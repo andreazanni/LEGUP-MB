@@ -8,17 +8,17 @@ page-mm-come-raggiungerci {
         background-color: transparent !important;
         background-image: linear-gradient(to top right, rgba(91,73,137,0.7), rgba(225,0,255,0.7));
       }
-    
+
     .sideMenu {
         background-color: transparent;
         color: white;
         height: 20%;
       }
-    
+
     #menu {
       font-size: 7vw;
     }
-    
+
     .home-button {
         background-color: transparent;
         color: white;
@@ -26,11 +26,11 @@ page-mm-come-raggiungerci {
         float: right;
         height: 20%;
       }
-    
+
     #home-icon {
       font-size: 7vw;
     }
-    
+
     .vocal-button {
         background-color: transparent;
         color: white;
@@ -44,15 +44,15 @@ page-mm-come-raggiungerci {
     #vocal-off {
       font-size: 7vw;
     }
-    
+
     .museo-content {
         display: none;
     }
-    
+
     .button-md {
         box-shadow: none !important;
     }
-    
+
       .card-title {
         font-family: 'Montserrat';
         font-size: 5.5vw;
@@ -63,7 +63,7 @@ page-mm-come-raggiungerci {
         border-bottom: 1px solid white;
         width: 70%;
       }
-    
+
       .card-subtitle {
         color: white;
         font-family: 'Amiri';
@@ -74,8 +74,8 @@ page-mm-come-raggiungerci {
         margin: auto;
         line-height: 1em;
     }
-    
-    
+
+
     .container-content {
       width: 100%;
       border-radius: 0;
@@ -83,24 +83,27 @@ page-mm-come-raggiungerci {
       padding: 12px;
       position: absolute;
       overflow: auto;
-    
+
     }
-    
+
     #container-contenuto {
       overflow: auto;
     }
-    
+
     #contenuto {
       text-align: justify;
       font-size: 3.5vw;
     }
-    
+
     #paginaMmComeRaggiungerci.museo_musica {
-        background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
-        background-size: cover;
-        background-position: center;
+        // background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+        // background-size: cover;
+        // background-position: center;
+        background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content15.jpg");
+  background-size: contain;
+  background-position: top;
     }
-    
+
     #contenuto h4 {
         background: -webkit-linear-gradient(45deg, rgb(91, 73, 137), rgb(225, 0, 255) 80%);
         -webkit-text-fill-color: transparent;
