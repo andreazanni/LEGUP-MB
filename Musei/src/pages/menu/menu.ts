@@ -17,6 +17,7 @@ import { MmCondivisioneSocialPage } from '../mm-condivisione-social/mm-condivisi
 import { MmSaleEspositivePage } from '../mm-sale-espositive/mm-sale-espositive';
 import { MmPercorsiATemaPage } from '../mm-percorsi-a-tema/mm-percorsi-a-tema';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { MmMostrePage } from '../mm-mostre/mm-mostre';
 
 @IonicPage()
 @Component({
@@ -152,6 +153,14 @@ export class MenuPage {
           this.nativePageTransitions.flip(options);
         }
         this.navCtrl.push(MmEventiPage, {datiMuseo: this.museo, voceMenu: 'EVENTI', contenuto: this.museo[0].EVENTI, museoClass: this.classe, contentClass: 'content_eventi'});
+        this.navCtrl.removeView(this.navCtrl.last());
+        break;
+
+      case "MostreService":
+        if (animation) {
+          this.nativePageTransitions.flip(options);
+        }
+        this.navCtrl.push(MmMostrePage, {datiMuseo: this.museo, voceMenu: 'MOSTRE', contenuto: this.museo[0].MOSTRE, museoClass: this.classe, contentClass: 'content_mostre'});
         this.navCtrl.removeView(this.navCtrl.last());
         break;
 

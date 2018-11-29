@@ -36,6 +36,7 @@ import { MpInformazioniGeneraliPage } from '../pages/mp-informazioni-generali/mp
 import { MpLeAreeMusealiPage } from '../pages/mp-le-aree-museali/mp-le-aree-museali';
 import { MpContattiPage } from '../pages/mp-contatti/mp-contatti';
 import { MmPercorsiATemaPage } from '../pages/mm-percorsi-a-tema/mm-percorsi-a-tema';
+import { MmMostrePage } from '../pages/mm-mostre/mm-mostre';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { MmPercorsiATemaPage } from '../pages/mm-percorsi-a-tema/mm-percorsi-a-t
     MpInformazioniGeneraliPage,
     MpContattiPage,
     MpLeAreeMusealiPage,
-    MmPercorsiATemaPage
+    MmPercorsiATemaPage,
+    MmMostrePage
   ],
   imports: [
     BrowserModule,
@@ -90,7 +92,8 @@ import { MmPercorsiATemaPage } from '../pages/mm-percorsi-a-tema/mm-percorsi-a-t
     MpInformazioniGeneraliPage,
     MpContattiPage,
     MpLeAreeMusealiPage,
-    MmPercorsiATemaPage
+    MmPercorsiATemaPage,
+    MmMostrePage
   ],
   providers: [
     StatusBar,

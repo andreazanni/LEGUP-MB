@@ -1,0 +1,26 @@
+<ion-content id="paginaMmMostre" class="card-background-page">
+	<ion-card id="content-header" class="headerContent">
+		<button class="sideMenu" ion-button (click)="openMenu()">
+			<ion-icon name="menu" id="menu"></ion-icon>
+		</button>
+		<button class="vocal-button" id="mic" ion-button icon-only (click)="read()">
+			<ion-icon name="mic" id="vocal"></ion-icon>
+		</button>
+		<button class="vocal-button" id="disabled-mic" style="display:none" ion-button icon-only (click)="stopRead()">
+			<ion-icon name="mic-off" id="vocal-off"></ion-icon>
+		</button>
+		<button class="home-button" ion-button icon-only (click)="goHomePage()">
+			<ion-icon name="home" id="home-icon"></ion-icon>
+    </button>
+    <div class="card-head">
+      <div class="card-title animated fadeInLeft slow" id="content_cardTitle"></div>
+      <div class="card-subtitle animated fadeInRight slow" id="content_cardSubTitle"></div>
+    </div>
+  </ion-card>
+  <ion-card id="card-contenuto" class="container-content">
+    <div id="container-contenuto">
+      <div id="contenuto" class="content-content animated fadeInUp slow">
+      </div>
+    </div>
+  </ion-card>
+</ion-content>

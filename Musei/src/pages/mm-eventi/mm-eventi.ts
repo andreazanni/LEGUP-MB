@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController, LoadingController, Platform, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, LoadingController, Platform } from 'ionic-angular';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { HomePage } from '../home/home';
 import { MenuPage } from '../menu/menu';
@@ -26,34 +26,15 @@ export class MmEventiPage {
   myContentClass: string;
   myMuseo: any;
   unregisterBackButtonAction: any;
-  alert: any;
-  alertAperto: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public tts: TextToSpeech, public menuCtrl: MenuController, public nativePageTransitions: NativePageTransitions, public loadingCtrl: LoadingController,
-    public platform: Platform, public alertCtrl: AlertController) {
+    public platform: Platform) {
 
     this.myVoceMenu = this.navParams.get('voceMenu');
     this.myContenuto = this.navParams.get('contenuto');
     this.myMuseoClass = this.navParams.get('museoClass');
     this.myContentClass = this.navParams.get('contenutoClass');
     this.myMuseo = this.navParams.get('datiMuseo');
-
-    this.creaAlert();
-  }
-
-  creaAlert() {
-    this.alert = this.alertCtrl.create({
-      title: "Purtroppo non sono riuscito a recuperare gli eventi. Si prega di riprovare più tardi, grazie.",
-      buttons: [
-        {
-          text: 'OK',
-          handler: () => {
-            this.alertAperto = false;
-            this.creaAlert();
-          }
-        }
-      ]   
-    });
   }
 
   ionViewDidLoad() {
@@ -75,54 +56,6 @@ export class MmEventiPage {
 
      this.menuCtrl.enable(false, "menuPrincipale");
      this.initializeBackButton();
-
-    let spinnerLoading = this.loadingCtrl.create({
-      });
-    spinnerLoading.present();
-     fetch("https://cors-anywhere.herokuapp.com/http://informa.comune.bologna.it/iperbole/rss/events/25")
-      .then(response => {
-
-        response.text().then((htmltxt) => {
-
-          let contenutoEventi = document.getElementById('contenuto')
-          var domParser = new DOMParser()
-          let doc = domParser.parseFromString(htmltxt, 'text/html')
-          const allItems = doc.querySelectorAll('item');
-          const allRealItems = Array.from(allItems);
-          allRealItems.forEach(item => {
-            let divItem = document.createElement('div')
-            divItem.className = 'itemFeed'
-            contenutoEventi.appendChild(divItem)
-            let titoloItem = document.createElement('h4')
-            titoloItem.style.fontWeight = 'bold'
-            divItem.appendChild(titoloItem)
-            let testoTitolo = document.createTextNode(item.querySelector('title').textContent)
-            titoloItem.appendChild(testoTitolo)
-            let periodoItem = document.createElement('div')
-            periodoItem.className = 'dateItem'
-            divItem.appendChild(periodoItem)
-            let dateItem = "("+ item.querySelector('pubdate').textContent + " - " + item.querySelector('pubenddate').textContent + ")"
-            periodoItem.textContent = dateItem
-            let descrizioneItem = document.createElement('p')
-            divItem.appendChild(descrizioneItem)
-            let stringaDescrizione = item.querySelector('description').textContent.split("<p>")
-            let sottoStringaDescrizione = stringaDescrizione[1].split("</p>")
-            let immagineItem = sottoStringaDescrizione[0]
-            let testoDescrizione = document.createTextNode(sottoStringaDescrizione[1])
-            periodoItem.insertAdjacentHTML('afterend',immagineItem)
-            descrizioneItem.appendChild(testoDescrizione)       
-          });
-        })
-        spinnerLoading.dismiss();
-      })
-      .catch(() => {
-        spinnerLoading.dismiss();
-        this.alert.present();
-        this.alert.onDidDismiss(() => {
-          this.creaAlert();
-        });
-        this.alertAperto = true;
-      });
   }
 
   ionViewWillLeave() {
@@ -131,15 +64,9 @@ export class MmEventiPage {
 
   initializeBackButton(): void {
     this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
-      if(this.alertAperto) {
-        this.alert.dismiss();
-        this.alertAperto = false;
-        this.creaAlert();
-      } else {
-        this.stopRead();
-        this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
-        this.navCtrl.removeView(this.navCtrl.last());
-      }
+      this.stopRead();
+      this.navCtrl.push(MuseoPage, {musei: this.myMuseo, classe1: this.myMuseoClass});
+      this.navCtrl.removeView(this.navCtrl.last());
     });
   }
 
