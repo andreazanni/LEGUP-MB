@@ -11,6 +11,7 @@ import { RicercaMuseiProvider } from '../providers/ricerca-musei/ricerca-musei';
 import { MpInformazioniGeneraliPage } from '../pages/mp-informazioni-generali/mp-informazioni-generali';
 import { MpLeAreeMusealiPage } from '../pages/mp-le-aree-museali/mp-le-aree-museali';
 import { MpContattiPage } from '../pages/mp-contatti/mp-contatti';
+import { TestCalendarPage } from '../pages/test-calendar/test-calendar';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 
 @Component({
@@ -23,7 +24,7 @@ export class MyApp {
   geoMusei: any;
   istituzione: any;
 
-  constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, public menuCtrl: MenuController, 
+  constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, modalCtrl: ModalController, public menuCtrl: MenuController,
   public diagnostic: Diagnostic, public geolocation: Geolocation, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public museiService: RicercaMuseiProvider,
   public tts: TextToSpeech) {
 
@@ -115,15 +116,20 @@ export class MyApp {
         this.nav.push(MpLeAreeMusealiPage, {voceMenu: 'AREE MUSEALI', contenuto: this.istituzione[0].AREE_MUSEALI});
         this.nav.removeView(this.nav.last());
         break;
-      
+
+        case "CalendarioService":
+        this.nav.push(TestCalendarPage, {voceMenu: 'CALENDARIO', contenuto: this.istituzione[0].AREE_MUSEALI});
+        this.nav.removeView(this.nav.last());
+        break;
+
         default:
         break;
-    } 
+    }
     this.menuCtrl.close();
   }
 
   calculateDistance(latitudineIniziale: any, longitudineIniziale: any) {
-    
+
     var R = 6371e3; // metres
     var distanzaMinore = 0;
     var museoPiuVicino;
@@ -133,12 +139,12 @@ export class MyApp {
       var φ2 = this.toRad(this.geoMusei[key].LATITUDINE);
       var Δφ = this.toRad(this.geoMusei[key].LATITUDINE-latitudineIniziale);
       var Δλ = this.toRad(this.geoMusei[key].LONGITUDINE-longitudineIniziale);
-  
+
       var a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
           Math.cos(φ1) * Math.cos(φ2) *
           Math.sin(Δλ/2) * Math.sin(Δλ/2);
       var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-  
+
       var d = R * c;
 
       //Mi salvo la distanza minore del museo
@@ -154,7 +160,7 @@ export class MyApp {
       buttons: ['OK']
     });
     alertDistanza.present();
-  
+
   }
 
   toRad(Value) {
