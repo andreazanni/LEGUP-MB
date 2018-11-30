@@ -37,6 +37,9 @@ import { MpLeAreeMusealiPage } from '../pages/mp-le-aree-museali/mp-le-aree-muse
 import { MpContattiPage } from '../pages/mp-contatti/mp-contatti';
 import { MmPercorsiATemaPage } from '../pages/mm-percorsi-a-tema/mm-percorsi-a-tema';
 import { MmMostrePage } from '../pages/mm-mostre/mm-mostre';
+import { TestCalendarPage } from '../pages/test-calendar/test-calendar';
+import { Calendar } from '@ionic-native/calendar';
+import { EventiCalendarioPage } from '../pages/eventi-calendario/eventi-calendario';
 
 @NgModule({
   declarations: [
@@ -61,7 +64,9 @@ import { MmMostrePage } from '../pages/mm-mostre/mm-mostre';
     MpContattiPage,
     MpLeAreeMusealiPage,
     MmPercorsiATemaPage,
-    MmMostrePage
+    MmMostrePage,
+    TestCalendarPage,
+    EventiCalendarioPage
   ],
   imports: [
     BrowserModule,
@@ -93,7 +98,9 @@ import { MmMostrePage } from '../pages/mm-mostre/mm-mostre';
     MpContattiPage,
     MpLeAreeMusealiPage,
     MmPercorsiATemaPage,
-    MmMostrePage
+    MmMostrePage,
+    TestCalendarPage,
+    EventiCalendarioPage
   ],
   providers: [
     StatusBar,
@@ -108,7 +115,8 @@ import { MmMostrePage } from '../pages/mm-mostre/mm-mostre';
     LaunchNavigator,
     Instagram,
     Camera,
-    Market
+    Market,
+    Calendar
   ]
 })
 export class AppModule {}
