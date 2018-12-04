@@ -72,4 +72,19 @@ export class RicercaMuseiProvider {
     });
   }
 
+    //Restituisce tutte le mostre e gli eventi
+    getEventiAndMostre() {
+      return new Promise(resolve => {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+  
+        this.http.post('http://www.omniservicetest.it/node/Musei/api/eventi-mostre', {headers: headers})
+          .map(res => res.json())
+          .subscribe(data => {
+            resolve(data);
+          }, error => {
+            console.log(error);
+          });
+      });
+    }  
 }

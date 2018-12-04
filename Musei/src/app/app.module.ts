@@ -40,6 +40,8 @@ import { MmMostrePage } from '../pages/mm-mostre/mm-mostre';
 import { TestCalendarPage } from '../pages/test-calendar/test-calendar';
 import { Calendar } from '@ionic-native/calendar';
 import { EventiCalendarioPage } from '../pages/eventi-calendario/eventi-calendario';
+import { MostrePage } from '../pages/mostre/mostre';
+import { EventiPage } from '../pages/eventi/eventi';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { EventiCalendarioPage } from '../pages/eventi-calendario/eventi-calendar
     MmPercorsiATemaPage,
     MmMostrePage,
     TestCalendarPage,
-    EventiCalendarioPage
+    EventiCalendarioPage,
+    MostrePage,
+    EventiPage
   ],
   imports: [
     BrowserModule,
@@ -100,7 +104,9 @@ import { EventiCalendarioPage } from '../pages/eventi-calendario/eventi-calendar
     MmPercorsiATemaPage,
     MmMostrePage,
     TestCalendarPage,
-    EventiCalendarioPage
+    EventiCalendarioPage,
+    MostrePage,
+    EventiPage
   ],
   providers: [
     StatusBar,

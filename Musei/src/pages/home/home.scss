@@ -68,7 +68,7 @@ page-home {
 
 	.card-title {
     text-align: right;
-    padding: 45% 5px;
+    padding: 30% 5px;
     height: 100%;
     font-size: 4vw;
     font-weight: 700;
@@ -78,26 +78,26 @@ page-home {
 
 	#open-menu {
     width: 34px;
-    height: 50%;
     /* border-top: 5vw solid transparent; */
     /* border-left: 4vw solid rgba(255, 255, 255, 0.5); */
     /* border-bottom: 5vw solid transparent; */
     position: absolute;
-    top: 25%;
+	top: 37.5%;
+	bottom: 37.5%;
     z-index: 10;
     //border: 2px solid rgba(255,255,255,0.7);
     margin-left: -15px;
     /* border-bottom: none; */
     border-radius: 20px;
     box-shadow: -3px 0 2px rgba(0,0,0,0.2);
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.6);
 
   }
 
   #line-menu{
     width: 3px;
-    height: 30%;
-    top: 35%;
+	top: 25%;
+	bottom: 25%;
     background: rgba(0, 0, 0, 0.1);
     margin-left: 22px;
     border-radius: 20px;

@@ -4,6 +4,8 @@ import { MuseiPage } from '../musei/musei';
 import { MuseoPage } from '../museo/museo';
 import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-musei';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { MostrePage } from '../mostre/mostre';
+import { EventiPage } from '../eventi/eventi';
 
 @Component({
   selector: 'page-home',
@@ -136,5 +138,21 @@ export class HomePage {
         }
       });
     }
+  }
+
+  findMostre() {
+    this.museiService.getEventiAndMostre().then((data) => {
+      this.tts.speak("");
+      this.navCtrl.push(MostrePage, {mostre: data[0].MOSTRE});
+      this.navCtrl.removeView(this.navCtrl.last());
+    })
+  }
+
+  findEventi() {
+    this.museiService.getEventiAndMostre().then((data) => {
+      this.tts.speak("");
+      this.navCtrl.push(EventiPage, {eventi: data[0].EVENTI});
+      this.navCtrl.removeView(this.navCtrl.last());
+    })
   }
 }

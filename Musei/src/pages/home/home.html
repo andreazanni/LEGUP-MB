@@ -20,7 +20,6 @@
         <ion-col class="colHome">
 			<ion-card id="card-artemoderna" class="cardHome" (click)="findMusei('Arte moderna e contemporanea', false)" style="background-color: Violet">
         <div class="card-gradient">
-				<div id="open-menu" class="animated fadeInLeft"><div id="line-menu"></div></div>
     			<div class="card-title animated fadeInRight">
 					Arte moderna e contemporanea
 				</div>
@@ -51,5 +50,22 @@
   		  	</ion-card>
 		</ion-col>
 	</ion-row>
+	<ion-row class="rowHome">
+        <ion-col class="colHome">
+			<ion-card id="card-mostre" class="cardHome" (click)="findMostre()" style="background-color: RoyalBlue">
+        <div class="card-gradient">
+    			<div class="card-title animated fadeInRight">Mostre</div>
+        </div>
+  		  	</ion-card>
+	    </ion-col>
+		<ion-col class="colHome">
+  	  		<ion-card id="card-eventi" class="cardHome" (click)="findEventi()" style="background-color: SeaGreen">
+            <div class="card-gradient">
+    			<div class="card-title animated fadeInRight">Eventi</div>
+            </div>
+  		  	</ion-card>
+		</ion-col>
+	</ion-row>
+	<div id="open-menu" class="animated fadeInLeft"><div id="line-menu"></div></div>
   </ion-grid>
 </ion-content>

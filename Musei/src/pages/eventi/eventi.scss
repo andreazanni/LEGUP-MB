@@ -1,0 +1,157 @@
+page-eventi {
+
+    .headerContent {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 30%;
+      background-color: transparent !important;
+      background-image: linear-gradient(to top right, rgba(29, 29, 29, 0.7), rgba(102,102,102,0.7));
+    }
+  
+    .sideMenu {
+          background-color: transparent;
+      color: white;
+      height: 20%;
+    }
+  
+    #menu {
+      font-size: 7vw;
+    }
+  
+      .home-button {
+          background-color: transparent;
+          color: white;
+          margin: 0 2%;
+      float: right;
+      height: 20%;
+    }
+  
+    #home-icon {
+      font-size: 7vw;
+    }
+  
+      .vocal-button {
+          background-color: transparent;
+          color: white;
+    }
+  
+    #vocal {
+      font-size: 7vw;
+    }
+  
+    #vocal-off {
+      font-size: 7vw;
+    }
+  
+    .museo-content {
+          display: none;
+    }
+  
+    .button-md {
+      box-shadow: none !important;
+    }
+  
+    .card-title {
+      font-family: 'Montserrat';
+      font-size: 5.5vw;
+      font-weight: 600;
+      color: white;
+      text-align: center;
+      margin: 10% auto 5px auto;
+      border-bottom: 1px solid white;
+      width: 50%;
+    }
+  
+    .card-subtitle {
+      color: white;
+      font-family: 'Amiri';
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 3vw;
+      width: 50vw;
+      margin: auto;
+      line-height: 1em;
+  }
+  
+  
+  .container-content {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    padding: 12px;
+    position: absolute;
+    overflow: auto;
+  }
+  
+  #container-contenuto {
+    overflow: auto;
+    font-size: 3.5vw;
+  }
+  
+  #contenuto {
+    text-align: justify;
+    font-size: 3.5vw;
+  }
+  
+  #paginaMmMostre.museo_musica {
+      // background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content3.jpg");
+      // background-size: cover;
+      // background-position: center;
+      background-image: url("../assets/imgs/home/Musica/MusicaContent/Musica_Content14.jpg");
+    background-size: contain;
+    background-position: top;
+  }
+  
+  h4 {
+      background: -webkit-linear-gradient(45deg, rgba(29, 29, 29, 0.7), rgba(102,102,102,0.7) 80%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      font-size: 4vw;
+  }
+
+  .itemTitle {
+      display: block !important;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      text-align: left !important;
+      font-style: oblique !important;
+  }
+  
+  .itemFeed {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .itemFeed img {
+      width: 50%;
+      float: left;
+      padding-top: 5px;
+      margin-right: 5px;
+  }
+  
+  .dateItem {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3.5vw;
+    padding-bottom: 10px;
+  }
+  
+  .card-ios p, .card-md p, .card-wp p {
+    font-size: 3.5vw;
+  }
+  
+  .card-ios h4, .card-ios h5, .card-ios h6, .card-md h4, .card-md h5, .card-md h6, .card-wp h4, .card-wp h5, .card-wp h6 {
+    font-size: 3.5vw;
+  }
+
+  .card-ios h3, .card-md h3, .card-wp h3 {
+    font-size: 4.5vw;
+  }
+  
+  }
+  
