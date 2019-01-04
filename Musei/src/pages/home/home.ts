@@ -141,6 +141,10 @@ export class HomePage {
   }
 
   findMostre() {
+    let spinnerLoading = this.loadingCtrl.create({
+      dismissOnPageChange: true
+    });
+    spinnerLoading.present();
     this.museiService.getEventiAndMostre().then((data) => {
       this.tts.speak("");
       this.navCtrl.push(MostrePage, {mostre: data[0].MOSTRE});
@@ -149,6 +153,10 @@ export class HomePage {
   }
 
   findEventi() {
+    let spinnerLoading = this.loadingCtrl.create({
+      dismissOnPageChange: true
+    });
+    spinnerLoading.present();
     this.museiService.getEventiAndMostre().then((data) => {
       this.tts.speak("");
       this.navCtrl.push(EventiPage, {eventi: data[0].EVENTI});
