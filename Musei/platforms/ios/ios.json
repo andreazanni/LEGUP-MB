@@ -139,6 +139,10 @@
             {
               "xml": "<feature name=\"Market\"><param name=\"ios-package\" value=\"CDVMarket\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Calendar\"><param name=\"ios-package\" value=\"Calendar\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -207,6 +211,10 @@
             {
               "xml": "<string>This app requires calendar access to function properly.</string>",
               "count": 1
+            },
+            {
+              "xml": "<string> </string>",
+              "count": 1
             }
           ],
           "NSRemindersUsageDescription": [
@@ -228,6 +236,12 @@
             },
             {
               "xml": "<array><string>instagram</string></array>",
+              "count": 1
+            }
+          ],
+          "CFBundleLocalizations": [
+            {
+              "xml": "<array><string>en</string><string>de</string><string>nl</string><string>fr</string><string>it</string><string>pt-BR</string></array>",
               "count": 1
             }
           ]
@@ -292,6 +306,10 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-market": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-calendar": {
+      "CALENDAR_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -590,6 +608,14 @@
       "clobbers": [
         "cordova.plugins.market"
       ]
+    },
+    {
+      "id": "cordova-plugin-calendar.Calendar",
+      "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
+      "pluginId": "cordova-plugin-calendar",
+      "clobbers": [
+        "Calendar"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -611,6 +637,7 @@
     "cordova-universal-clipboard": "0.1.0",
     "cordova-instagram-plugin": "0.5.7",
     "cordova-plugin-camera": "4.0.3",
-    "cordova-plugin-market": "1.2.0"
+    "cordova-plugin-market": "1.2.0",
+    "cordova-plugin-calendar": "5.1.3"
   }
 }

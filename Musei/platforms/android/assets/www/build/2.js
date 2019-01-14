@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 306:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MmSaleEspositivePageModule", function() { return MmSaleEspositivePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MuseiPageModule", function() { return MuseiPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mm_sale_espositive__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__musei__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MmSaleEspositivePageModule = /** @class */ (function () {
-    function MmSaleEspositivePageModule() {
+var MuseiPageModule = /** @class */ (function () {
+    function MuseiPageModule() {
     }
-    MmSaleEspositivePageModule = __decorate([
+    MuseiPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__mm_sale_espositive__["a" /* MmSaleEspositivePage */],
+                __WEBPACK_IMPORTED_MODULE_2__musei__["a" /* MuseiPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mm_sale_espositive__["a" /* MmSaleEspositivePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__musei__["a" /* MuseiPage */]),
             ],
         })
-    ], MmSaleEspositivePageModule);
-    return MmSaleEspositivePageModule;
+    ], MuseiPageModule);
+    return MuseiPageModule;
 }());
 
-//# sourceMappingURL=mm-sale-espositive.module.js.map
+//# sourceMappingURL=musei.module.js.map
 
 /***/ })
 

@@ -140,7 +140,11 @@ export class MmCondivisioneSocialPage {
       }
     }).then(() => {
       //Facebook
-      this.socialSharing.canShareVia('facebook').then(() => {
+      let app = 'facebook';
+      if(this.platform.is('ios')) {
+        app = 'com.apple.social.' + app;
+      }
+      this.socialSharing.canShareVia(app).then(() => {
         divItem.appendChild(document.getElementById('bottone-facebook'));
         document.getElementById('bottone-installa-facebook').remove();
       }).catch(() => {
@@ -148,21 +152,35 @@ export class MmCondivisioneSocialPage {
         document.getElementById('bottone-facebook').remove();
       }).then(() => {
         //Twitter
-        this.socialSharing.canShareVia('twitter').then(() => {
+        let app = 'twitter';
+        if(this.platform.is('ios')) {
+          app = 'com.apple.social.' + app;
+        }
+        this.socialSharing.canShareVia(app).then(() => {
           divItem.appendChild(document.getElementById('bottone-twitter'));
           document.getElementById('bottone-installa-twitter').remove();
         }).catch(() => {
           divItem.appendChild(document.getElementById('bottone-installa-twitter'));
           document.getElementById('bottone-twitter').remove();
         }).then(() => {
-          //WHatsapp
-          this.socialSharing.canShareVia('whatsapp').then(() => {
-            divItem.appendChild(document.getElementById('bottone-whatsapp'));
+          //Se sono su tablet o iPad non mostro whatsapp
+          if(this.platform.is('tablet') || this.platform.is('ipad')) {
             document.getElementById('bottone-installa-whatsapp').remove();
-        }).catch(() => {
-          divItem.appendChild(document.getElementById('bottone-installa-whatsapp'));
-          document.getElementById('bottone-whatsapp').remove();
-          });
+            document.getElementById('bottone-whatsapp').remove();
+          } else {
+            //WHatsapp
+            let app = 'whatsapp';
+            if(this.platform.is('ios')) {
+              app = 'com.apple.social.' + app;
+            }
+            this.socialSharing.canShareVia(app).then(() => {
+              divItem.appendChild(document.getElementById('bottone-whatsapp'));
+              document.getElementById('bottone-installa-whatsapp').remove();
+          }).catch(() => {
+            divItem.appendChild(document.getElementById('bottone-installa-whatsapp'));
+            document.getElementById('bottone-whatsapp').remove();
+            });
+          }
         });
       });
     });

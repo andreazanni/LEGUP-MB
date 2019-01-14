@@ -63,6 +63,10 @@
             {
               "xml": "<feature name=\"Market\"><param name=\"android-package\" value=\"com.xmartlabs.cordova.market.Market\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Calendar\"><param name=\"android-package\" value=\"nl.xservices.plugins.Calendar\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -162,6 +166,16 @@
               "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"org.apache.cordova.camera.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/camera_provider_paths\" /></provider>",
               "count": 1
             }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.READ_CALENDAR\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_CALENDAR\" />",
+              "count": 1
+            }
           ]
         }
       }
@@ -221,6 +235,9 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-market": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-calendar": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -493,6 +510,14 @@
       "clobbers": [
         "cordova.plugins.market"
       ]
+    },
+    {
+      "id": "cordova-plugin-calendar.Calendar",
+      "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
+      "pluginId": "cordova-plugin-calendar",
+      "clobbers": [
+        "Calendar"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -513,6 +538,7 @@
     "cordova-universal-clipboard": "0.1.0",
     "cordova-instagram-plugin": "0.5.7",
     "cordova-plugin-camera": "4.0.3",
-    "cordova-plugin-market": "1.2.0"
+    "cordova-plugin-market": "1.2.0",
+    "cordova-plugin-calendar": "5.1.3"
   }
 }

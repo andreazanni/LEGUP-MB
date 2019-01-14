@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 302:
+/***/ 321:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MmInformazioniPageModule", function() { return MmInformazioniPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MostrePageModule", function() { return MostrePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mm_informazioni__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mostre__ = __webpack_require__(128);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MmInformazioniPageModule = /** @class */ (function () {
-    function MmInformazioniPageModule() {
+var MostrePageModule = /** @class */ (function () {
+    function MostrePageModule() {
     }
-    MmInformazioniPageModule = __decorate([
+    MostrePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__mm_informazioni__["a" /* MmInformazioniPage */],
+                __WEBPACK_IMPORTED_MODULE_2__mostre__["a" /* MostrePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mm_informazioni__["a" /* MmInformazioniPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mostre__["a" /* MostrePage */]),
             ],
         })
-    ], MmInformazioniPageModule);
-    return MmInformazioniPageModule;
+    ], MostrePageModule);
+    return MostrePageModule;
 }());
 
-//# sourceMappingURL=mm-informazioni.module.js.map
+//# sourceMappingURL=mostre.module.js.map
 
 /***/ })
 

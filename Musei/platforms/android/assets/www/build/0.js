@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 308:
+/***/ 327:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MuseoPageModule", function() { return MuseoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestCalendarPageModule", function() { return TestCalendarPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__museo__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__test_calendar__ = __webpack_require__(132);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MuseoPageModule = /** @class */ (function () {
-    function MuseoPageModule() {
+var TestCalendarPageModule = /** @class */ (function () {
+    function TestCalendarPageModule() {
     }
-    MuseoPageModule = __decorate([
+    TestCalendarPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__museo__["a" /* MuseoPage */],
+                __WEBPACK_IMPORTED_MODULE_2__test_calendar__["a" /* TestCalendarPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__museo__["a" /* MuseoPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__test_calendar__["a" /* TestCalendarPage */]),
             ],
-            entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_2__museo__["a" /* MuseoPage */],
-            ]
         })
-    ], MuseoPageModule);
-    return MuseoPageModule;
+    ], TestCalendarPageModule);
+    return TestCalendarPageModule;
 }());
 
-//# sourceMappingURL=museo.module.js.map
+//# sourceMappingURL=test-calendar.module.js.map
 
 /***/ })
 
