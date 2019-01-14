@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, MenuController, Platform, AlertCon
 import { HomePage } from '../home/home';
 import { EventiCalendarioPage } from '../eventi-calendario/eventi-calendario';
 import { Calendar } from '@ionic-native/calendar';
+import { RicercaMuseiProvider } from '../../providers/ricerca-musei/ricerca-musei';
 
 
 /**
@@ -18,7 +19,7 @@ import { Calendar } from '@ionic-native/calendar';
   templateUrl: 'test-calendar.html',
 })
 export class TestCalendarPage {
-
+  myContenuto: any;
   date: any;
   daysInThisMonth: any;
   daysInLastMonth: any;
@@ -30,21 +31,32 @@ export class TestCalendarPage {
   eventList: any;
   selectedEvent: any;
   isSelected: any;
+  AREA: any;
+  NOME: any;
+  eventoObj: object;
+  calendarioEventi: any;
+  eventiDelMese: any;
 
   unregisterBackButtonAction: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, public platform: Platform, private alertCtrl: AlertController, private calendar: Calendar) {
+  constructor(public navCtrl: NavController, public museiService: RicercaMuseiProvider, public navParams: NavParams, public menuCtrl: MenuController, public platform: Platform, private alertCtrl: AlertController, private calendar: Calendar) {
+    this.myContenuto = this.navParams.get('contenuto');
+
   }
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TestCalendarPage');
+    this.initializeBackButton();
   }
 
   ionViewWillEnter() {
     this.date = new Date();
     this.monthNames = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
+    this.scaricaEventiMuseo();
     this.getDaysOfMonth();
-    this.loadEventThisMonth();
+    //this.loadEventThisMonth();
   }
 
   getDaysOfMonth() {
@@ -119,6 +131,8 @@ export class TestCalendarPage {
     console.log(this.eventList);
     var startDate = new Date(this.date.getFullYear(), this.date.getMonth(), 1);
     var endDate = new Date(this.date.getFullYear(), this.date.getMonth()+1, 0);
+    console.log(startDate)
+    console.log(endDate)
     this.calendar.listEventsInRange(startDate, endDate).then(
       (msg) => {
         msg.forEach(item => {
@@ -131,7 +145,6 @@ export class TestCalendarPage {
         console.log(err);
       }
     );
-
   }
 
   checkEvent(day) {
@@ -195,5 +208,123 @@ export class TestCalendarPage {
     });
     alert.present();
   }
+
+
+
+
+
+// scaricaEventiMuseo() {
+//     let options = {
+//       AREA: 'Patrimonio industriale e cultura tecnica'
+//     };
+
+//     this.museiService.startRicercaMusei(options).then((data) => {
+//       console.log(data);
+//       console.log(data[0].EVENTI);
+//       var domParser = new DOMParser()
+//       let doc = domParser.parseFromString(data[0].EVENTI, 'text/html');
+//       const allItems = doc.querySelectorAll('.itemFeed');
+//       const allRealItems = Array.from(allItems);
+//       console.log(allItems);
+//       this.calendarioEventi = new Array();
+//       allRealItems.forEach(item => {
+//         console.log(item)
+//         let periodo = item.getElementsByClassName('dateItem')[0].innerHTML.split(" - ");
+//         let dataInizio = periodo[0].replace("(","").substr(5, 11);
+//         let dataFine = periodo[1].replace(")","").substr(5, 11);
+//         console.log(periodo);
+//         let evento = {
+//           "location" : item.getElementsByTagName('h3')[0].innerHTML,
+//           "title": item.getElementsByTagName('h4')[0].innerHTML,
+//           "imagine": item.getElementsByTagName('img')[0].src,
+//           "notes": item.getElementsByTagName('p')[0].innerHTML,
+//           "startDate": new Date(dataInizio),
+//           "endDate": new Date(dataFine),
+//           "elementHTML": item
+//         }
+//         this.calendarioEventi.push(evento);
+//     });
+//     console.log(this.calendarioEventi);
+//     this.caricaEventiDelMese();
+//   });
+// }
+
+scaricaEventiMuseo() {
+
+    console.log(this.myContenuto);
+    console.log(this.myContenuto[0].EVENTI);
+    var domParser = new DOMParser()
+    let doc = domParser.parseFromString(this.myContenuto[0].EVENTI, 'text/html');
+    const allItems = doc.querySelectorAll('.itemFeed');
+    const allRealItems = Array.from(allItems);
+    console.log(allItems);
+    this.calendarioEventi = new Array();
+    allRealItems.forEach(item => {
+      console.log(item)
+      let periodo = item.getElementsByClassName('dateItem')[0].innerHTML.split(" - ");
+      let dataInizio = periodo[0].replace("(","").substr(5, 11);
+      let dataFine = periodo[1].replace(")","").substr(5, 11);
+      console.log(periodo);
+      let evento = {
+        "location" : item.getElementsByTagName('h3')[0].innerHTML,
+        "title": item.getElementsByTagName('h4')[0].innerHTML,
+        "imagine": item.getElementsByTagName('img')[0].src,
+        "notes": item.getElementsByTagName('p')[0].innerHTML,
+        "startDate": new Date(dataInizio),
+        "endDate": new Date(dataFine),
+        "elementHTML": item
+      }
+      this.calendarioEventi.push(evento);
+  });
+  console.log(this.calendarioEventi);
+  this.caricaEventiDelMese();
+}
+
+caricaEventiDelMese() {
+  this.eventiDelMese = new Array();
+  console.log(this.eventiDelMese);
+  var startDate = new Date(this.date.getFullYear(), this.date.getMonth(), 1);
+  var endDate = new Date(this.date.getFullYear(), this.date.getMonth()+1, 0);
+  console.log(startDate)
+  console.log(endDate)
+  this.calendarioEventi.forEach( evento => {
+    if( (evento.startDate >= startDate && evento.startDate <= endDate) || (evento.endDate >= startDate && evento.endDate <= endDate))
+    this.eventiDelMese.push(evento);
+
+  });
+  console.log(this.eventiDelMese);
+}
+
+controllaEventi(day) {
+  //console.log(day);
+  var hasEvent = false;
+  // var thisDate1 = this.date.getFullYear()+"-"+(this.date.getMonth()+1)+"-"+day+" 00:00:00";
+  // var thisDate2 = this.date.getFullYear()+"-"+(this.date.getMonth()+1)+"-"+day+" 23:59:59";
+  var thisDate1 = new Date(this.date.getFullYear(), this.date.getMonth(), day, 0,0,0);
+  //console.log(this.eventList);
+  this.eventiDelMese.forEach(evento => {
+    if((evento.startDate <= thisDate1) && (thisDate1 <= evento.endDate)) {
+      hasEvent = true;
+    }
+  });
+  return hasEvent;
+}
+
+selezionaData(day) {
+  this.isSelected = false;
+  this.selectedEvent = new Array();
+  var thisDate1 = new Date(this.date.getFullYear(), this.date.getMonth(), day, 0,0,0);
+  console.log(this.eventiDelMese);
+  this.eventiDelMese.forEach(evento => {
+    console.log(evento.startDate, thisDate1)
+    if((evento.startDate <= thisDate1) && (thisDate1 <= evento.endDate)) {
+      this.isSelected = true;
+      this.selectedEvent.push(evento);
+      console.log("eventoSelezionato")
+    }
+  });
+  console.log(this.selectedEvent)
+}
+
 
 }

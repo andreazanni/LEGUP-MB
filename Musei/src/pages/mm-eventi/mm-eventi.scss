@@ -103,7 +103,7 @@ page-mm-eventi {
   background-position: top;
 }
 
-h4 {
+.itemFeed h4 {
     background: -webkit-linear-gradient(45deg, rgb(91, 73, 137), rgb(225, 0, 255) 80%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -111,11 +111,12 @@ h4 {
     text-transform: uppercase;
     padding-bottom: 10px;
     font-size: 4vw;
+    font-weight: bold;
 }
 
 .itemFeed {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .itemFeed img {
@@ -127,17 +128,179 @@ h4 {
 
 .dateItem {
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 3.5vw;
+  //font-weight: bold;
+  font-size: 2.5vw;
   padding-bottom: 10px;
+  color: black;
+}
+.itemTitle{
+  color: black;
 }
 
 .card-ios p, .card-md p, .card-wp p {
   font-size: 3.5vw;
+  text-align: justify;
+  text-transform: none;
+  font-weight: normal;
 }
 
 .card-ios h3, .card-ios h4, .card-ios h5, .card-ios h6, .card-md h3, .card-md h4, .card-md h5, .card-md h6, .card-wp h3, .card-wp h4, .card-wp h5, .card-wp h6 {
   font-size: 3.5vw;
+}
+
+//CSS calendario Eventi
+
+[col-1] {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 8.33333%;
+  -ms-flex: 0 0 8.33333%;
+  flex: 0 0 14.285714285714286%;
+  width: 14.285714285714286%;
+  max-width: 14.285714285714286%;
+}
+.col {
+  text-align: center;
+  padding: 5px;
+}
+.last-month, .next-month {
+  color: #999999;
+  font-size: 90%;
+}
+.currentDate, .otherDate {
+  padding: 5px;
+}
+.currentDate {
+  font-weight: bold;
+  background-color: rgb(225, 0, 255);
+  color: white;
+  border-radius: 30px;
+}
+.calendar-header {
+  background: -webkit-linear-gradient(45deg, rgb(91, 73, 137), rgb(225, 0, 255) 80%);
+  //background-color: #1a732d;
+  color: #FFFFFF;
+}
+.event-bullet {
+  margin: 2px auto;
+  height: 5px;
+  width: 5px;
+  background-color: rgb(91, 73, 137);
+  border-radius: 30px;
+}
+.selected-date {
+  width: 20px;
+  height: 2px;
+  background-color: blue;
+}
+.unselected-date {
+  border: none;
+}
+.calendar-body {
+  .grid {
+    padding: 0;
+  }
+  .col:last-child {
+    border-right: none;
+  }
+  .calendar-weekday, .calendar-date {
+    text-align: center;
+    margin: 0;
+  }
+  .calendar-weekday {
+    font-weight: bold;
+    //border-bottom: solid 1px #1a732d;
+    background-color: rgba(225, 0, 255, 0.5);
+  }
+  .calendar-date {
+    border-top: solid 1px rgb(91, 73, 137);
+    border-bottom: solid 1px rgb(91, 73, 137);
+  }
+}
+
+#calendarView {
+  height: 500px;
+  display: block;
+  position: relative;
+  /* position: absolute; */
+}
+
+.calendar-weekday .col {
+  color: white;
+}
+
+.scrollDiv .scroll-content{
+  overflow: overlay;
+}
+
+.list .card{
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.itemFeed, .item{
+  background: white;
+}
+
+.evento{
+  box-shadow: none;
+}
+
+.card-Item-Feed ion-item{
+  padding: 10px;
+}
+
+.itemLocation{
+  color: black;
+  font-size: 2.5vw !important;
+  padding-bottom: 5px;
+}
+
+ion-card.evento{
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+.card-Item-Feed{
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.view_toggle .button{
+  float: right !important;
+  background-color: white;
+  color: lightgray;
+  font-size: 5.5vw;
+  margin: 0.4rem 0.2rem;
+  padding: 0 1em;
+  margin-bottom: 24px;
+  height: auto;
+
+}
+
+.view_toggle{
+  overflow: auto;
+}
+
+.view_toggle div{
+  position: absolute;
+  top: 10px;
+  display: inline;
+  background: -webkit-linear-gradient(45deg, rgb(91, 73, 137), rgb(225, 0, 255) 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.view_selected{
+  color:  rgb(225, 0, 255) !important;
+}
+
+.addEvent{
+ float: right;
+ background: -webkit-linear-gradient(45deg, rgb(91, 73, 137), rgb(225, 0, 255) 80%);
+ width: 25px;
+ height: 25px;
+ font-size: 5.5vw;
+ color: white;
 }
 
 }

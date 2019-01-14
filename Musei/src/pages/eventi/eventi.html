@@ -1,4 +1,4 @@
-<ion-content id="paginaEventi" class="card-background-page">
+<!-- <ion-content id="paginaEventi" class="card-background-page">
   <ion-card id="content-header" class="headerContent">
     <button class="vocal-button" id="mic" ion-button icon-only (click)="read()">
       <ion-icon name="mic" id="vocal"></ion-icon>
@@ -21,3 +21,126 @@
     </div>
   </ion-card>
 </ion-content>
+-->
+<ion-content id="paginaEventi" class="card-background-page">
+	<ion-card id="content-header" class="headerContent">
+		<!-- <button class="sideMenu" ion-button (click)="openMenu()">
+			<ion-icon name="menu" id="menu"></ion-icon>
+		</button> -->
+		<button class="vocal-button" id="mic" ion-button icon-only (click)="read()">
+			<ion-icon name="mic" id="vocal"></ion-icon>
+		</button>
+		<button class="vocal-button" id="disabled-mic" style="display:none" ion-button icon-only (click)="stopRead()">
+			<ion-icon name="mic-off" id="vocal-off"></ion-icon>
+		</button>
+		<button class="home-button" ion-button icon-only (click)="goHomePage()">
+			<ion-icon name="home" id="home-icon"></ion-icon>
+    </button>
+    <div class="card-head">
+      <div class="card-title animated fadeInLeft slow" id="content_cardTitle"></div>
+      <div class="card-subtitle animated fadeInRight slow" id="content_cardSubTitle"></div>
+    </div>
+  </ion-card>
+  <ion-card id="card-contenuto" class="container-content">
+    <div id="container-contenuto">
+      <div id="contenuto" class="content-content animated fadeInUp slow">
+        <!-- gestione eventi a calendario -->
+          <div class="view_toggle">
+            <div>SELEZIONA VISTA</div>
+            <button id="calendar_view" class="calendar_view" ion-button (click)="cambiaVistaEventi('calendar_view')">
+              <ion-icon name="calendar" id="calendar"></ion-icon>
+            </button>
+            <button id="list_view"class="list_view view_selected" ion-button (click)="cambiaVistaEventi('list_view')">
+                <ion-icon name="list-box" id="list-box"></ion-icon>
+              </button>
+          </div>
+           <!-- <ion-content id="calendarView"  >
+
+              <ion-content class="scrollDiv" > -->
+              <div id="calendarView">
+                <div class="calendar-header vista_calendario" style='display: none'>
+                  <ion-row class="calendar-month">
+                    <ion-col col-2 (click)="goToLastMonth()"><ion-icon name="arrow-back"></ion-icon></ion-col>
+                    <ion-col col-8>{{currentMonth}} {{currentYear}}</ion-col>
+                    <ion-col col-2 (click)="goToNextMonth()"><ion-icon name="arrow-forward"></ion-icon></ion-col>
+                  </ion-row>
+                </div>
+                <div class="calendar-body vista_calendario" style='display: none'>
+                  <ion-grid>
+                    <ion-row class="calendar-weekday">
+                      <ion-col>Dom</ion-col>
+                      <ion-col>Lun</ion-col>
+                      <ion-col>Mar</ion-col>
+                      <ion-col>Mer</ion-col>
+                      <ion-col>Gio</ion-col>
+                      <ion-col>Ven</ion-col>
+                      <ion-col>Sab</ion-col>
+                    </ion-row>
+                    <ion-row class="calendar-date">
+                      <ion-col col-1 *ngFor="let lastDay of daysInLastMonth" class="last-month" (click)="goToLastMonth()">{{lastDay}}</ion-col>
+                      <ion-col col-1 *ngFor="let day of daysInThisMonth" (click)="selezionaData(day)">
+                        <span class="currentDate" *ngIf="currentDate === day; else otherDate">{{day}}</span>
+                        <ng-template #otherDate class="otherDate">
+                          {{day}}<br>
+                          <div class="event-bullet" *ngIf="controllaEventi(day)"></div>
+                        </ng-template>
+                      </ion-col>
+                      <ion-col col-1 *ngFor="let nextDay of daysInNextMonth" class="next-month" (click)="goToNextMonth()">{{nextDay}}</ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </div>
+                <ion-card class="evento vista_calendario" style='display: none'>
+                  <div class="selected-event" *ngIf="isSelected">
+                    <ion-list>
+                      <ion-card class="card-Item-Feed" *ngFor="let se of selectedEvent">
+                        <button class="addEvent" (click)='salvaEvento(se)'>+</button>
+                        <ion-item [innerHTML]="se.elementHTML.outerHTML">
+
+                        <!-- <ion-buttons end>
+                          <button ion-button clear icon-only (click)="deleteEvent(se)">
+                            <ion-icon name="close"></ion-icon>
+                          </button>
+                        </ion-buttons> -->
+
+                          <!-- <h2>{{se.title}}</h2>
+                          <h3>{{se.location}}</h3>
+                          <p>Start Date: {{se.startDate}}<br>
+                          End Date: {{se.endDate}}</p> -->
+
+                        </ion-item>
+                      </ion-card>
+                    </ion-list>
+                  </div>
+                </ion-card>
+                <ion-card class="evento vista_lista">
+                  <div class="selected-event">
+                    <ion-list>
+                      <ion-card class="card-Item-Feed" *ngFor="let ev of calendarioEventi">
+                        <button class="addEvent" (click)='salvaEvento(ev)'>+</button>
+                        <ion-item [innerHTML]="ev.elementHTML.outerHTML">
+
+                        <!-- <ion-buttons end>
+                          <button ion-button clear icon-only (click)="deleteEvent(se)">
+                            <ion-icon name="close"></ion-icon>
+                          </button>
+                        </ion-buttons> -->
+
+                          <!-- <h2>{{se.title}}</h2>
+                          <h3>{{se.location}}</h3>
+                          <p>Start Date: {{se.startDate}}<br>
+                          End Date: {{se.endDate}}</p> -->
+
+                        </ion-item>
+                      </ion-card>
+                    </ion-list>
+                  </div>
+                </ion-card>
+              </div>
+              <!-- </ion-content>
+            </ion-content> -->
+
+      </div>
+    </div>
+  </ion-card>
+</ion-content>
+

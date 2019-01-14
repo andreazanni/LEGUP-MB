@@ -60,6 +60,16 @@ page-home {
 	#card-patrimonioindustriale {
 		background-image: url("../assets/imgs/home/patrimonioindustriale.jpg");
 		background-size: cover;
+  }
+
+  #card-eventi {
+		background-image: url("../assets/imgs/home/Eventi.jpg");
+		background-size: cover;
+  }
+
+  #card-mostre {
+		background-image: url("../assets/imgs/home/Mostre.jpg");
+		background-size: cover;
 	}
 
 	.card-gradient {
@@ -126,5 +136,14 @@ page-home {
 
 	#card-patrimonioindustriale .card-gradient {
 		background-image: linear-gradient(to top right, rgba(43,104,175,0.7), rgba(145,186,251,0.7));
-	}
+  }
+
+  #card-eventi .card-gradient {
+		background-image: linear-gradient(to top right, rgba(255, 153, 51, 0.7), rgba(255, 102, 102, 0.7));
+  }
+
+  #card-mostre .card-gradient {
+		background-image: linear-gradient(to top right, rgba(255, 102, 153, 0.7), rgba(22, 224, 184, 0.7));
+  }
+
 }

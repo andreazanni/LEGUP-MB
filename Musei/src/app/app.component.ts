@@ -118,8 +118,14 @@ export class MyApp {
         break;
 
         case "CalendarioService":
-        this.nav.push(TestCalendarPage, {voceMenu: 'CALENDARIO', contenuto: this.istituzione[0].AREE_MUSEALI});
+        //scarico gli eventi prima di caricare la nuova pagina
+        let options = {
+          AREA: 'Patrimonio industriale e cultura tecnica'
+        };
+        this.museiService.startRicercaMusei(options).then((data) => {
+        this.nav.push(TestCalendarPage, {voceMenu: 'CALENDARIO', contenuto: data});
         this.nav.removeView(this.nav.last());
+        });
         break;
 
         default:
